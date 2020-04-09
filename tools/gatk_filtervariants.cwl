@@ -35,6 +35,10 @@ arguments:
       }
       -nct 16
       -o $(inputs.output_basename).gatk.hc.filtered.vcf
+
+      bgzip $(inputs.output_basename).gatk.hc.filtered.vcf
+
+      tabix $(inputs.output_basename).gatk.hc.filtered.vcf.gz
  
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
@@ -42,7 +46,8 @@ inputs:
   genes_bed: {type: File?}
   output_basename: string
 outputs:
-  hc_called_vcf:
+  filtered_vcf:
     type: File
     outputBinding:
-      glob: '*.gatk.hc.filtered.vcf'
+      glob: '*.gatk.hc.filtered.vcf.gz'
+    secondaryFiles: ['.tbi']

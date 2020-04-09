@@ -26,7 +26,6 @@ arguments:
       }
       -OBI
       -O $(inputs.output_basename).sorted.dup_marked.splitn.bam
- 
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
   dup_marked_bam: {type: File, secondaryFiles: ['.bai']}
@@ -37,4 +36,4 @@ outputs:
     type: File
     outputBinding:
       glob: '*.bam'
-    secondaryFiles: [.bai]
+    secondaryFiles: ['.bai']

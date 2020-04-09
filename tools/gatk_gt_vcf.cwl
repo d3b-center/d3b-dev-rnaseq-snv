@@ -27,7 +27,7 @@ arguments:
           return "";
         }
       }
-      -o $(inputs.output_basename).gatk.rnaseq.vcf.gz
+      -o $(inputs.output_basename).gatk.hc.gt.vcf.gz
       --variant $(inputs.hc_called_vcf.path)
  
 inputs:
@@ -39,4 +39,5 @@ outputs:
   gt_vcf:
     type: File
     outputBinding:
-      glob: '*.gatk.rnaseq.vcf.gz'
+      glob: '*.gatk.hc.gt.vcf.gz'
+    secondaryFiles: ['.tbi']

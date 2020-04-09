@@ -18,7 +18,7 @@ arguments:
       java -Xmx23g -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
       -R $(inputs.reference_fasta.path)
       -T HaplotypeCaller
-      -I $(inputs.dup_marked_bam.path)
+      -I $(inputs.bqsr_bam.path)
       --filter_reads_with_N_cigar
       --genotyping_mode DISCOVERY
       --fix_misencoded_quality_scores
@@ -36,14 +36,18 @@ arguments:
       -variant_index_type LINEAR
       -variant_index_parameter 128000
       -o $(inputs.output_basename).gatk.hc.called.vcf
- 
+
+      bgzip $(inputs.output_basename).gatk.hc.called.vcf
+
+      tabix $(inputs.output_basename).gatk.hc.called.vcf.gz
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
-  dup_marked_bam: {type: File, secondaryFiles: ['.bai']}
+  bqsr_bam: {type: File, secondaryFiles: ['^.bai']}
   genes_bed: {type: File?}
   output_basename: string
 outputs:
   hc_called_vcf:
     type: File
     outputBinding:
-      glob: '*.gatk.hc.called.vcf'
+      glob: '*.gatk.hc.called.vcf.gz'
+    secondaryFiles: ['.tbi']
