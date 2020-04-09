@@ -15,6 +15,11 @@ arguments:
   - position: 1
     shellQuote: false
     valueFrom: >-
+      --java-options "-Xmx30000m
+      -XX:+PrintFlagsFinal
+      -Xloggc:gc_log.log
+      -XX:GCTimeLimit=50
+      -XX:GCHeapFreeLimit=10"
       -I=$(inputs.input_bam.path)
       -O=$(inputs.output_basename).sorted.dup_marked.bam
       -OBI

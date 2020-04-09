@@ -14,6 +14,11 @@ arguments:
   - position: 1
     shellQuote: false
     valueFrom: >-
+      --java-options "-Xmx7500m
+      -XX:+PrintFlagsFinal
+      -Xloggc:gc_log.log
+      -XX:GCTimeLimit=50
+      -XX:GCHeapFreeLimit=10"
       -R $(inputs.reference_fasta.path)
       -I $(inputs.dup_marked_bam.path)
       ${

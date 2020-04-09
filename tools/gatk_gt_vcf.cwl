@@ -15,7 +15,7 @@ arguments:
     shellQuote: false
     valueFrom: >-
 
-      java -Xmx23g -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
+      java -Xmx30g -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
       -R $(inputs.reference_fasta.path)
       -T GenotypeGVCFs
       -nct 16
