@@ -16,7 +16,7 @@ arguments:
     shellQuote: false
     valueFrom: >-
       -I=$(inputs.input_bam.path)
-      -O=$(inputs.output_basename).aligned.sorted.duplicates_marked.bam
+      -O=$(inputs.output_basename).sorted.dup_marked.bam
       -OBI
       -M=$(inputs.output_basename).sorted.deduped.metrics
 inputs:

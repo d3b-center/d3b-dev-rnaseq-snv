@@ -1,12 +1,13 @@
 cwlVersion: v1.0
 class: CommandLineTool
-id: gatk-haplotypecaller-rnaseq
+id: gatk-filter-variants
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
     ramMin: 32000
     coresMin: 16
+    coresMax: 4
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:3.8_ubuntu'
 baseCommand: [mkdir, TMP]
@@ -17,12 +18,13 @@ arguments:
 
       java -Xmx23g -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
       -R $(inputs.reference_fasta.path)
-      -T HaplotypeCaller
-      -I $(inputs.dup_marked_bam.path)
-      --filter_reads_with_N_cigar
-      --genotyping_mode DISCOVERY
-      --fix_misencoded_quality_scores
-      -stand_call_conf 50
+      -T VariantFiltration
+      -V $(inputs.gt_vcf.path)
+      -window 35
+      -cluster 
+      -filterName FS
+      -filter "FS > 30.0"
+      -filterName QD -filter "QD < 2.0"
       ${
         if (inputs.genes_bed != null){
           return "-L " + inputs.genes_bed.path;
@@ -32,18 +34,15 @@ arguments:
         }
       }
       -nct 16
-      -ERC GVCF
-      -variant_index_type LINEAR
-      -variant_index_parameter 128000
-      -o $(inputs.output_basename).gatk.hc.called.vcf
+      -o $(inputs.output_basename).gatk.hc.filtered.vcf
  
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
-  dup_marked_bam: {type: File, secondaryFiles: ['.bai']}
+  gt_vcf: {type: File, secondaryFiles: ['.tbi']}
   genes_bed: {type: File?}
   output_basename: string
 outputs:
   hc_called_vcf:
     type: File
     outputBinding:
-      glob: '*.gatk.hc.called.vcf'
+      glob: '*.gatk.hc.filtered.vcf'
