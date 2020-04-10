@@ -8,13 +8,13 @@ requirements:
     dockerPull: 'kfdrc/gatk:4.1.1.0'
   - class: ResourceRequirement
     ramMin: 8000
-    coresMin: 8
+    coresMin: 4
 baseCommand: [/gatk, BaseRecalibrator]
 arguments:
   - position: 0
     shellQuote: false
     valueFrom: >-
-      --java-options "-Xms4000m
+      --java-options "-Xmx7500m
       -XX:GCTimeLimit=50
       -XX:GCHeapFreeLimit=10
       -XX:+PrintFlagsFinal

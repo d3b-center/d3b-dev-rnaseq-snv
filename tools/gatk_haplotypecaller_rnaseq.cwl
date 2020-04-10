@@ -5,8 +5,8 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 32000
-    coresMin: 16
+    ramMin: 8000
+    coresMin: 4
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:3.8_ubuntu'
 baseCommand: [mkdir, TMP]
@@ -15,7 +15,7 @@ arguments:
     shellQuote: false
     valueFrom: >-
 
-      java -Xmx30g -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
+      java -Xmx7500m -Djava.io.tmpdir=TMP -jar /GenomeAnalysisTK.jar
       -R $(inputs.reference_fasta.path)
       -T HaplotypeCaller
       -I $(inputs.bqsr_bam.path)
@@ -31,7 +31,7 @@ arguments:
           return "";
         }
       }
-      -nct 16
+      -nct 4
       -ERC GVCF
       -variant_index_type LINEAR
       -variant_index_parameter 128000
@@ -42,7 +42,7 @@ arguments:
       tabix $(inputs.output_basename).gatk.hc.called.vcf.gz
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
-  bqsr_bam: {type: File, secondaryFiles: ['^.bai']}
+  bqsr_bam: {type: File, secondaryFiles: ['.bai']}
   genes_bed: {type: File?}
   output_basename: string
 outputs:

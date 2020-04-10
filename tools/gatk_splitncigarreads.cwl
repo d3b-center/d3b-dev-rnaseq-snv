@@ -6,7 +6,7 @@ requirements:
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
     ramMin: 8000
-    coresMin: 8
+    coresMin: 4
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:4.1.1.0'
 baseCommand: [/gatk, SplitNCigarReads]
@@ -30,12 +30,20 @@ arguments:
         }
       }
       -OBI
-      -O $(inputs.output_basename).sorted.dup_marked.splitn.bam
+      ${
+          if (inputs.output_basename != null){
+              return "-O " + inputs.output_basename + ".sorted.dup_marked.splitn.bam";
+          }
+          else{
+              return "-O " + inputs.interval_bed.narmroot + ".sorted.dup_marked.splitn.bam";
+          }
+      }
+      
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
   dup_marked_bam: {type: File, secondaryFiles: ['.bai']}
   interval_bed: {type: File?}
-  output_basename: string
+  output_basename: {type: string?, doc: "Can leave blank if using an inerval file"}
 outputs:
   cigar_n_split_bam:
     type: File
