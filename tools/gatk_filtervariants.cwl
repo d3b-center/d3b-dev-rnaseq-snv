@@ -5,9 +5,8 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 32000
-    coresMin: 16
-    coresMax: 4
+    ramMin: 8000
+    coresMin: 4
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:4.1.1.0'
 baseCommand: [/gatk, VariantFiltration]
@@ -31,7 +30,7 @@ arguments:
           return "";
         }
       }
-      -o $(inputs.output_basename).gatk.hc.filtered.vcf.gz
+      -O $(inputs.output_basename).gatk.hc.filtered.vcf.gz
 
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}

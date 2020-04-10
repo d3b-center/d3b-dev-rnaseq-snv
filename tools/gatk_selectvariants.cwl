@@ -22,7 +22,7 @@ arguments:
         if (run_mode == 'grep' || run_mode == 'gatk'){
           var in_vcf = inputs.input_vcf.path;
           var out_vcf = inputs.output_basename + '.' + inputs.tool_name + '.PASS.vcf.gz';
-          var cmd = '/gatk SelectVariants --java-options "-Xmx8000m" -V ' + in_vcf +  ' -O ' + out_vcf + ' --exclude-filtered TRUE';
+          var cmd = '/gatk SelectVariants --java-options "-Xmx7500m" -V ' + in_vcf +  ' -O ' + out_vcf + ' --exclude-filtered TRUE';
           if (run_mode == 'grep'){
             cmd = 'zcat ' + in_vcf + ' | grep -E "^#|PASS" | bgzip > ' + out_vcf + '; tabix ' + out_vcf;
           }
@@ -45,4 +45,3 @@ outputs:
     outputBinding:
       glob: '*.PASS.vcf.gz'
     secondaryFiles: ['.tbi']
-

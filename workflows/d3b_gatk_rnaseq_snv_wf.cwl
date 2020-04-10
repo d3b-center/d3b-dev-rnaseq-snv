@@ -10,7 +10,7 @@ requirements:
 
 inputs:
   output_basename: string
-  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam"}
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
   knownsites: {type: 'File[]', doc: "Population vcfs, based on Broad best practices"}
