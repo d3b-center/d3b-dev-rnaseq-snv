@@ -5,9 +5,10 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: DockerRequirement
-    dockerPull: 'kfdrc/gatk:4.0.3.0'
+    dockerPull: 'kfdrc/gatk:4.1.1.0'
   - class: ResourceRequirement
-    ramMin: 4500
+    ramMin: 4000
+    coresMin: 2
 baseCommand: [/gatk, ApplyBQSR]
 arguments:
   - position: 1
