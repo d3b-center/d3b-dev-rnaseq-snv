@@ -16,7 +16,8 @@ For the most part, tool parameters follow defaults from the GATK Best Practices 
 ```yaml
 inputs:
   output_basename: string
-  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam"}
+  pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
   knownsites: {type: 'File[]', doc: "Population vcfs, based on Broad best practices"}

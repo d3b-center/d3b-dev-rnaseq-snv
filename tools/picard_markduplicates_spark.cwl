@@ -10,30 +10,27 @@ requirements:
   - class: ResourceRequirement
     ramMin: 32000
     coresMin: 16
-baseCommand: [/gatk, MarkDuplicatesSpark]
+baseCommand: []
 arguments:
   - position: 1
     shellQuote: false
     valueFrom: >-
+      mkdir TMP
+
+      /gatk MarkDuplicatesSpark
       --java-options "-Xmx30000m
       -XX:+PrintFlagsFinal
       -Xloggc:gc_log.log
       -XX:GCTimeLimit=50
       -XX:GCHeapFreeLimit=10"
+      --tmp-dir TMP
       -I=$(inputs.input_bam.path)
-      -O=$(inputs.output_basename).sorted.dup_marked.bam
-      -OBI
-      -M=$(inputs.output_basename).sorted.deduped.metrics
+      -O=$(inputs.input_bam.nameroot).dup_marked.bam
 inputs:
   input_bam: File
-  output_basename: string
 outputs: 
   output_markduplicates_bam:
     type: File
     outputBinding:
       glob: '*.bam'
     secondaryFiles: [.bai]
-  metrics:
-    type: File
-    outputBinding:
-      glob: '*.sorted.deduped.metrics'

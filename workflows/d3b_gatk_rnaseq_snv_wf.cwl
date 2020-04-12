@@ -7,9 +7,11 @@ label: "GATK RNAseq SNV Calling Workflow"
 requirements:
   - class: ScatterFeatureRequirement
   - class: MultipleInputFeatureRequirement
+  - class: SubworkflowFeatureRequirement
 
 inputs:
   output_basename: string
+  pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
@@ -30,14 +32,14 @@ steps:
     in:
       ref_dict: reference_dict
     out: [sequence_intervals, sequence_intervals_with_unmapped]
-  gatk_markduplicates:
-    run: ../tools/picard_markduplicates_spark.cwl
-    label: "GATK Mark Duplicates"
+  sambamba_sort_gatk_md_subwf:
+    run: ../subworkflows/sambamba_sort_gatk_md_sub_wf.cwl
+    label: "SAMBAMBA Mark Duplicates"
     in:
-      input_bam: STAR_sorted_genomic_bam
-      output_basename: output_basename
+      STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
+      pass_thru: pass_thru
     out:
-      [output_markduplicates_bam, metrics]
+      [sorted_md_bam]
   gatk_splitntrim:
     hints:
       - class: 'sbg:AWSInstanceType'
@@ -46,7 +48,7 @@ steps:
     label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
-      dup_marked_bam: gatk_markduplicates/output_markduplicates_bam
+      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
       interval_bed: python_createsequencegroups/sequence_intervals
       output_basename: output_basename
     scatter: interval_bed
