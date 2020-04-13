@@ -29,7 +29,6 @@ arguments:
       --use-original-qualities
       -O $(inputs.input_bam.nameroot).aligned.duplicates_marked.recalibrated.bam
       -bqsr $(inputs.bqsr_report.path)
-      --static-quantized-quals 10 --static-quantized-quals 20 --static-quantized-quals 30
       ${
         if (inputs.sequence_interval != null){
           return "-L " + inputs.sequence_interval.path;

@@ -34,7 +34,7 @@ steps:
     out: [sequence_intervals, sequence_intervals_with_unmapped]
   sambamba_sort_gatk_md_subwf:
     run: ../subworkflows/sambamba_sort_gatk_md_sub_wf.cwl
-    label: "SAMBAMBA Mark Duplicates"
+    label: "SAMBAMBA Sort GATK Mark Duplicates"
     in:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
       pass_thru: pass_thru
