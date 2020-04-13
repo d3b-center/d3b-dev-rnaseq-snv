@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="cwl-workflow AdZhok __plugin-port-drag __plugin-validate __plugin-selection __plugin-update"
+   ct-click=""
+   tabindex="-1"
+   ct-drop-enabled=""
+   ct-drop-zones="graph-editor"
+   version="1.1"
+   id="svg341"
+   sodipodi:docname="d3b_strelka2_rnaseq_snv_wf.cwl.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   width="1257"
+   height="715.33337">
+  <metadata
+     id="metadata347">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs345" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2136"
+     inkscape:window-height="1492"
+     id="namedview343"
+     showgrid="false"
+     inkscape:zoom="0.64"
+     inkscape:cx="1012.1877"
+     inkscape:cy="862.36017"
+     inkscape:window-x="767"
+     inkscape:window-y="303"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg341" />
+  <rect
+     x="-11.496436"
+     y="-6.9047213"
+     width="100.94663%"
+     height="101.75029%"
+     class="pan-handle"
+     style="fill:#303030;stroke:none;stroke-width:1.01347673px"
+     id="rect2" />
+  <g
+     class="workflow"
+     transform="matrix(1.3,0,0,1.3,113.289,50.850026)"
+     id="g339">
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_vcf"
+       data-destination-port="input_vcf"
+       data-source-node="strelka2_rnaseq"
+       data-source-connection="out/strelka2_rnaseq/output_vcf"
+       data-destination-connection="in/gatk_pass_vcf/input_vcf"
+       data-destination-node="gatk_pass_vcf"
+       id="g8">
+      <path
+         class="sub-edge outer"
+         d="m 330.3125,200 c 87.98005,0 87.98005,106.30957 175.9601,106.30957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path4"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 330.3125,200 c 87.98005,0 87.98005,106.30957 175.9601,106.30957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path6"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="mode"
+       data-destination-port="mode"
+       data-source-node="mode"
+       data-source-connection="out/mode/mode"
+       data-destination-connection="in/gatk_pass_vcf/mode"
+       data-destination-node="gatk_pass_vcf"
+       id="g14">
+      <path
+         class="sub-edge outer"
+         d="M 37,428 C 265.04892,428 265.04892,281.53147 493.09785,281.53147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path10"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,428 C 265.04892,428 265.04892,281.53147 493.09785,281.53147"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path12"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_pass_vcf/output_basename"
+       data-destination-node="gatk_pass_vcf"
+       id="g20">
+      <path
+         class="sub-edge outer"
+         d="m 37,321 c 228.04892,0 228.04892,-67.53147 456.09785,-67.53147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path16"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,321 c 228.04892,0 228.04892,-67.53147 456.09785,-67.53147"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path18"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="tool_name"
+       data-destination-port="tool_name"
+       data-source-node="tool_name"
+       data-source-connection="out/tool_name/tool_name"
+       data-destination-connection="in/gatk_pass_vcf/tool_name"
+       data-destination-node="gatk_pass_vcf"
+       id="g26">
+      <path
+         class="sub-edge outer"
+         d="M 37,0 C 271.6363,0 271.6363,228.69043 506.2726,228.69043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path22"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,0 C 271.6363,0 271.6363,228.69043 506.2726,228.69043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path24"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="STAR_sorted_genomic_bam"
+       data-destination-port="input_rna_bam"
+       data-source-node="STAR_sorted_genomic_bam"
+       data-source-connection="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+       data-destination-connection="in/strelka2_rnaseq/input_rna_bam"
+       data-destination-node="strelka2_rnaseq"
+       id="g32">
+      <path
+         class="sub-edge outer"
+         d="m 37,107 c 100.26787,0 100.26787,122.2524 200.53575,122.2524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path28"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,107 c 100.26787,0 100.26787,122.2524 200.53575,122.2524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path30"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/strelka2_rnaseq/output_basename"
+       data-destination-node="strelka2_rnaseq"
+       id="g38">
+      <path
+         class="sub-edge outer"
+         d="m 37,321 c 95.65625,0 95.65625,-121 191.3125,-121"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path34"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,321 c 95.65625,0 95.65625,-121 191.3125,-121"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path36"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/strelka2_rnaseq/reference"
+       data-destination-node="strelka2_rnaseq"
+       id="g44">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 100.26787,0 100.26787,-43.2524 200.53575,-43.2524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path40"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 100.26787,0 100.26787,-43.2524 200.53575,-43.2524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path42"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="pass_vcf"
+       data-destination-port="strelka2_pass_vcf"
+       data-source-node="gatk_pass_vcf"
+       data-source-connection="out/gatk_pass_vcf/pass_vcf"
+       data-destination-connection="in/strelka2_pass_vcf/strelka2_pass_vcf"
+       data-destination-node="strelka2_pass_vcf"
+       id="g50">
+      <path
+         class="sub-edge outer"
+         d="m 607.375,267.5 c 89.75577,0 89.75577,-53.5 179.51154,-53.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path46"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 607.375,267.5 c 89.75577,0 89.75577,-53.5 179.51154,-53.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path48"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_vcf"
+       data-destination-port="strelka2_prepass_vcf"
+       data-source-node="strelka2_rnaseq"
+       data-source-connection="out/strelka2_rnaseq/output_vcf"
+       data-destination-connection="in/strelka2_prepass_vcf/strelka2_prepass_vcf"
+       data-destination-node="strelka2_prepass_vcf"
+       id="g56">
+      <path
+         class="sub-edge outer"
+         d="m 330.3125,200 c 91.03125,0 91.03125,-60.5 182.0625,-60.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path52"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 330.3125,200 c 91.03125,0 91.03125,-60.5 182.0625,-60.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path54"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_pass_vcf"
+       transform="translate(549.375,267.5)"
+       data-id="gatk_pass_vcf"
+       id="g104">
+      <g
+         class="core"
+         id="g70">
+        <circle
+           cx="0"
+           cy="0"
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle58" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle60" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg68">
+          <title
+             id="title62">tool2</title>
+          <polygon
+             points="38.77,397.57 0,366 136.15,198.78 0,31.57 38.77,0 200.63,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon64" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect66" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text72">GATK Select PASS</text>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/gatk_pass_vcf/tool_name"
+         data-port-id="tool_name"
+         id="g78">
+        <g
+           class="io-port"
+           id="g76">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle74" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/gatk_pass_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g84">
+        <g
+           class="io-port"
+           id="g82">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle80" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/gatk_pass_vcf/mode"
+         data-port-id="mode"
+         id="g90">
+        <g
+           class="io-port"
+           id="g88">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle86" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/gatk_pass_vcf/input_vcf"
+         data-port-id="input_vcf"
+         id="g96">
+        <g
+           class="io-port"
+           id="g94">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle92" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/gatk_pass_vcf/pass_vcf"
+         data-port-id="pass_vcf"
+         id="g102">
+        <g
+           class="io-port"
+           id="g100">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle98" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="strelka2_rnaseq"
+       transform="translate(279.3125,200)"
+       data-id="strelka2_rnaseq"
+       id="g146">
+      <g
+         class="core"
+         id="g118">
+        <circle
+           cx="0"
+           cy="0"
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle106" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle108" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg116">
+          <title
+             id="title110">tool2</title>
+          <polygon
+             points="38.77,397.57 0,366 136.15,198.78 0,31.57 38.77,0 200.63,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon112" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect114" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text120">Strelka2</text>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/strelka2_rnaseq/reference"
+         data-port-id="reference"
+         id="g126">
+        <g
+           class="io-port"
+           id="g124">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle122" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/strelka2_rnaseq/output_basename"
+         data-port-id="output_basename"
+         id="g132">
+        <g
+           class="io-port"
+           id="g130">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle128" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/strelka2_rnaseq/input_rna_bam"
+         data-port-id="input_rna_bam"
+         id="g138">
+        <g
+           class="io-port"
+           id="g136">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle134" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/strelka2_rnaseq/output_vcf"
+         data-port-id="output_vcf"
+         id="g144">
+        <g
+           class="io-port"
+           id="g142">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle140" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+       transform="translate(0,107)"
+       data-id="STAR_sorted_genomic_bam"
+       id="g172">
+      <g
+         class="core"
+         id="g162">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle148" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle150" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg160">
+          <title
+             id="title152">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path154"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon156" />
+          <polygon
+             points="194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon158" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text164">STAR_sorted_genomic_bam</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+         data-port-id="STAR_sorted_genomic_bam"
+         id="g170">
+        <g
+           class="io-port"
+           id="g168">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle166" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-enum "
+       data-connection-id="out/mode/mode"
+       transform="translate(0,428)"
+       data-id="mode"
+       id="g199">
+      <g
+         class="core"
+         id="g189">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle174" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle176" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg187">
+          <title
+             id="title178">type_input</title>
+          <g
+             id="input">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path180"
+               inkscape:connector-curvature="0" />
+            <g
+               id="Layer_22"
+               data-name="Layer 22">
+              <g
+                 id="Layer_9_copy_4"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon182" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text191">mode</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/mode/mode"
+         data-port-id="mode"
+         id="g197">
+        <g
+           class="io-port"
+           id="g195">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle193" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/output_basename/output_basename"
+       transform="translate(0,321)"
+       data-id="output_basename"
+       id="g229">
+      <g
+         class="core"
+         id="g219">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle201" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle203" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg217">
+          <title
+             id="title205">type_input</title>
+          <g
+             id="g215">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path207"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g213"
+               data-name="Layer 22">
+              <g
+                 id="g211"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon209" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text221">output_basename</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/output_basename/output_basename"
+         data-port-id="output_basename"
+         id="g227">
+        <g
+           class="io-port"
+           id="g225">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle223" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/reference_fasta/reference_fasta"
+       transform="translate(0,214)"
+       data-id="reference_fasta"
+       id="g255">
+      <g
+         class="core"
+         id="g245">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle231" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle233" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg243">
+          <title
+             id="title235">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path237"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon239" />
+          <polygon
+             points="194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon241" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text247">reference_fasta</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/reference_fasta/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g253">
+        <g
+           class="io-port"
+           id="g251">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle249" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/tool_name/tool_name"
+       data-id="tool_name"
+       id="g285">
+      <g
+         class="core"
+         id="g275">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle257" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle259" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg273">
+          <title
+             id="title261">type_input</title>
+          <g
+             id="g271">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path263"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g269"
+               data-name="Layer 22">
+              <g
+                 id="g267"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon265" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text277">tool_name</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/tool_name/tool_name"
+         data-port-id="tool_name"
+         id="g283">
+        <g
+           class="io-port"
+           id="g281">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle279" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node output type-File "
+       data-connection-id="in/strelka2_pass_vcf/strelka2_pass_vcf"
+       transform="translate(823.88654,214)"
+       data-id="strelka2_pass_vcf"
+       id="g311">
+      <g
+         class="core"
+         id="g301">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle287" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle289" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg299">
+          <title
+             id="title291">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon293" />
+          <polygon
+             points="403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 403.28,256 208.64,256 208.64,206 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon295" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path297"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text303">strelka2_pass_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/strelka2_pass_vcf/strelka2_pass_vcf"
+         data-port-id="strelka2_pass_vcf"
+         id="g309">
+        <g
+           class="io-port"
+           id="g307">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle305" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node output type-File "
+       data-connection-id="in/strelka2_prepass_vcf/strelka2_prepass_vcf"
+       transform="translate(549.375,139.5)"
+       data-id="strelka2_prepass_vcf"
+       id="g337">
+      <g
+         class="core"
+         id="g327">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle313" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle315" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg325">
+          <title
+             id="title317">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon319" />
+          <polygon
+             points="403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 403.28,256 208.64,256 208.64,206 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon321" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path323"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(0.884615,0,0,0.884615,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text329">strelka2_prepass_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/strelka2_prepass_vcf/strelka2_prepass_vcf"
+         data-port-id="strelka2_prepass_vcf"
+         id="g335">
+        <g
+           class="io-port"
+           id="g333">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle331" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
