@@ -1,0 +1,69 @@
+cwlVersion: v1.0
+class: Workflow
+doc: >-
+    "VarDict Java RNAseq SNV Calling Workflow"
+id: d3b-strelka2-rnaseq-snv-wf
+label: "Vardict Java RNAseq SNV Calling Workflow"
+requirements:
+  - class: ScatterFeatureRequirement
+  - class: MultipleInputFeatureRequirement
+
+inputs:
+  output_basename: string
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+  sample_name: string
+  reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
+  reference_dict: File
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_cpus: {type: ['null', int], default: 9}
+  vardict_ram: {type: ['null', int], default: 18, doc: "In GB"}
+  wgs_calling_interval_list: {type: File, doc: "GATK intervals list-style, or bed file.  Recommend canocical chromosomes with N regions removed"}
+  tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
+  mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
+
+outputs:
+  vardict_prepass_vcf: {type: File, outputSource: sort_merge_vardict_vcf/merged_vcf, doc: "VarDict SNV calls"}
+  vardict_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "VarDict calls filtered on PASS"}
+
+steps:
+  python_vardict_interval_split:
+    run: ../tools/python_vardict_interval_split.cwl
+    doc: "Custom interval list generation for vardict input. Briefly, ~60M bp per interval list, 20K bp intervals, lists break on chr and N reginos only"
+    in:
+      wgs_bed_file: wgs_calling_interval_list
+    out: [split_intervals_bed]
+  vardict:
+    run: ../tools/vardict_rnaseq.cwl
+    label: "VarDict Java"
+    in:
+      input_bam: STAR_sorted_genomic_bam
+      input_name: sample_name
+      padding: padding
+      min_vaf: vardict_min_vaf
+      cpus: vardict_cpus
+      ram: vardict_ram
+      reference: reference_fasta
+      bed: python_vardict_interval_split/split_intervals_bed
+      output_basename: output_basename
+    scatter: [bed]
+    out: [vardict_vcf]
+  sort_merge_vardict_vcf:
+    run: ../tools/gatk_sortvcf.cwl
+    label: GATK Sort & merge vardict
+    in:
+      input_vcfs: vardict/vardict_vcf
+      output_basename: output_basename
+      reference_dict: reference_dict
+      tool_name:
+        valueFrom: ${return "vardict"}
+    out: [merged_vcf]
+  gatk_pass_vcf:
+    run: ../tools/gatk_selectvariants.cwl
+    label: "GATK Select PASS"
+    in:
+      input_vcf: sort_merge_vardict_vcf/merged_vcf
+      output_basename: output_basename
+      tool_name: tool_name
+      mode: mode
+    out: [pass_vcf]
