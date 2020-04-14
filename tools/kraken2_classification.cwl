@@ -4,7 +4,7 @@ id: kraken2_classification
 requirements:
   - class: ShellCommandRequirement
   - class: DockerRequirement
-    dockerPull: 'dmiller15/kraken2:0.0.2'
+    dockerPull: 'kfdrc/kraken2:0.0.2'
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
     ramMin: $(inputs.ram) 
