@@ -2,7 +2,7 @@ cwlVersion: v1.0
 class: Workflow
 doc: >-
     "VarDict Java RNAseq SNV Calling Workflow"
-id: d3b-strelka2-rnaseq-snv-wf
+id: d3b-vardict-rnaseq-snv-wf
 label: "Vardict Java RNAseq SNV Calling Workflow"
 requirements:
   - class: ScatterFeatureRequirement
@@ -17,7 +17,7 @@ inputs:
   vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
   vardict_cpus: {type: ['null', int], default: 9}
   vardict_ram: {type: ['null', int], default: 18, doc: "In GB"}
-  wgs_calling_interval_list: {type: File, doc: "GATK intervals list-style, or bed file.  Recommend canocical chromosomes with N regions removed"}
+  calling bed: {type: File, doc: "Interval calling bed file.  Recommend canocical chromosomes with N regions removed"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
   padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
@@ -31,10 +31,13 @@ steps:
     run: ../tools/python_vardict_interval_split.cwl
     doc: "Custom interval list generation for vardict input. Briefly, ~60M bp per interval list, 20K bp intervals, lists break on chr and N reginos only"
     in:
-      wgs_bed_file: wgs_calling_interval_list
+      wgs_bed_file: calling bed
     out: [split_intervals_bed]
   vardict:
     run: ../tools/vardict_rnaseq.cwl
+    hints:
+      - class: 'sbg:AWSInstanceType'
+        value: c5.9xlarge
     label: "VarDict Java"
     in:
       input_bam: STAR_sorted_genomic_bam
@@ -67,3 +70,8 @@ steps:
       tool_name: tool_name
       mode: mode
     out: [pass_vcf]
+$namespaces:
+  sbg: https://sevenbridges.com
+hints:
+  - class: 'sbg:maxNumberOfParallelInstances'
+    value: 2

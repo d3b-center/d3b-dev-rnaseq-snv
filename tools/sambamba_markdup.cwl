@@ -4,7 +4,7 @@ id: sambamba_sort_mark_dup
 
 requirements:
   - class: DockerRequirement
-    dockerPull: 'migbro/sambamba:0.7.1'
+    dockerPull: 'kfdrc/sambamba:0.7.1'
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement

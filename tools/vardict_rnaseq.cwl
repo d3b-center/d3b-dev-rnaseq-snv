@@ -26,8 +26,7 @@ arguments:
       -b '$(inputs.input_bam.path)'
       -z -c 1 -S 2 -E 3 -g 4 -F 0x700 -V 0.01 -x $(inputs.padding) $(inputs.bed.path) > vardict_results.txt
       && cat vardict_results.txt | /VarDict-1.7.0/bin/teststrandbias.R > vardict_r_test_results.txt
-      && cat vardict_r_test_results.txt | /VarDict-1.7.0/bin/var2vcf_valid.pl
-      -N '$(inputs.input_name)'-E -f $(inputs.min_vaf) -v 50  $(inputs.output_basename).result.vcf
+      && /VarDict-1.7.0/bin/var2vcf_valid.pl -N '$(inputs.input_name)'-E -f $(inputs.min_vaf) -v 50 vardict_r_test_results.txt > $(inputs.output_basename).result.vcf
       && cat $(inputs.output_basename).result.vcf | perl -e 'while(<>){if ($_ =~ /^#/){print $_;} else{@a = split /\t/,$_; if($a[3] =~ /[KMRYSWBVHDXkmryswbvhdx]/){$a[3] = "N";} if($a[4] =~ /[KMRYSWBVHDXkmryswbvhdx]/){$a[4] = "N";} if($a[3] ne $a[4]){print join("\t", @a);}}}'
       > $(inputs.output_basename).$(inputs.bed.nameroot).vcf
       && bgzip  $(inputs.output_basename).$(inputs.bed.nameroot).vcf

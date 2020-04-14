@@ -34,6 +34,11 @@ outputs:
   pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Filtered vcf selected for PASS variants"}
 ```
 
+### Docker Pulls
+ - `kfdrc/sambamba:0.7.1`
+ - `kfdrc/gatk:4.1.1.0`
+ - `kfdrc/python:2.7.13`
+
 ### Workflow Diagram
 
 ![WF diagram](misc/d3b_gatk_rnaseq_snv_wf.cwl.svg)
@@ -59,6 +64,43 @@ inputs:
   strelka2_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Strelka2 calls filtered on PASS"}
 ```
 
+### Docker Pulls
+ - `kfdrc/strelka2:2.9.10`
+ - `kfdrc/gatk:4.1.1.0`
+
 ### Workflow Diagram
 
 ![WF diagram](misc/d3b_strelka2_rnaseq_snv_wf.cwl.svg)
+
+## VardictJava v1.7.0
+This [workflow](https://github.com/bcbio/bcbio-nextgen/blob/master/bcbio/rnaseq/variation.py) is based on the Vardict run style of BC Bio.
+`workflows/d3b_vardict_rnaseq_snv_wf.cwl` is the wrapper cwl that runs this workflow.
+
+### Inputs
+```yaml
+inputs:
+  output_basename: string
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+  sample_name: string
+  reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
+  reference_dict: File
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_cpus: {type: ['null', int], default: 9}
+  vardict_ram: {type: ['null', int], default: 18, doc: "In GB"}
+  calling bed: {type: File, doc: "Interval calling bed file.  Recommend canocical chromosomes with N regions removed"}
+  tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
+  mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
+```
+
+### Outputs
+```yaml
+outputs:
+  vardict_prepass_vcf: {type: File, outputSource: sort_merge_vardict_vcf/merged_vcf, doc: "VarDict SNV calls"}
+  vardict_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "VarDict calls filtered on PASS"}
+```
+
+### Docker Pulls
+- `kfdrc/vardict:1.7.0`
+- `kfdrc/gatk:4.1.1.0`
+- `kfdrc/python:2.7.13`
