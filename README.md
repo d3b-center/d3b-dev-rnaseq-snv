@@ -123,3 +123,24 @@ outputs:
 ### Workflow Diagram
 
 ![WF diagram](misc/d3b_vardict_rnaseq_snv_wf.cwl.svg)
+
+## Kraken2
+[Kraken2](http://ccb.jhu.edu/software/kraken2/index.shtml) is available to run at `tools/kraken2_classification.cwl`.
+
+```yaml
+inputs:
+  input_db: { type: File, doc: "Input TGZ containing Kraken2 database" }
+  input_reads: { type: File, doc: "FA or FQ file containing sequences to be classified" }
+  input_mates: { type: 'File?', doc: "Paired mates for input_reads" }
+  db_path: { type: string, default: "./covid", doc: "Relative path to the folder containing the db files from input_db" }
+  threads: { type: int, default: 32, doc: "Number of threads to use in parallel" }
+  ram: { type: int, default: 50000, doc: "Recommended MB of RAM needed to run the job" }
+  output_basename: { type: string, doc: "String to be used as the base filename of the output" }
+```
+
+```yaml
+outputs:
+  output: { type: File, outputBinding: { glob: "*.output" } }
+  classified_reads: { type: 'File', outputBinding: { glob: "*_1.fq" } }
+  classified_mates: { type: 'File?', outputBinding: { glob: "*_2.fq" } }
+```
