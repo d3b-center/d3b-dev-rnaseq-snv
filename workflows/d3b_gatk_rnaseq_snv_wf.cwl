@@ -15,6 +15,8 @@ inputs:
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
+  exome_flag: {type: string?, default: "Y", doc: "Whether to run in exome mode for callers. Should be Y or leave blank as default is Y. Only make N if you are certain"}
   knownsites: {type: 'File[]', doc: "Population vcfs, based on Broad best practices"}
   dbsnp_vcf: {type: File, secondaryFiles: ['.idx']}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
@@ -26,12 +28,22 @@ outputs:
   pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Filtered vcf selected for PASS variants"}
 
 steps:
-  python_createsequencegroups:
-    run: ../tools/python_createsequencegroups.cwl
-    label: "Python Intvl from Dict"
+  bedtools_gtf_to_bed:
+    run: ../tools/bedtools_gtf_to_bed.cwl
     in:
-      ref_dict: reference_dict
-    out: [sequence_intervals, sequence_intervals_with_unmapped]
+      input_bed_gtf: call_bed_file
+    out: [run_bed]
+  gatk_intervallisttools:
+    run: ../tools/gatk_intervallisttool.cwl
+    in:
+      interval_list: bedtools_gtf_to_bed/run_bed
+      reference_dict: reference_dict
+      exome_flag: exome_flag
+      scatter_ct:
+        valueFrom: ${return 50}
+      bands:
+        valueFrom: ${return 80000000}
+    out: [output]
   sambamba_sort_gatk_md_subwf:
     run: ../subworkflows/sambamba_sort_gatk_md_sub_wf.cwl
     label: "SAMBAMBA Sort GATK Mark Duplicates"
@@ -49,7 +61,7 @@ steps:
     in:
       reference_fasta: reference_fasta
       dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
-      interval_bed: python_createsequencegroups/sequence_intervals
+      interval_bed: gatk_intervallisttools/output
       output_basename: output_basename
     scatter: interval_bed
     out: [cigar_n_split_bam]
@@ -90,7 +102,7 @@ steps:
       reference_fasta: reference_fasta
       bqsr_bam: gatk_applybqsr/recalibrated_bam
       dbsnp: dbsnp_vcf
-      # genes_bed: python_createsequencegroups/sequence_intervals
+      # genes_bed: gatk_intervallisttools/output
       output_basename: output_basename
     scatter: bqsr_bam
     out: [hc_called_vcf]

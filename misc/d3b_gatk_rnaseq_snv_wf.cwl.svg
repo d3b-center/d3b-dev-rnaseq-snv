@@ -7,31 +7,30 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   class="cwl-workflow NFtLfI __plugin-port-drag __plugin-validate __plugin-selection __plugin-update"
+   class="cwl-workflow LnCmxE __plugin-port-drag __plugin-validate __plugin-selection __plugin-update"
    ct-click=""
    tabindex="-1"
    ct-drop-enabled=""
    ct-drop-zones="graph-editor"
    version="1.1"
-   id="svg905"
+   id="svg1015"
    sodipodi:docname="d3b_gatk_rnaseq_snv_wf.cwl.svg"
-   width="2178.2996"
-   height="871.25165"
+   width="1297.2876"
+   height="434.37762"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06">
   <metadata
-     id="metadata911">
+     id="metadata1021">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs909" />
+     id="defs1019" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -41,2853 +40,3157 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="3066"
-     inkscape:window-height="1948"
-     id="namedview907"
+     inkscape:window-width="2900"
+     inkscape:window-height="1588"
+     id="namedview1017"
      showgrid="false"
-     inkscape:zoom="1.18"
-     inkscape:cx="894.91526"
-     inkscape:cy="517.01433"
-     inkscape:window-x="140"
+     inkscape:zoom="0.834386"
+     inkscape:cx="51.198485"
+     inkscape:cy="135.23261"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg905" />
+     inkscape:current-layer="svg1015" />
   <rect
-     x="4.9255368e-07"
-     y="0.18389034"
-     width="86.718224%"
-     height="71.735878%"
+     x="-1.1984861"
+     y="1.2161267"
+     width="100.14731%"
+     height="101.09956%"
      class="pan-handle"
-     style="fill:#303030;stroke:none;stroke-width:0.78872097px"
-     id="rect2"
-     mask="none"
-     clip-path="none" />
+     style="fill:#303030;stroke:none;stroke-width:1.00622308px"
+     id="rect2" />
   <g
-     id="g8"
-     data-destination-node="gatk_applybqsr"
-     data-destination-connection="in/gatk_applybqsr/bqsr_report"
-     data-source-connection="out/gatk_baserecalibrator/output"
-     data-source-node="gatk_baserecalibrator"
-     data-destination-port="bqsr_report"
-     data-source-port="output"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path4"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 991.49121,360.5 c 59.80689,0 59.80689,-24.2476 119.61389,-24.2476"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path6"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 991.49121,360.5 c 59.80689,0 59.80689,-24.2476 119.61389,-24.2476"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g14"
-     data-destination-node="gatk_applybqsr"
-     data-destination-connection="in/gatk_applybqsr/input_bam"
-     data-source-connection="out/gatk_splitntrim/cigar_n_split_bam"
-     data-source-node="gatk_splitntrim"
-     data-destination-port="input_bam"
-     data-source-port="cigar_n_split_bam"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path10"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 675.58899,353.5 C 888.73541,353.5 888.73541,307 1101.8818,307"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path12"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 675.58899,353.5 C 888.73541,353.5 888.73541,307 1101.8818,307"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g20"
-     data-destination-node="gatk_applybqsr"
-     data-destination-connection="in/gatk_applybqsr/reference"
-     data-source-connection="out/reference_fasta/reference_fasta"
-     data-source-node="reference_fasta"
-     data-destination-port="reference"
-     data-source-port="reference_fasta"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path16"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,214 c 537.05254,0 537.05254,63.7476 1074.1051,63.7476"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path18"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,214 c 537.05254,0 537.05254,63.7476 1074.1051,63.7476"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g26"
-     data-destination-node="gatk_baserecalibrator"
-     data-destination-connection="in/gatk_baserecalibrator/input_bam"
-     data-source-connection="out/gatk_splitntrim/cigar_n_split_bam"
-     data-source-node="gatk_splitntrim"
-     data-destination-port="input_bam"
-     data-source-port="cigar_n_split_bam"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path22"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 675.58899,353.5 c 111.56273,0 111.56273,36.2524 223.12547,36.2524"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path24"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 675.58899,353.5 c 111.56273,0 111.56273,36.2524 223.12547,36.2524"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g32"
-     data-destination-node="gatk_baserecalibrator"
-     data-destination-connection="in/gatk_baserecalibrator/knownsites"
-     data-source-connection="out/knownsites/knownsites"
-     data-source-node="knownsites"
-     data-destination-port="knownsites"
-     data-source-port="knownsites"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path28"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,749 C 463.24561,749 463.24561,360.5 889.49121,360.5"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path30"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,749 C 463.24561,749 463.24561,360.5 889.49121,360.5"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g38"
-     data-destination-node="gatk_baserecalibrator"
-     data-destination-connection="in/gatk_baserecalibrator/reference"
-     data-source-connection="out/reference_fasta/reference_fasta"
-     data-source-node="reference_fasta"
-     data-destination-port="reference"
-     data-source-port="reference_fasta"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path34"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,214 c 430.85723,0 430.85723,117.2476 861.71446,117.2476"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path36"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,214 c 430.85723,0 430.85723,117.2476 861.71446,117.2476"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g44"
-     data-destination-node="gatk_filter_vcf"
-     data-destination-connection="in/gatk_filter_vcf/hc_vcf"
-     data-source-connection="out/merge_hc_vcf/merged_vcf"
-     data-source-node="merge_hc_vcf"
-     data-destination-port="hc_vcf"
-     data-source-port="merged_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path40"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 1777.1277,353.5 c 94.8518,0 94.8518,103.7524 189.7036,103.7524"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path42"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 1777.1277,353.5 c 94.8518,0 94.8518,103.7524 189.7036,103.7524"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g50"
-     data-destination-node="gatk_filter_vcf"
-     data-destination-connection="in/gatk_filter_vcf/output_basename"
-     data-source-connection="out/output_basename/output_basename"
-     data-source-node="output_basename"
-     data-destination-port="output_basename"
-     data-source-port="output_basename"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path46"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,535 C 997.30402,535 997.30402,428 1957.608,428"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path48"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,535 C 997.30402,535 997.30402,428 1957.608,428"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g56"
-     data-destination-node="gatk_filter_vcf"
-     data-destination-connection="in/gatk_filter_vcf/reference_fasta"
-     data-source-connection="out/reference_fasta/reference_fasta"
-     data-source-node="reference_fasta"
-     data-destination-port="reference_fasta"
-     data-source-port="reference_fasta"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path52"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,214 c 964.9156,0 964.9156,184.7476 1929.8313,184.7476"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path54"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,214 c 964.9156,0 964.9156,184.7476 1929.8313,184.7476"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g62"
-     data-destination-node="gatk_haplotype_rnaseq"
-     data-destination-connection="in/gatk_haplotype_rnaseq/bqsr_bam"
-     data-source-connection="out/gatk_applybqsr/recalibrated_bam"
-     data-source-node="gatk_applybqsr"
-     data-destination-port="bqsr_bam"
-     data-source-port="recalibrated_bam"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path58"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 1203.8818,307 c 86.4566,0 86.4566,85.30957 172.9133,85.30957"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path60"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 1203.8818,307 c 86.4566,0 86.4566,85.30957 172.9133,85.30957"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g68"
-     data-destination-node="gatk_haplotype_rnaseq"
-     data-destination-connection="in/gatk_haplotype_rnaseq/dbsnp"
-     data-source-connection="out/dbsnp_vcf/dbsnp_vcf"
-     data-source-node="dbsnp_vcf"
-     data-destination-port="dbsnp"
-     data-source-port="dbsnp_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path64"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 1189.8818,428 c 86.8693,0 86.8693,-60.46853 173.7385,-60.46853"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path66"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 1189.8818,428 c 86.8693,0 86.8693,-60.46853 173.7385,-60.46853"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g74"
-     data-destination-node="gatk_haplotype_rnaseq"
-     data-destination-connection="in/gatk_haplotype_rnaseq/output_basename"
-     data-source-connection="out/output_basename/output_basename"
-     data-source-node="output_basename"
-     data-destination-port="output_basename"
-     data-source-port="output_basename"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path70"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,535 C 700.31015,535 700.31015,339.46853 1363.6203,339.46853"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path72"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,535 C 700.31015,535 700.31015,339.46853 1363.6203,339.46853"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g80"
-     data-destination-node="gatk_haplotype_rnaseq"
-     data-destination-connection="in/gatk_haplotype_rnaseq/reference_fasta"
-     data-source-connection="out/reference_fasta/reference_fasta"
-     data-source-node="reference_fasta"
-     data-destination-port="reference_fasta"
-     data-source-port="reference_fasta"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path76"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,214 c 669.89753,0 669.89753,100.69043 1339.7951,100.69043"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path78"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,214 c 669.89753,0 669.89753,100.69043 1339.7951,100.69043"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g86"
-     data-destination-node="gatk_pass_vcf"
-     data-destination-connection="in/gatk_pass_vcf/input_vcf"
-     data-source-connection="out/gatk_filter_vcf/filtered_vcf"
-     data-source-node="gatk_filter_vcf"
-     data-destination-port="input_vcf"
-     data-source-port="filtered_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path82"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 2059.608,428 c 89.2691,0 89.2691,-89.19043 178.5381,-89.19043"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path84"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 2059.608,428 c 89.2691,0 89.2691,-89.19043 178.5381,-89.19043"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g92"
-     data-destination-node="gatk_pass_vcf"
-     data-destination-connection="in/gatk_pass_vcf/mode"
-     data-source-connection="out/mode/mode"
-     data-source-node="mode"
-     data-destination-port="mode"
-     data-source-port="mode"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path88"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,642 C 1130.9857,642 1130.9857,314.03147 2224.9714,314.03147"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path90"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,642 C 1130.9857,642 1130.9857,314.03147 2224.9714,314.03147"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g98"
-     data-destination-node="gatk_pass_vcf"
-     data-destination-connection="in/gatk_pass_vcf/output_basename"
-     data-source-connection="out/output_basename/output_basename"
-     data-source-node="output_basename"
-     data-destination-port="output_basename"
-     data-source-port="output_basename"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path94"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,535 C 1130.9857,535 1130.9857,285.96853 2224.9714,285.96853"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path96"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,535 C 1130.9857,535 1130.9857,285.96853 2224.9714,285.96853"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g104"
-     data-destination-node="gatk_pass_vcf"
-     data-destination-connection="in/gatk_pass_vcf/tool_name"
-     data-source-connection="out/tool_name/tool_name"
-     data-source-node="tool_name"
-     data-destination-port="tool_name"
-     data-source-port="tool_name"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path100"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,0 C 1137.5731,0 1137.5731,261.19043 2238.1461,261.19043"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path102"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,0 C 1137.5731,0 1137.5731,261.19043 2238.1461,261.19043"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g110"
-     data-destination-node="gatk_splitntrim"
-     data-destination-connection="in/gatk_splitntrim/dup_marked_bam"
-     data-source-connection="out/sambamba_sort_gatk_md_subwf/sorted_md_bam"
-     data-source-node="sambamba_sort_gatk_md_subwf"
-     data-destination-port="dup_marked_bam"
-     data-source-port="sorted_md_bam"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path106"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 323.3125,307 c 125.58704,0 125.58704,85.30957 251.17409,85.30957"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path108"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 323.3125,307 c 125.58704,0 125.58704,85.30957 251.17409,85.30957"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g116"
-     data-destination-node="gatk_splitntrim"
-     data-destination-connection="in/gatk_splitntrim/interval_bed"
-     data-source-connection="out/python_createsequencegroups/sequence_intervals"
-     data-source-node="python_createsequencegroups"
-     data-destination-port="interval_bed"
-     data-source-port="sequence_intervals"
-     class="edge __validate-invalid"
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path112"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 319.71401,445.42751 c 120.79891,0 120.79891,-77.89604 241.59783,-77.89604"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path114"
-       style="fill:none;stroke:#f89406;stroke-width:2px"
-       d="m 319.71401,445.42751 c 120.79891,0 120.79891,-77.89604 241.59783,-77.89604"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g122"
-     data-destination-node="gatk_splitntrim"
-     data-destination-connection="in/gatk_splitntrim/output_basename"
-     data-source-connection="out/output_basename/output_basename"
-     data-source-node="output_basename"
-     data-destination-port="output_basename"
-     data-source-port="output_basename"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path118"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,535 C 299.15592,535 299.15592,339.46853 561.31184,339.46853"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path120"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,535 C 299.15592,535 299.15592,339.46853 561.31184,339.46853"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g128"
-     data-destination-node="gatk_splitntrim"
-     data-destination-connection="in/gatk_splitntrim/reference_fasta"
-     data-source-connection="out/reference_fasta/reference_fasta"
-     data-source-node="reference_fasta"
-     data-destination-port="reference_fasta"
-     data-source-port="reference_fasta"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path124"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,214 c 268.74329,0 268.74329,100.69043 537.48659,100.69043"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path126"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,214 c 268.74329,0 268.74329,100.69043 537.48659,100.69043"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g134"
-     data-destination-node="merge_hc_vcf"
-     data-destination-connection="in/merge_hc_vcf/input_vcfs"
-     data-source-connection="out/gatk_haplotype_rnaseq/hc_called_vcf"
-     data-source-node="gatk_haplotype_rnaseq"
-     data-destination-port="input_vcfs"
-     data-source-port="hc_called_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path130"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 1477.8975,353.5 c 99.0639,0 99.0639,38.80957 198.1278,38.80957"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path132"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 1477.8975,353.5 c 99.0639,0 99.0639,38.80957 198.1278,38.80957"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g140"
-     data-destination-node="merge_hc_vcf"
-     data-destination-connection="in/merge_hc_vcf/output_basename"
-     data-source-connection="out/output_basename/output_basename"
-     data-source-node="output_basename"
-     data-destination-port="output_basename"
-     data-source-port="output_basename"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path136"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,535 C 849.92527,535 849.92527,367.53147 1662.8505,367.53147"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path138"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,535 C 849.92527,535 849.92527,367.53147 1662.8505,367.53147"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g146"
-     data-destination-node="merge_hc_vcf"
-     data-destination-connection="in/merge_hc_vcf/reference_dict"
-     data-source-connection="out/reference_dict/reference_dict"
-     data-source-node="reference_dict"
-     data-destination-port="reference_dict"
-     data-source-port="reference_dict"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path142"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,321 c 812.92527,0 812.92527,18.46853 1625.8505,18.46853"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path144"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,321 c 812.92527,0 812.92527,18.46853 1625.8505,18.46853"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g152"
-     data-destination-node="merge_hc_vcf"
-     data-destination-connection="in/merge_hc_vcf/tool_name"
-     data-source-connection="out/tool_name/tool_name"
-     data-source-node="tool_name"
-     data-destination-port="tool_name"
-     data-source-port="tool_name"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path148"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,0 C 856.51264,0 856.51264,314.69043 1676.0253,314.69043"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path150"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,0 C 856.51264,0 856.51264,314.69043 1676.0253,314.69043"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g158"
-     data-destination-node="python_createsequencegroups"
-     data-destination-connection="in/python_createsequencegroups/ref_dict"
-     data-source-connection="out/reference_dict/reference_dict"
-     data-source-node="reference_dict"
-     data-destination-port="ref_dict"
-     data-source-port="reference_dict"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path154"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,321 c 99.15625,0 99.15625,107 198.3125,107"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path156"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,321 c 99.15625,0 99.15625,107 198.3125,107"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g164"
-     data-destination-node="sambamba_sort_gatk_md_subwf"
-     data-destination-connection="in/sambamba_sort_gatk_md_subwf/STAR_sorted_genomic_bam"
-     data-source-connection="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
-     data-source-node="STAR_sorted_genomic_bam"
-     data-destination-port="STAR_sorted_genomic_bam"
-     data-source-port="STAR_sorted_genomic_bam"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path160"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 37,107 c 100.95549,0 100.95549,182.57249 201.91099,182.57249"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path162"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 37,107 c 100.95549,0 100.95549,182.57249 201.91099,182.57249"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g170"
-     data-destination-node="sambamba_sort_gatk_md_subwf"
-     data-destination-connection="in/sambamba_sort_gatk_md_subwf/pass_thru"
-     data-source-connection="out/pass_thru/pass_thru"
-     data-source-node="pass_thru"
-     data-destination-port="pass_thru"
-     data-source-port="pass_thru"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path166"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="M 37,428 C 137.95549,428 137.95549,324.42751 238.91099,324.42751"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path168"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="M 37,428 C 137.95549,428 137.95549,324.42751 238.91099,324.42751"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g176"
-     data-destination-node="filtered_vcf"
-     data-destination-connection="in/filtered_vcf/filtered_vcf"
-     data-source-connection="out/gatk_filter_vcf/filtered_vcf"
-     data-source-node="gatk_filter_vcf"
-     data-destination-port="filtered_vcf"
-     data-source-port="filtered_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path172"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 2059.608,428 c 92.3203,0 92.3203,0 184.6405,0"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path174"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 2059.608,428 c 92.3203,0 92.3203,0 184.6405,0"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g182"
-     data-destination-node="haplotype_called__vcf"
-     data-destination-connection="in/haplotype_called__vcf/haplotype_called__vcf"
-     data-source-connection="out/merge_hc_vcf/merged_vcf"
-     data-source-node="merge_hc_vcf"
-     data-destination-port="haplotype_called__vcf"
-     data-source-port="merged_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path178"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 1777.1277,353.5 c 97.2402,0 97.2402,-46.5 194.4803,-46.5"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path180"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 1777.1277,353.5 c 97.2402,0 97.2402,-46.5 194.4803,-46.5"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g188"
-     data-destination-node="pass_vcf"
-     data-destination-connection="in/pass_vcf/pass_vcf"
-     data-source-connection="out/gatk_pass_vcf/pass_vcf"
-     data-source-node="gatk_pass_vcf"
-     data-destination-port="pass_vcf"
-     data-source-port="pass_vcf"
-     class="edge "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path184"
-       style="fill:none;stroke:#303030;stroke-width:7px"
-       d="m 2339.2485,300 c 89.7559,0 89.7559,74.5 179.5118,74.5"
-       class="sub-edge outer" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path186"
-       style="fill:none;stroke:#9a9a9a;stroke-width:2px"
-       d="m 2339.2485,300 c 89.7559,0 89.7559,74.5 179.5118,74.5"
-       class="sub-edge inner" />
-  </g>
-  <g
-     id="g230"
-     data-id="gatk_applybqsr"
-     transform="matrix(0.684971,0,0,0.684971,875.0835,250.42131)"
-     data-connection-id="gatk_applybqsr"
-     class="node step  "
-     tabindex="-1">
+     class="workflow"
+     transform="matrix(0.428054,0,0,0.428054,72.006378,28.861698)"
+     id="g1013">
     <g
-       id="g202"
-       class="core">
-      <circle
-         id="circle190"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="51"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle192"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="38.25"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg200"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title194">tool2</title>
-        <polygon
-           id="polygon196"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect198"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
+       tabindex="-1"
+       class="edge "
+       data-source-port="call_bed_file"
+       data-destination-port="input_bed_gtf"
+       data-source-node="call_bed_file"
+       data-source-connection="out/call_bed_file/call_bed_file"
+       data-destination-connection="in/bedtools_gtf_to_bed/input_bed_gtf"
+       data-destination-node="bedtools_gtf_to_bed"
+       id="g8">
+      <path
+         class="sub-edge outer"
+         d="M 37,856 C 139.5,856 139.5,535 242,535"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path4"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,856 C 139.5,856 139.5,535 242,535"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path6"
+         inkscape:connector-curvature="0" />
     </g>
-    <text
-       id="text204"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,81)">GATK Apply BQSR</text>
     <g
-       id="g210"
-       data-port-id="reference"
-       data-connection-id="in/gatk_applybqsr/reference"
-       transform="translate(-41.776754,-29.252398)"
-       class="port input-port">
+       tabindex="-1"
+       class="edge "
+       data-source-port="output"
+       data-destination-port="bqsr_report"
+       data-source-node="gatk_baserecalibrator"
+       data-source-connection="out/gatk_baserecalibrator/output"
+       data-destination-connection="in/gatk_applybqsr/bqsr_report"
+       data-destination-node="gatk_applybqsr"
+       id="g14">
+      <path
+         class="sub-edge outer"
+         d="m 1210,414 c 60.1116,0 60.1116,-24.7476 120.2232,-24.7476"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path10"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1210,414 c 60.1116,0 60.1116,-24.7476 120.2232,-24.7476"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path12"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="cigar_n_split_bam"
+       data-destination-port="input_bam"
+       data-source-node="gatk_splitntrim"
+       data-source-connection="out/gatk_splitntrim/cigar_n_split_bam"
+       data-destination-connection="in/gatk_applybqsr/input_bam"
+       data-destination-node="gatk_applybqsr"
+       id="g20">
+      <path
+         class="sub-edge outer"
+         d="m 895,407 c 213,0 213,-47 426,-47"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path16"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 895,407 c 213,0 213,-47 426,-47"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path18"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/gatk_applybqsr/reference"
+       data-destination-node="gatk_applybqsr"
+       id="g26">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 646.61162,0 646.61162,116.7476 1293.2232,116.7476"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path22"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 646.61162,0 646.61162,116.7476 1293.2232,116.7476"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path24"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="cigar_n_split_bam"
+       data-destination-port="input_bam"
+       data-source-node="gatk_splitntrim"
+       data-source-connection="out/gatk_splitntrim/cigar_n_split_bam"
+       data-destination-connection="in/gatk_baserecalibrator/input_bam"
+       data-destination-node="gatk_baserecalibrator"
+       id="g32">
+      <path
+         class="sub-edge outer"
+         d="m 895,407 c 111.1116,0 111.1116,36.2524 222.2232,36.2524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path28"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 895,407 c 111.1116,0 111.1116,36.2524 222.2232,36.2524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path30"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="knownsites"
+       data-destination-port="knownsites"
+       data-source-node="knownsites"
+       data-source-connection="out/knownsites/knownsites"
+       data-destination-connection="in/gatk_baserecalibrator/knownsites"
+       data-destination-node="gatk_baserecalibrator"
+       id="g38">
+      <path
+         class="sub-edge outer"
+         d="M 37,749 C 572.5,749 572.5,414 1108,414"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path34"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,749 C 572.5,749 572.5,414 1108,414"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path36"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/gatk_baserecalibrator/reference"
+       data-destination-node="gatk_baserecalibrator"
+       id="g44">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 540.11162,0 540.11162,170.7476 1080.2232,170.7476"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path40"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 540.11162,0 540.11162,170.7476 1080.2232,170.7476"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path42"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="merged_vcf"
+       data-destination-port="hc_vcf"
+       data-source-node="merge_hc_vcf"
+       data-source-connection="out/merge_hc_vcf/merged_vcf"
+       data-destination-connection="in/gatk_filter_vcf/hc_vcf"
+       data-destination-node="gatk_filter_vcf"
+       id="g50">
+      <path
+         class="sub-edge outer"
+         d="m 1996,407 c 95.1116,0 95.1116,103.2524 190.2232,103.2524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path46"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1996,407 c 95.1116,0 95.1116,103.2524 190.2232,103.2524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path48"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_filter_vcf/output_basename"
+       data-destination-node="gatk_filter_vcf"
+       id="g56">
+      <path
+         class="sub-edge outer"
+         d="m 37,535 c 1070,0 1070,-54 2140,-54"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path52"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,535 c 1070,0 1070,-54 2140,-54"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path54"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference_fasta"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/gatk_filter_vcf/reference_fasta"
+       data-destination-node="gatk_filter_vcf"
+       id="g62">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 1074.6116,0 1074.6116,237.7476 2149.2232,237.7476"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path58"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 1074.6116,0 1074.6116,237.7476 2149.2232,237.7476"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path60"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="recalibrated_bam"
+       data-destination-port="bqsr_bam"
+       data-source-node="gatk_applybqsr"
+       data-source-connection="out/gatk_applybqsr/recalibrated_bam"
+       data-destination-connection="in/gatk_haplotype_rnaseq/bqsr_bam"
+       data-destination-node="gatk_haplotype_rnaseq"
+       id="g68">
+      <path
+         class="sub-edge outer"
+         d="m 1423,360 c 86.4488,0 86.4488,85.80957 172.8976,85.80957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path64"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1423,360 c 86.4488,0 86.4488,85.80957 172.8976,85.80957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path66"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="dbsnp_vcf"
+       data-destination-port="dbsnp"
+       data-source-node="dbsnp_vcf"
+       data-source-connection="out/dbsnp_vcf/dbsnp_vcf"
+       data-destination-connection="in/gatk_haplotype_rnaseq/dbsnp"
+       data-destination-node="gatk_haplotype_rnaseq"
+       id="g74">
+      <path
+         class="sub-edge outer"
+         d="m 1409,481 c 86.8614,0 86.8614,-59.96853 173.7228,-59.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path70"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1409,481 c 86.8614,0 86.8614,-59.96853 173.7228,-59.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path72"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_haplotype_rnaseq/output_basename"
+       data-destination-node="gatk_haplotype_rnaseq"
+       id="g80">
+      <path
+         class="sub-edge outer"
+         d="M 37,535 C 809.86142,535 809.86142,392.96853 1582.7228,392.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path76"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,535 C 809.86142,535 809.86142,392.96853 1582.7228,392.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path78"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference_fasta"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/gatk_haplotype_rnaseq/reference_fasta"
+       data-destination-node="gatk_haplotype_rnaseq"
+       id="g86">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 779.4488,0 779.4488,154.19043 1558.8976,154.19043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path82"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 779.4488,0 779.4488,154.19043 1558.8976,154.19043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path84"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="exome_flag"
+       data-destination-port="exome_flag"
+       data-source-node="exome_flag"
+       data-source-connection="out/exome_flag/exome_flag"
+       data-destination-connection="in/gatk_intervallisttools/exome_flag"
+       data-destination-node="gatk_intervallisttools"
+       id="g92">
+      <path
+         class="sub-edge outer"
+         d="m 316,428 c 129.61162,0 129.61162,15.2524 259.22325,15.2524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path88"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 316,428 c 129.61162,0 129.61162,15.2524 259.22325,15.2524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path90"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="run_bed"
+       data-destination-port="interval_list"
+       data-source-node="bedtools_gtf_to_bed"
+       data-source-connection="out/bedtools_gtf_to_bed/run_bed"
+       data-destination-connection="in/gatk_intervallisttools/interval_list"
+       data-destination-node="gatk_intervallisttools"
+       id="g98">
+      <path
+         class="sub-edge outer"
+         d="M 316,535 C 441,535 441,414 566,414"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path94"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 316,535 C 441,535 441,414 566,414"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path96"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_dict"
+       data-destination-port="reference_dict"
+       data-source-node="reference_dict"
+       data-source-connection="out/reference_dict/reference_dict"
+       data-destination-connection="in/gatk_intervallisttools/reference_dict"
+       data-destination-node="gatk_intervallisttools"
+       id="g104">
+      <path
+         class="sub-edge outer"
+         d="m 37,321 c 269.11162,0 269.11162,63.7476 538.22325,63.7476"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path100"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,321 c 269.11162,0 269.11162,63.7476 538.22325,63.7476"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path102"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="filtered_vcf"
+       data-destination-port="input_vcf"
+       data-source-node="gatk_filter_vcf"
+       data-source-connection="out/gatk_filter_vcf/filtered_vcf"
+       data-destination-connection="in/gatk_pass_vcf/input_vcf"
+       data-destination-node="gatk_pass_vcf"
+       id="g110">
+      <path
+         class="sub-edge outer"
+         d="m 2279,481 c 88.9488,0 88.9488,-89.19043 177.8976,-89.19043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path106"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 2279,481 c 88.9488,0 88.9488,-89.19043 177.8976,-89.19043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path108"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="mode"
+       data-destination-port="mode"
+       data-source-node="mode"
+       data-source-connection="out/mode/mode"
+       data-destination-connection="in/gatk_pass_vcf/mode"
+       data-destination-node="gatk_pass_vcf"
+       id="g116">
+      <path
+         class="sub-edge outer"
+         d="M 37,642 C 1240.3614,642 1240.3614,367.03147 2443.7228,367.03147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path112"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,642 C 1240.3614,642 1240.3614,367.03147 2443.7228,367.03147"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path114"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_pass_vcf/output_basename"
+       data-destination-node="gatk_pass_vcf"
+       id="g122">
+      <path
+         class="sub-edge outer"
+         d="M 37,535 C 1240.3614,535 1240.3614,338.96853 2443.7228,338.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path118"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,535 C 1240.3614,535 1240.3614,338.96853 2443.7228,338.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path120"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="tool_name"
+       data-destination-port="tool_name"
+       data-source-node="tool_name"
+       data-source-connection="out/tool_name/tool_name"
+       data-destination-connection="in/gatk_pass_vcf/tool_name"
+       data-destination-node="gatk_pass_vcf"
+       id="g128">
+      <path
+         class="sub-edge outer"
+         d="M 37,0 C 1246.9488,0 1246.9488,314.19043 2456.8976,314.19043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path124"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,0 C 1246.9488,0 1246.9488,314.19043 2456.8976,314.19043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path126"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="sorted_md_bam"
+       data-destination-port="dup_marked_bam"
+       data-source-node="sambamba_sort_gatk_md_subwf"
+       data-source-connection="out/sambamba_sort_gatk_md_subwf/sorted_md_bam"
+       data-destination-connection="in/gatk_splitntrim/dup_marked_bam"
+       data-destination-node="gatk_splitntrim"
+       id="g134">
+      <path
+         class="sub-edge outer"
+         d="m 323,314 c 235.4488,0 235.4488,131.80957 470.8976,131.80957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path130"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 323,314 c 235.4488,0 235.4488,131.80957 470.8976,131.80957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path132"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge __validate-invalid"
+       data-source-port="output"
+       data-destination-port="interval_bed"
+       data-source-node="gatk_intervallisttools"
+       data-source-connection="out/gatk_intervallisttools/output"
+       data-destination-connection="in/gatk_splitntrim/interval_bed"
+       data-destination-node="gatk_splitntrim"
+       id="g140">
+      <path
+         class="sub-edge outer"
+         d="m 668,414 c 56.36142,0 56.36142,7.03147 112.72285,7.03147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path136"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 668,414 c 56.36142,0 56.36142,7.03147 112.72285,7.03147"
+         style="fill:none;stroke:#f89406;stroke-width:2px"
+         id="path138"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_splitntrim/output_basename"
+       data-destination-node="gatk_splitntrim"
+       id="g146">
+      <path
+         class="sub-edge outer"
+         d="M 37,535 C 408.86142,535 408.86142,392.96853 780.72285,392.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path142"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,535 C 408.86142,535 408.86142,392.96853 780.72285,392.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path144"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference_fasta"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/gatk_splitntrim/reference_fasta"
+       data-destination-node="gatk_splitntrim"
+       id="g152">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 378.4488,0 378.4488,154.19043 756.8976,154.19043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path148"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 378.4488,0 378.4488,154.19043 756.8976,154.19043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path150"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="hc_called_vcf"
+       data-destination-port="input_vcfs"
+       data-source-node="gatk_haplotype_rnaseq"
+       data-source-connection="out/gatk_haplotype_rnaseq/hc_called_vcf"
+       data-destination-connection="in/merge_hc_vcf/input_vcfs"
+       data-destination-node="merge_hc_vcf"
+       id="g158">
+      <path
+         class="sub-edge outer"
+         d="m 1697,407 c 98.9488,0 98.9488,38.80957 197.8976,38.80957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path154"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1697,407 c 98.9488,0 98.9488,38.80957 197.8976,38.80957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path156"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/merge_hc_vcf/output_basename"
+       data-destination-node="merge_hc_vcf"
+       id="g164">
+      <path
+         class="sub-edge outer"
+         d="M 37,535 C 959.36142,535 959.36142,421.03147 1881.7228,421.03147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path160"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,535 C 959.36142,535 959.36142,421.03147 1881.7228,421.03147"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path162"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_dict"
+       data-destination-port="reference_dict"
+       data-source-node="reference_dict"
+       data-source-connection="out/reference_dict/reference_dict"
+       data-destination-connection="in/merge_hc_vcf/reference_dict"
+       data-destination-node="merge_hc_vcf"
+       id="g170">
+      <path
+         class="sub-edge outer"
+         d="m 37,321 c 922.36142,0 922.36142,71.96853 1844.7228,71.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path166"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,321 c 922.36142,0 922.36142,71.96853 1844.7228,71.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path168"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="tool_name"
+       data-destination-port="tool_name"
+       data-source-node="tool_name"
+       data-source-connection="out/tool_name/tool_name"
+       data-destination-connection="in/merge_hc_vcf/tool_name"
+       data-destination-node="merge_hc_vcf"
+       id="g176">
+      <path
+         class="sub-edge outer"
+         d="M 37,0 C 965.9488,0 965.9488,368.19043 1894.8976,368.19043"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path172"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,0 C 965.9488,0 965.9488,368.19043 1894.8976,368.19043"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path174"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="STAR_sorted_genomic_bam"
+       data-destination-port="STAR_sorted_genomic_bam"
+       data-source-node="STAR_sorted_genomic_bam"
+       data-source-connection="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+       data-destination-connection="in/sambamba_sort_gatk_md_subwf/STAR_sorted_genomic_bam"
+       data-destination-node="sambamba_sort_gatk_md_subwf"
+       id="g182">
+      <path
+         class="sub-edge outer"
+         d="m 37,107 c 100.79924,0 100.79924,189.57249 201.59849,189.57249"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path178"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,107 c 100.79924,0 100.79924,189.57249 201.59849,189.57249"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path180"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="pass_thru"
+       data-destination-port="pass_thru"
+       data-source-node="pass_thru"
+       data-source-connection="out/pass_thru/pass_thru"
+       data-destination-connection="in/sambamba_sort_gatk_md_subwf/pass_thru"
+       data-destination-node="sambamba_sort_gatk_md_subwf"
+       id="g188">
+      <path
+         class="sub-edge outer"
+         d="m 37,428 c 100.79924,0 100.79924,-96.57249 201.59849,-96.57249"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path184"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,428 c 100.79924,0 100.79924,-96.57249 201.59849,-96.57249"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path186"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="filtered_vcf"
+       data-destination-port="filtered_vcf"
+       data-source-node="gatk_filter_vcf"
+       data-source-connection="out/gatk_filter_vcf/filtered_vcf"
+       data-destination-connection="in/filtered_vcf/filtered_vcf"
+       data-destination-node="filtered_vcf"
+       id="g194">
+      <path
+         class="sub-edge outer"
+         d="m 2279,481 c 92,0 92,0 184,0"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path190"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 2279,481 c 92,0 92,0 184,0"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path192"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="merged_vcf"
+       data-destination-port="haplotype_called__vcf"
+       data-source-node="merge_hc_vcf"
+       data-source-connection="out/merge_hc_vcf/merged_vcf"
+       data-destination-connection="in/haplotype_called__vcf/haplotype_called__vcf"
+       data-destination-node="haplotype_called__vcf"
+       id="g200">
+      <path
+         class="sub-edge outer"
+         d="m 1996,407 c 97.5,0 97.5,-47 195,-47"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path196"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1996,407 c 97.5,0 97.5,-47 195,-47"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path198"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="pass_vcf"
+       data-destination-port="pass_vcf"
+       data-source-node="gatk_pass_vcf"
+       data-source-connection="out/gatk_pass_vcf/pass_vcf"
+       data-destination-connection="in/pass_vcf/pass_vcf"
+       data-destination-node="pass_vcf"
+       id="g206">
+      <path
+         class="sub-edge outer"
+         d="m 2558,353 c 90,0 90,75 180,75"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path202"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 2558,353 c 90,0 90,75 180,75"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path204"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="bedtools_gtf_to_bed"
+       transform="translate(279,535)"
+       data-id="bedtools_gtf_to_bed"
+       id="g236">
       <g
-         id="g208"
-         class="io-port">
+         class="core"
+         id="g220">
         <circle
-           id="circle206"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle208" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle210" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg218">
+          <title
+             id="title212">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon214" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect216" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text222">bedtools_gtf_to_bed</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/bedtools_gtf_to_bed/input_bed_gtf"
+         data-port-id="input_bed_gtf"
+         id="g228">
+        <g
+           class="io-port"
+           id="g226">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle224" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/bedtools_gtf_to_bed/run_bed"
+         data-port-id="run_bed"
+         id="g234">
+        <g
+           class="io-port"
+           id="g232">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle230" />
+        </g>
       </g>
     </g>
     <g
-       id="g216"
-       data-port-id="input_bam"
-       data-connection-id="in/gatk_applybqsr/input_bam"
-       transform="translate(-51)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_applybqsr"
+       transform="translate(1372,360)"
+       data-id="gatk_applybqsr"
+       id="g278">
       <g
-         id="g214"
-         class="io-port">
+         class="core"
+         id="g250">
         <circle
-           id="circle212"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle238" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle240" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg248">
+          <title
+             id="title242">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon244" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect246" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text252">GATK Apply BQSR</text>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/gatk_applybqsr/reference"
+         data-port-id="reference"
+         id="g258">
+        <g
+           class="io-port"
+           id="g256">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle254" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/gatk_applybqsr/input_bam"
+         data-port-id="input_bam"
+         id="g264">
+        <g
+           class="io-port"
+           id="g262">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle260" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/gatk_applybqsr/bqsr_report"
+         data-port-id="bqsr_report"
+         id="g270">
+        <g
+           class="io-port"
+           id="g268">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle266" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/gatk_applybqsr/recalibrated_bam"
+         data-port-id="recalibrated_bam"
+         id="g276">
+        <g
+           class="io-port"
+           id="g274">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle272" />
+        </g>
       </g>
     </g>
     <g
-       id="g222"
-       data-port-id="bqsr_report"
-       data-connection-id="in/gatk_applybqsr/bqsr_report"
-       transform="translate(-41.776754,29.252398)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_baserecalibrator"
+       transform="translate(1159,414)"
+       data-id="gatk_baserecalibrator"
+       id="g320">
       <g
-         id="g220"
-         class="io-port">
+         class="core"
+         id="g292">
         <circle
-           id="circle218"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle280" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle282" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg290">
+          <title
+             id="title284">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon286" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect288" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text294">GATK BQSR</text>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/gatk_baserecalibrator/reference"
+         data-port-id="reference"
+         id="g300">
+        <g
+           class="io-port"
+           id="g298">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle296" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/gatk_baserecalibrator/knownsites"
+         data-port-id="knownsites"
+         id="g306">
+        <g
+           class="io-port"
+           id="g304">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle302" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/gatk_baserecalibrator/input_bam"
+         data-port-id="input_bam"
+         id="g312">
+        <g
+           class="io-port"
+           id="g310">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle308" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/gatk_baserecalibrator/output"
+         data-port-id="output"
+         id="g318">
+        <g
+           class="io-port"
+           id="g316">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle314" />
+        </g>
       </g>
     </g>
     <g
-       id="g228"
-       data-port-id="recalibrated_bam"
-       data-connection-id="out/gatk_applybqsr/recalibrated_bam"
-       transform="translate(51)"
-       class="port output-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_filter_vcf"
+       transform="translate(2228,481)"
+       data-id="gatk_filter_vcf"
+       id="g362">
       <g
-         id="g226"
-         class="io-port">
+         class="core"
+         id="g334">
         <circle
-           id="circle224"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle322" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle324" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg332">
+          <title
+             id="title326">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon328" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect330" />
+        </svg>
       </g>
-    </g>
-  </g>
-  <g
-     id="g272"
-     data-id="gatk_baserecalibrator"
-     transform="matrix(0.684971,0,0,0.684971,729.6021,287.06726)"
-     data-connection-id="gatk_baserecalibrator"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g244"
-       class="core">
-      <circle
-         id="circle232"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="51"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle234"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="38.25"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg242"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title236">tool2</title>
-        <polygon
-           id="polygon238"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect240"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text246"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,81)">GATK BQSR</text>
-    <g
-       id="g252"
-       data-port-id="reference"
-       data-connection-id="in/gatk_baserecalibrator/reference"
-       transform="translate(-41.776754,-29.252398)"
-       class="port input-port">
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text336">GATK Hard Filter VCF</text>
       <g
-         id="g250"
-         class="io-port">
-        <circle
-           id="circle248"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/gatk_filter_vcf/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g342">
+        <g
+           class="io-port"
+           id="g340">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle338" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g258"
-       data-port-id="knownsites"
-       data-connection-id="in/gatk_baserecalibrator/knownsites"
-       transform="translate(-51)"
-       class="port input-port">
       <g
-         id="g256"
-         class="io-port">
-        <circle
-           id="circle254"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/gatk_filter_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g348">
+        <g
+           class="io-port"
+           id="g346">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle344" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g264"
-       data-port-id="input_bam"
-       data-connection-id="in/gatk_baserecalibrator/input_bam"
-       transform="translate(-41.776754,29.252398)"
-       class="port input-port">
       <g
-         id="g262"
-         class="io-port">
-        <circle
-           id="circle260"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/gatk_filter_vcf/hc_vcf"
+         data-port-id="hc_vcf"
+         id="g354">
+        <g
+           class="io-port"
+           id="g352">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle350" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g270"
-       data-port-id="output"
-       data-connection-id="out/gatk_baserecalibrator/output"
-       transform="translate(51)"
-       class="port output-port">
       <g
-         id="g268"
-         class="io-port">
-        <circle
-           id="circle266"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g314"
-     data-id="gatk_filter_vcf"
-     transform="matrix(0.684971,0,0,0.684971,1461.2311,333.3028)"
-     data-connection-id="gatk_filter_vcf"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g286"
-       class="core">
-      <circle
-         id="circle274"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="51"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle276"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="38.25"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg284"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title278">tool2</title>
-        <polygon
-           id="polygon280"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect282"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text288"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,81)">GATK Hard Filter VCF</text>
-    <g
-       id="g294"
-       data-port-id="reference_fasta"
-       data-connection-id="in/gatk_filter_vcf/reference_fasta"
-       transform="translate(-41.776754,-29.252398)"
-       class="port input-port">
-      <g
-         id="g292"
-         class="io-port">
-        <circle
-           id="circle290"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/gatk_filter_vcf/filtered_vcf"
+         data-port-id="filtered_vcf"
+         id="g360">
+        <g
+           class="io-port"
+           id="g358">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle356" />
+        </g>
       </g>
     </g>
     <g
-       id="g300"
-       data-port-id="output_basename"
-       data-connection-id="in/gatk_filter_vcf/output_basename"
-       transform="translate(-51)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_haplotype_rnaseq"
+       transform="translate(1639,407)"
+       data-id="gatk_haplotype_rnaseq"
+       id="g410">
       <g
-         id="g298"
-         class="io-port">
+         class="core"
+         id="g376">
         <circle
-           id="circle296"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle364" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle366" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg374">
+          <title
+             id="title368">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon370" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect372" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text378">GATK Haplotype Caller</text>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/gatk_haplotype_rnaseq/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g384">
+        <g
+           class="io-port"
+           id="g382">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle380" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/gatk_haplotype_rnaseq/output_basename"
+         data-port-id="output_basename"
+         id="g390">
+        <g
+           class="io-port"
+           id="g388">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle386" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/gatk_haplotype_rnaseq/dbsnp"
+         data-port-id="dbsnp"
+         id="g396">
+        <g
+           class="io-port"
+           id="g394">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle392" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/gatk_haplotype_rnaseq/bqsr_bam"
+         data-port-id="bqsr_bam"
+         id="g402">
+        <g
+           class="io-port"
+           id="g400">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle398" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/gatk_haplotype_rnaseq/hc_called_vcf"
+         data-port-id="hc_called_vcf"
+         id="g408">
+        <g
+           class="io-port"
+           id="g406">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle404" />
+        </g>
       </g>
     </g>
     <g
-       id="g306"
-       data-port-id="hc_vcf"
-       data-connection-id="in/gatk_filter_vcf/hc_vcf"
-       transform="translate(-41.776754,29.252398)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_intervallisttools"
+       transform="translate(617,414)"
+       data-id="gatk_intervallisttools"
+       id="g452">
       <g
-         id="g304"
-         class="io-port">
+         class="core"
+         id="g424">
         <circle
-           id="circle302"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle412" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle414" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg422">
+          <title
+             id="title416">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon418" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect420" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text426">gatk_intervallisttools</text>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/gatk_intervallisttools/reference_dict"
+         data-port-id="reference_dict"
+         id="g432">
+        <g
+           class="io-port"
+           id="g430">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle428" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/gatk_intervallisttools/interval_list"
+         data-port-id="interval_list"
+         id="g438">
+        <g
+           class="io-port"
+           id="g436">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle434" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/gatk_intervallisttools/exome_flag"
+         data-port-id="exome_flag"
+         id="g444">
+        <g
+           class="io-port"
+           id="g442">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle440" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/gatk_intervallisttools/output"
+         data-port-id="output"
+         id="g450">
+        <g
+           class="io-port"
+           id="g448">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle446" />
+        </g>
       </g>
     </g>
     <g
-       id="g312"
-       data-port-id="filtered_vcf"
-       data-connection-id="out/gatk_filter_vcf/filtered_vcf"
-       transform="translate(51)"
-       class="port output-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_pass_vcf"
+       transform="translate(2500,353)"
+       data-id="gatk_pass_vcf"
+       id="g500">
       <g
-         id="g310"
-         class="io-port">
+         class="core"
+         id="g466">
         <circle
-           id="circle308"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle454" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle456" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg464">
+          <title
+             id="title458">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon460" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect462" />
+        </svg>
       </g>
-    </g>
-  </g>
-  <g
-     id="g362"
-     data-id="gatk_haplotype_rnaseq"
-     transform="matrix(0.684971,0,0,0.684971,1057.9815,282.27246)"
-     data-connection-id="gatk_haplotype_rnaseq"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g328"
-       class="core">
-      <circle
-         id="circle316"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="58"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle318"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="43.5"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg326"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title320">tool2</title>
-        <polygon
-           id="polygon322"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect324"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text330"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,88)">GATK Haplotype Caller</text>
-    <g
-       id="g336"
-       data-port-id="reference_fasta"
-       data-connection-id="in/gatk_haplotype_rnaseq/reference_fasta"
-       transform="translate(-43.1024,-38.809575)"
-       class="port input-port">
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text468">GATK Select PASS</text>
       <g
-         id="g334"
-         class="io-port">
-        <circle
-           id="circle332"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/gatk_pass_vcf/tool_name"
+         data-port-id="tool_name"
+         id="g474">
+        <g
+           class="io-port"
+           id="g472">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle470" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g342"
-       data-port-id="output_basename"
-       data-connection-id="in/gatk_haplotype_rnaseq/output_basename"
-       transform="translate(-56.277152,-14.03147)"
-       class="port input-port">
       <g
-         id="g340"
-         class="io-port">
-        <circle
-           id="circle338"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/gatk_pass_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g480">
+        <g
+           class="io-port"
+           id="g478">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle476" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g348"
-       data-port-id="dbsnp"
-       data-connection-id="in/gatk_haplotype_rnaseq/dbsnp"
-       transform="translate(-56.277152,14.03147)"
-       class="port input-port">
       <g
-         id="g346"
-         class="io-port">
-        <circle
-           id="circle344"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/gatk_pass_vcf/mode"
+         data-port-id="mode"
+         id="g486">
+        <g
+           class="io-port"
+           id="g484">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle482" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g354"
-       data-port-id="bqsr_bam"
-       data-connection-id="in/gatk_haplotype_rnaseq/bqsr_bam"
-       transform="translate(-43.1024,38.809575)"
-       class="port input-port">
       <g
-         id="g352"
-         class="io-port">
-        <circle
-           id="circle350"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/gatk_pass_vcf/input_vcf"
+         data-port-id="input_vcf"
+         id="g492">
+        <g
+           class="io-port"
+           id="g490">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle488" />
+        </g>
       </g>
-    </g>
-    <g
-       id="g360"
-       data-port-id="hc_called_vcf"
-       data-connection-id="out/gatk_haplotype_rnaseq/hc_called_vcf"
-       transform="translate(58)"
-       class="port output-port">
       <g
-         id="g358"
-         class="io-port">
-        <circle
-           id="circle356"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g410"
-     data-id="gatk_pass_vcf"
-     transform="matrix(0.684971,0,0,0.684971,1647.982,245.62651)"
-     data-connection-id="gatk_pass_vcf"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g376"
-       class="core">
-      <circle
-         id="circle364"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="58"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle366"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="43.5"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg374"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title368">tool2</title>
-        <polygon
-           id="polygon370"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect372"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text378"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,88)">GATK Select PASS</text>
-    <g
-       id="g384"
-       data-port-id="tool_name"
-       data-connection-id="in/gatk_pass_vcf/tool_name"
-       transform="translate(-43.1024,-38.809575)"
-       class="port input-port">
-      <g
-         id="g382"
-         class="io-port">
-        <circle
-           id="circle380"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/gatk_pass_vcf/pass_vcf"
+         data-port-id="pass_vcf"
+         id="g498">
+        <g
+           class="io-port"
+           id="g496">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle494" />
+        </g>
       </g>
     </g>
     <g
-       id="g390"
-       data-port-id="output_basename"
-       data-connection-id="in/gatk_pass_vcf/output_basename"
-       transform="translate(-56.277152,-14.03147)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_splitntrim"
+       transform="translate(837,407)"
+       data-id="gatk_splitntrim"
+       id="g548">
       <g
-         id="g388"
-         class="io-port">
+         class="core"
+         id="g514">
         <circle
-           id="circle386"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle502" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle504" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg512">
+          <title
+             id="title506">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon508" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect510" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text516">GATK Split N Cigar</text>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/gatk_splitntrim/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g522">
+        <g
+           class="io-port"
+           id="g520">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle518" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/gatk_splitntrim/output_basename"
+         data-port-id="output_basename"
+         id="g528">
+        <g
+           class="io-port"
+           id="g526">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle524" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/gatk_splitntrim/interval_bed"
+         data-port-id="interval_bed"
+         id="g534">
+        <g
+           class="io-port"
+           id="g532">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle530" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/gatk_splitntrim/dup_marked_bam"
+         data-port-id="dup_marked_bam"
+         id="g540">
+        <g
+           class="io-port"
+           id="g538">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle536" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/gatk_splitntrim/cigar_n_split_bam"
+         data-port-id="cigar_n_split_bam"
+         id="g546">
+        <g
+           class="io-port"
+           id="g544">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle542" />
+        </g>
       </g>
     </g>
     <g
-       id="g396"
-       data-port-id="mode"
-       data-connection-id="in/gatk_pass_vcf/mode"
-       transform="translate(-56.277152,14.03147)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="merge_hc_vcf"
+       transform="translate(1938,407)"
+       data-id="merge_hc_vcf"
+       id="g596">
       <g
-         id="g394"
-         class="io-port">
+         class="core"
+         id="g562">
         <circle
-           id="circle392"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle550" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle552" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg560">
+          <title
+             id="title554">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon556" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect558" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text564">GAK Merge HC VCF</text>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/merge_hc_vcf/tool_name"
+         data-port-id="tool_name"
+         id="g570">
+        <g
+           class="io-port"
+           id="g568">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle566" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/merge_hc_vcf/reference_dict"
+         data-port-id="reference_dict"
+         id="g576">
+        <g
+           class="io-port"
+           id="g574">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle572" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/merge_hc_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g582">
+        <g
+           class="io-port"
+           id="g580">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle578" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/merge_hc_vcf/input_vcfs"
+         data-port-id="input_vcfs"
+         id="g588">
+        <g
+           class="io-port"
+           id="g586">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle584" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/merge_hc_vcf/merged_vcf"
+         data-port-id="merged_vcf"
+         id="g594">
+        <g
+           class="io-port"
+           id="g592">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle590" />
+        </g>
       </g>
     </g>
     <g
-       id="g402"
-       data-port-id="input_vcf"
-       data-connection-id="in/gatk_pass_vcf/input_vcf"
-       transform="translate(-43.1024,38.809575)"
-       class="port input-port">
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="sambamba_sort_gatk_md_subwf"
+       transform="translate(279,314)"
+       data-id="sambamba_sort_gatk_md_subwf"
+       id="g630">
       <g
-         id="g400"
-         class="io-port">
+         class="core"
+         id="g608">
         <circle
-           id="circle398"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="44"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle598" />
+        <circle
+           cx="0"
+           cy="0"
+           r="33"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle600" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 400.01 399.88"
+           x="-9"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg606">
+          <title
+             id="title602">workflow</title>
+          <path
+             d="m 400,200 a 80,80 0 0 1 -140.33,52.53 l -101.44,50.71 a 80,80 0 1 1 -17.9,-35.77 l 101.44,-50.71 a 80.23,80.23 0 0 1 0,-33.52 L 140.33,132.53 a 79.87,79.87 0 1 1 17.9,-35.77 l 101.44,50.71 A 80,80 0 0 1 400,200 Z"
+             transform="translate(0.01,-0.16)"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path604"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,74)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text610">SAMBAMBA Sort GATK Mark Duplicates</text>
+      <g
+         class="port input-port"
+         transform="translate(-40.40151,-17.427506)"
+         data-connection-id="in/sambamba_sort_gatk_md_subwf/STAR_sorted_genomic_bam"
+         data-port-id="STAR_sorted_genomic_bam"
+         id="g616">
+        <g
+           class="io-port"
+           id="g614">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle612" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-40.40151,17.427506)"
+         data-connection-id="in/sambamba_sort_gatk_md_subwf/pass_thru"
+         data-port-id="pass_thru"
+         id="g622">
+        <g
+           class="io-port"
+           id="g620">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle618" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(44)"
+         data-connection-id="out/sambamba_sort_gatk_md_subwf/sorted_md_bam"
+         data-port-id="sorted_md_bam"
+         id="g628">
+        <g
+           class="io-port"
+           id="g626">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle624" />
+        </g>
       </g>
     </g>
     <g
-       id="g408"
-       data-port-id="pass_vcf"
-       data-connection-id="out/gatk_pass_vcf/pass_vcf"
-       transform="translate(58)"
-       class="port output-port">
-      <g
-         id="g406"
-         class="io-port">
-        <circle
-           id="circle404"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g458"
-     data-id="gatk_splitntrim"
-     transform="matrix(0.684971,0,0,0.684971,508.42345,282.27246)"
-     data-connection-id="gatk_splitntrim"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g424"
-       class="core">
-      <circle
-         id="circle412"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="58"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle414"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="43.5"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg422"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title416">tool2</title>
-        <polygon
-           id="polygon418"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect420"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text426"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,88)">GATK Split N Cigar</text>
-    <g
-       id="g432"
-       data-port-id="reference_fasta"
-       data-connection-id="in/gatk_splitntrim/reference_fasta"
-       transform="translate(-43.1024,-38.809575)"
-       class="port input-port">
-      <g
-         id="g430"
-         class="io-port">
-        <circle
-           id="circle428"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g438"
-       data-port-id="output_basename"
-       data-connection-id="in/gatk_splitntrim/output_basename"
-       transform="translate(-56.277152,-14.03147)"
-       class="port input-port">
-      <g
-         id="g436"
-         class="io-port">
-        <circle
-           id="circle434"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g444"
-       data-port-id="interval_bed"
-       data-connection-id="in/gatk_splitntrim/interval_bed"
-       transform="translate(-56.277152,14.03147)"
-       class="port input-port">
-      <g
-         id="g442"
-         class="io-port">
-        <circle
-           id="circle440"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g450"
-       data-port-id="dup_marked_bam"
-       data-connection-id="in/gatk_splitntrim/dup_marked_bam"
-       transform="translate(-43.1024,38.809575)"
-       class="port input-port">
-      <g
-         id="g448"
-         class="io-port">
-        <circle
-           id="circle446"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g456"
-       data-port-id="cigar_n_split_bam"
-       data-connection-id="out/gatk_splitntrim/cigar_n_split_bam"
-       transform="translate(58)"
-       class="port output-port">
-      <g
-         id="g454"
-         class="io-port">
-        <circle
-           id="circle452"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g506"
-     data-id="merge_hc_vcf"
-     transform="matrix(0.684971,0,0,0.684971,1262.9455,282.27246)"
-     data-connection-id="merge_hc_vcf"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g472"
-       class="core">
-      <circle
-         id="circle460"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="58"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle462"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="43.5"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg470"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title464">tool2</title>
-        <polygon
-           id="polygon466"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect468"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text474"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,88)">GAK Merge HC VCF</text>
-    <g
-       id="g480"
-       data-port-id="tool_name"
-       data-connection-id="in/merge_hc_vcf/tool_name"
-       transform="translate(-43.1024,-38.809575)"
-       class="port input-port">
-      <g
-         id="g478"
-         class="io-port">
-        <circle
-           id="circle476"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g486"
-       data-port-id="reference_dict"
-       data-connection-id="in/merge_hc_vcf/reference_dict"
-       transform="translate(-56.277152,-14.03147)"
-       class="port input-port">
-      <g
-         id="g484"
-         class="io-port">
-        <circle
-           id="circle482"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g492"
-       data-port-id="output_basename"
-       data-connection-id="in/merge_hc_vcf/output_basename"
-       transform="translate(-56.277152,14.03147)"
-       class="port input-port">
-      <g
-         id="g490"
-         class="io-port">
-        <circle
-           id="circle488"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g498"
-       data-port-id="input_vcfs"
-       data-connection-id="in/merge_hc_vcf/input_vcfs"
-       transform="translate(-43.1024,38.809575)"
-       class="port input-port">
-      <g
-         id="g496"
-         class="io-port">
-        <circle
-           id="circle494"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g504"
-       data-port-id="merged_vcf"
-       data-connection-id="out/merge_hc_vcf/merged_vcf"
-       transform="translate(58)"
-       class="port output-port">
-      <g
-         id="g502"
-         class="io-port">
-        <circle
-           id="circle500"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g542"
-     data-id="python_createsequencegroups"
-     transform="matrix(0.684971,0,0,0.684971,276.71386,333.3028)"
-     data-connection-id="python_createsequencegroups"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g520"
-       class="core">
-      <circle
-         id="circle508"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="44"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle510"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="33"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg518"
-         version="1.1"
-         height="15"
-         width="20"
-         y="-8"
-         x="-10"
-         viewBox="0 0 398.39 397.78"
-         class="node-icon">
-        <title
-           id="title512">tool2</title>
-        <polygon
-           id="polygon514"
-           style="fill:#303030;stroke:#303030"
-           points="38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 0,31.57 " />
-        <rect
-           id="rect516"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           height="50"
-           width="200"
-           y="347.78"
-           x="198.39" />
-      </svg>
-    </g>
-    <text
-       id="text522"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,74)">Python Intvl from Dict</text>
-    <g
-       id="g528"
-       data-port-id="ref_dict"
-       data-connection-id="in/python_createsequencegroups/ref_dict"
-       transform="translate(-44)"
-       class="port input-port">
-      <g
-         id="g526"
-         class="io-port">
-        <circle
-           id="circle524"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g534"
-       data-port-id="sequence_intervals_with_unmapped"
-       data-connection-id="out/python_createsequencegroups/sequence_intervals_with_unmapped"
-       transform="translate(40.401509,-17.42751)"
-       class="port output-port">
-      <g
-         id="g532"
-         class="io-port">
-        <circle
-           id="circle530"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g540"
-       data-port-id="sequence_intervals"
-       data-connection-id="out/python_createsequencegroups/sequence_intervals"
-       transform="translate(40.401509,17.42751)"
-       class="port output-port">
-      <g
-         id="g538"
-         class="io-port">
-        <circle
-           id="circle536"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g576"
-     data-id="sambamba_sort_gatk_md_subwf"
-     transform="matrix(0.684971,0,0,0.684971,276.71386,250.42131)"
-     data-connection-id="sambamba_sort_gatk_md_subwf"
-     class="node step  "
-     tabindex="-1">
-    <g
-       id="g554"
-       class="core">
-      <circle
-         id="circle544"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="44"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle546"
-         style="fill:#11a7a7;stroke:none;stroke-width:1px"
-         class="inner"
-         r="33"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg552"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-10"
-         x="-9"
-         viewBox="0 0 400.01 399.88"
-         class="node-icon">
-        <title
-           id="title548">workflow</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path550"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           transform="translate(0.01,-0.16)"
-           d="m 400,200 a 80,80 0 0 1 -140.33,52.53 l -101.44,50.71 a 80,80 0 1 1 -17.9,-35.77 l 101.44,-50.71 a 80.23,80.23 0 0 1 0,-33.52 L 140.33,132.53 a 79.87,79.87 0 1 1 17.9,-35.77 l 101.44,50.71 A 80,80 0 0 1 400,200 Z" />
-      </svg>
-    </g>
-    <text
-       id="text556"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,74)">SAMBAMBA Sort GATK Mark Duplicates</text>
-    <g
-       id="g562"
-       data-port-id="STAR_sorted_genomic_bam"
-       data-connection-id="in/sambamba_sort_gatk_md_subwf/STAR_sorted_genomic_bam"
-       transform="translate(-40.40151,-17.427506)"
-       class="port input-port">
-      <g
-         id="g560"
-         class="io-port">
-        <circle
-           id="circle558"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g568"
-       data-port-id="pass_thru"
-       data-connection-id="in/sambamba_sort_gatk_md_subwf/pass_thru"
-       transform="translate(-40.40151,17.427506)"
-       class="port input-port">
-      <g
-         id="g566"
-         class="io-port">
-        <circle
-           id="circle564"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-    <g
-       id="g574"
-       data-port-id="sorted_md_bam"
-       data-connection-id="out/sambamba_sort_gatk_md_subwf/sorted_md_bam"
-       transform="translate(44)"
-       class="port output-port">
-      <g
-         id="g572"
-         class="io-port">
-        <circle
-           id="circle570"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g602"
-     data-id="STAR_sorted_genomic_bam"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,113.42711)"
-     data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
-     class="node input type-File "
-     tabindex="-1">
-    <g
-       id="g592"
-       class="core">
-      <circle
-         id="circle578"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle580"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg590"
-         version="1.1"
-         height="20"
-         width="20"
-         x="-11"
-         y="-10"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title582">file_input</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path584"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z" />
-        <polygon
-           id="polygon586"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon588"
-           style="fill:#303030;stroke:#303030"
-           points="176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 " />
-      </svg>
-    </g>
-    <text
-       id="text594"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">STAR_sorted_genomic_bam</text>
-    <g
-       id="g600"
-       data-port-id="STAR_sorted_genomic_bam"
+       tabindex="-1"
+       class="node input type-File "
        data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
-       transform="translate(37)"
-       class="port output-port">
+       transform="translate(0,107)"
+       data-id="STAR_sorted_genomic_bam"
+       id="g656">
       <g
-         id="g598"
-         class="io-port">
+         class="core"
+         id="g646">
         <circle
-           id="circle596"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle632" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle634" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg644">
+          <title
+             id="title636">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path638"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon640" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon642" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text648">STAR_sorted_genomic_bam</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+         data-port-id="STAR_sorted_genomic_bam"
+         id="g654">
+        <g
+           class="io-port"
+           id="g652">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle650" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g628"
-     data-id="dbsnp_vcf"
-     transform="matrix(0.684971,0,0,0.684971,875.0835,333.3028)"
-     data-connection-id="out/dbsnp_vcf/dbsnp_vcf"
-     class="node input type-File "
-     tabindex="-1">
     <g
-       id="g618"
-       class="core">
-      <circle
-         id="circle604"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle606"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg616"
-         version="1.1"
-         height="20"
-         width="20"
-         x="-11"
-         y="-10"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title608">file_input</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path610"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z" />
-        <polygon
-           id="polygon612"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon614"
-           style="fill:#303030;stroke:#303030"
-           points="176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 " />
-      </svg>
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/call_bed_file/call_bed_file"
+       transform="translate(0,856)"
+       data-id="call_bed_file"
+       id="g682">
+      <g
+         class="core"
+         id="g672">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle658" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle660" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg670">
+          <title
+             id="title662">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path664"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon666" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon668" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text674">call_bed_file</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/call_bed_file/call_bed_file"
+         data-port-id="call_bed_file"
+         id="g680">
+        <g
+           class="io-port"
+           id="g678">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle676" />
+        </g>
+      </g>
     </g>
-    <text
-       id="text620"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">dbsnp_vcf</text>
     <g
-       id="g626"
-       data-port-id="dbsnp_vcf"
+       tabindex="-1"
+       class="node input type-File "
        data-connection-id="out/dbsnp_vcf/dbsnp_vcf"
-       transform="translate(37)"
-       class="port output-port">
+       transform="translate(1372,481)"
+       data-id="dbsnp_vcf"
+       id="g708">
       <g
-         id="g624"
-         class="io-port">
+         class="core"
+         id="g698">
         <circle
-           id="circle622"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle684" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle686" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg696">
+          <title
+             id="title688">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path690"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon692" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon694" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text700">dbsnp_vcf</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/dbsnp_vcf/dbsnp_vcf"
+         data-port-id="dbsnp_vcf"
+         id="g706">
+        <g
+           class="io-port"
+           id="g704">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle702" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g654"
-     data-id="knownsites"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,553.17849)"
-     data-connection-id="out/knownsites/knownsites"
-     class="node input type-array items-File"
-     tabindex="-1">
     <g
-       id="g644"
-       class="core">
-      <circle
-         id="circle630"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle632"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg642"
-         version="1.1"
-         height="20"
-         width="20"
-         x="-11"
-         y="-10"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title634">file_input</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path636"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z" />
-        <polygon
-           id="polygon638"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon640"
-           style="fill:#303030;stroke:#303030"
-           points="176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 " />
-      </svg>
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/exome_flag/exome_flag"
+       transform="translate(279,428)"
+       data-id="exome_flag"
+       id="g735">
+      <g
+         class="core"
+         id="g725">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle710" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle712" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg723">
+          <title
+             id="title714">type_input</title>
+          <g
+             id="input">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path716"
+               inkscape:connector-curvature="0" />
+            <g
+               id="Layer_22"
+               data-name="Layer 22">
+              <g
+                 id="Layer_9_copy_4"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon718" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text727">exome_flag</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/exome_flag/exome_flag"
+         data-port-id="exome_flag"
+         id="g733">
+        <g
+           class="io-port"
+           id="g731">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle729" />
+        </g>
+      </g>
     </g>
-    <text
-       id="text646"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">knownsites</text>
     <g
-       id="g652"
-       data-port-id="knownsites"
+       tabindex="-1"
+       class="node input type-array items-File"
        data-connection-id="out/knownsites/knownsites"
-       transform="translate(37)"
-       class="port output-port">
+       transform="translate(0,749)"
+       data-id="knownsites"
+       id="g761">
       <g
-         id="g650"
-         class="io-port">
+         class="core"
+         id="g751">
         <circle
-           id="circle648"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle737" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle739" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg749">
+          <title
+             id="title741">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path743"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon745" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon747" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text753">knownsites</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/knownsites/knownsites"
+         data-port-id="knownsites"
+         id="g759">
+        <g
+           class="io-port"
+           id="g757">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle755" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g681"
-     data-id="mode"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,479.88659)"
-     data-connection-id="out/mode/mode"
-     class="node input type-enum "
-     tabindex="-1">
     <g
-       id="g671"
-       class="core">
-      <circle
-         id="circle656"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle658"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg669"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-10"
-         x="-11"
-         viewBox="0 0 499 365"
-         class="node-icon">
-        <title
-           id="title660">type_input</title>
-        <g
-           id="input">
-          <path
-             inkscape:connector-curvature="0"
-             id="path662"
-             style="fill:#303030;stroke:#303030;stroke-width:3px"
-             transform="translate(0,-68)"
-             d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z" />
-          <g
-             data-name="Layer 22"
-             id="Layer_22">
-            <g
-               data-name="Layer 9 copy 4"
-               id="Layer_9_copy_4">
-              <polygon
-                 id="polygon664"
-                 style="fill:#303030;stroke:#303030"
-                 points="176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 " />
-            </g>
-          </g>
-        </g>
-      </svg>
-    </g>
-    <text
-       id="text673"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">mode</text>
-    <g
-       id="g679"
-       data-port-id="mode"
+       tabindex="-1"
+       class="node input type-enum "
        data-connection-id="out/mode/mode"
-       transform="translate(37)"
-       class="port output-port">
+       transform="translate(0,642)"
+       data-id="mode"
+       id="g791">
       <g
-         id="g677"
-         class="io-port">
+         class="core"
+         id="g781">
         <circle
-           id="circle675"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g711"
-     data-id="output_basename"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,406.59469)"
-     data-connection-id="out/output_basename/output_basename"
-     class="node input type-string "
-     tabindex="-1">
-    <g
-       id="g701"
-       class="core">
-      <circle
-         id="circle683"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle685"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg699"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-10"
-         x="-11"
-         viewBox="0 0 499 365"
-         class="node-icon">
-        <title
-           id="title687">type_input</title>
-        <g
-           id="g697">
-          <path
-             inkscape:connector-curvature="0"
-             id="path689"
-             style="fill:#303030;stroke:#303030;stroke-width:3px"
-             transform="translate(0,-68)"
-             d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle763" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle765" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg779">
+          <title
+             id="title767">type_input</title>
           <g
-             data-name="Layer 22"
-             id="g695">
+             id="g777">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path769"
+               inkscape:connector-curvature="0" />
             <g
-               data-name="Layer 9 copy 4"
-               id="g693">
-              <polygon
-                 id="polygon691"
-                 style="fill:#303030;stroke:#303030"
-                 points="176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 " />
+               id="g775"
+               data-name="Layer 22">
+              <g
+                 id="g773"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon771" />
+              </g>
             </g>
           </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text783">mode</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/mode/mode"
+         data-port-id="mode"
+         id="g789">
+        <g
+           class="io-port"
+           id="g787">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle785" />
         </g>
-      </svg>
+      </g>
     </g>
-    <text
-       id="text703"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">output_basename</text>
     <g
-       id="g709"
-       data-port-id="output_basename"
+       tabindex="-1"
+       class="node input type-string "
        data-connection-id="out/output_basename/output_basename"
-       transform="translate(37)"
-       class="port output-port">
+       transform="translate(0,535)"
+       data-id="output_basename"
+       id="g821">
       <g
-         id="g707"
-         class="io-port">
+         class="core"
+         id="g811">
         <circle
-           id="circle705"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g741"
-     data-id="pass_thru"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,333.3028)"
-     data-connection-id="out/pass_thru/pass_thru"
-     class="node input type-boolean "
-     tabindex="-1">
-    <g
-       id="g731"
-       class="core">
-      <circle
-         id="circle713"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle715"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg729"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-10"
-         x="-11"
-         viewBox="0 0 499 365"
-         class="node-icon">
-        <title
-           id="title717">type_input</title>
-        <g
-           id="g727">
-          <path
-             inkscape:connector-curvature="0"
-             id="path719"
-             style="fill:#303030;stroke:#303030;stroke-width:3px"
-             transform="translate(0,-68)"
-             d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle793" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle795" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg809">
+          <title
+             id="title797">type_input</title>
           <g
-             data-name="Layer 22"
-             id="g725">
-            <g
-               data-name="Layer 9 copy 4"
-               id="g723">
-              <polygon
-                 id="polygon721"
-                 style="fill:#303030;stroke:#303030"
-                 points="176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 " />
-            </g>
-          </g>
-        </g>
-      </svg>
-    </g>
-    <text
-       id="text733"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">pass_thru</text>
-    <g
-       id="g739"
-       data-port-id="pass_thru"
-       data-connection-id="out/pass_thru/pass_thru"
-       transform="translate(37)"
-       class="port output-port">
-      <g
-         id="g737"
-         class="io-port">
-        <circle
-           id="circle735"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g767"
-     data-id="reference_dict"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,260.0109)"
-     data-connection-id="out/reference_dict/reference_dict"
-     class="node input type-File "
-     tabindex="-1">
-    <g
-       id="g757"
-       class="core">
-      <circle
-         id="circle743"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle745"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg755"
-         version="1.1"
-         height="20"
-         width="20"
-         x="-11"
-         y="-10"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title747">file_input</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path749"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z" />
-        <polygon
-           id="polygon751"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon753"
-           style="fill:#303030;stroke:#303030"
-           points="176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 " />
-      </svg>
-    </g>
-    <text
-       id="text759"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">reference_dict</text>
-    <g
-       id="g765"
-       data-port-id="reference_dict"
-       data-connection-id="out/reference_dict/reference_dict"
-       transform="translate(37)"
-       class="port output-port">
-      <g
-         id="g763"
-         class="io-port">
-        <circle
-           id="circle761"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g793"
-     data-id="reference_fasta"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,186.719)"
-     data-connection-id="out/reference_fasta/reference_fasta"
-     class="node input type-File "
-     tabindex="-1">
-    <g
-       id="g783"
-       class="core">
-      <circle
-         id="circle769"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle771"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg781"
-         version="1.1"
-         height="20"
-         width="20"
-         x="-11"
-         y="-10"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title773">file_input</title>
-        <path
-           inkscape:connector-curvature="0"
-           id="path775"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z" />
-        <polygon
-           id="polygon777"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon779"
-           style="fill:#303030;stroke:#303030"
-           points="176.68,344.68 141.32,309.32 194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 " />
-      </svg>
-    </g>
-    <text
-       id="text785"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">reference_fasta</text>
-    <g
-       id="g791"
-       data-port-id="reference_fasta"
-       data-connection-id="out/reference_fasta/reference_fasta"
-       transform="translate(37)"
-       class="port output-port">
-      <g
-         id="g789"
-         class="io-port">
-        <circle
-           id="circle787"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
-           cy="0"
-           cx="0" />
-      </g>
-    </g>
-  </g>
-  <g
-     id="g823"
-     data-id="tool_name"
-     data-connection-id="out/tool_name/tool_name"
-     class="node input type-string "
-     tabindex="-1"
-     transform="matrix(0.684971,0,0,0.684971,85.392902,40.135206)">
-    <g
-       id="g813"
-       class="core">
-      <circle
-         id="circle795"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle797"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg811"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-10"
-         x="-11"
-         viewBox="0 0 499 365"
-         class="node-icon">
-        <title
-           id="title799">type_input</title>
-        <g
-           id="g809">
-          <path
-             inkscape:connector-curvature="0"
-             id="path801"
-             style="fill:#303030;stroke:#303030;stroke-width:3px"
-             transform="translate(0,-68)"
-             d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z" />
-          <g
-             data-name="Layer 22"
              id="g807">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path799"
+               inkscape:connector-curvature="0" />
             <g
-               data-name="Layer 9 copy 4"
-               id="g805">
-              <polygon
-                 id="polygon803"
-                 style="fill:#303030;stroke:#303030"
-                 points="176.68,295.68 141.32,260.32 194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 " />
+               id="g805"
+               data-name="Layer 22">
+              <g
+                 id="g803"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon801" />
+              </g>
             </g>
           </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text813">output_basename</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/output_basename/output_basename"
+         data-port-id="output_basename"
+         id="g819">
+        <g
+           class="io-port"
+           id="g817">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle815" />
         </g>
-      </svg>
+      </g>
     </g>
-    <text
-       id="text815"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">tool_name</text>
     <g
-       id="g821"
-       data-port-id="tool_name"
+       tabindex="-1"
+       class="node input type-boolean "
+       data-connection-id="out/pass_thru/pass_thru"
+       transform="translate(0,428)"
+       data-id="pass_thru"
+       id="g851">
+      <g
+         class="core"
+         id="g841">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle823" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle825" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg839">
+          <title
+             id="title827">type_input</title>
+          <g
+             id="g837">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path829"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g835"
+               data-name="Layer 22">
+              <g
+                 id="g833"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon831" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text843">pass_thru</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/pass_thru/pass_thru"
+         data-port-id="pass_thru"
+         id="g849">
+        <g
+           class="io-port"
+           id="g847">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle845" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/reference_dict/reference_dict"
+       transform="translate(0,321)"
+       data-id="reference_dict"
+       id="g877">
+      <g
+         class="core"
+         id="g867">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle853" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle855" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg865">
+          <title
+             id="title857">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path859"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon861" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon863" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text869">reference_dict</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/reference_dict/reference_dict"
+         data-port-id="reference_dict"
+         id="g875">
+        <g
+           class="io-port"
+           id="g873">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle871" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/reference_fasta/reference_fasta"
+       transform="translate(0,214)"
+       data-id="reference_fasta"
+       id="g903">
+      <g
+         class="core"
+         id="g893">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle879" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle881" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg891">
+          <title
+             id="title883">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path885"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon887" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon889" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text895">reference_fasta</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/reference_fasta/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g901">
+        <g
+           class="io-port"
+           id="g899">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle897" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
        data-connection-id="out/tool_name/tool_name"
-       transform="translate(37)"
-       class="port output-port">
+       data-id="tool_name"
+       id="g933">
       <g
-         id="g819"
-         class="io-port">
+         class="core"
+         id="g923">
         <circle
-           id="circle817"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle905" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle907" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg921">
+          <title
+             id="title909">type_input</title>
+          <g
+             id="g919">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path911"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g917"
+               data-name="Layer 22">
+              <g
+                 id="g915"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon913" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text925">tool_name</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/tool_name/tool_name"
+         data-port-id="tool_name"
+         id="g931">
+        <g
+           class="io-port"
+           id="g929">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle927" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g849"
-     data-id="filtered_vcf"
-     transform="matrix(0.684971,0,0,0.684971,1647.982,333.3028)"
-     data-connection-id="in/filtered_vcf/filtered_vcf"
-     class="node output type-File "
-     tabindex="-1">
     <g
-       id="g839"
-       class="core">
-      <circle
-         id="circle825"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle827"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg837"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-11"
-         x="-7"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title829">file_output</title>
-        <polygon
-           id="polygon831"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon833"
-           style="fill:#303030;stroke:#303030"
-           points="385.32,344.68 349.96,309.32 403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 " />
-        <path
-           inkscape:connector-curvature="0"
-           id="path835"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z" />
-      </svg>
-    </g>
-    <text
-       id="text841"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">filtered_vcf</text>
-    <g
-       id="g847"
-       data-port-id="filtered_vcf"
+       tabindex="-1"
+       class="node output type-File "
        data-connection-id="in/filtered_vcf/filtered_vcf"
-       transform="translate(-37)"
-       class="port input-port">
+       transform="translate(2500,481)"
+       data-id="filtered_vcf"
+       id="g959">
       <g
-         id="g845"
-         class="io-port">
+         class="core"
+         id="g949">
         <circle
-           id="circle843"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle935" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle937" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg947">
+          <title
+             id="title939">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon941" />
+          <polygon
+             points="403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon943" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path945"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text951">filtered_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/filtered_vcf/filtered_vcf"
+         data-port-id="filtered_vcf"
+         id="g957">
+        <g
+           class="io-port"
+           id="g955">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle953" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g875"
-     data-id="haplotype_called__vcf"
-     transform="matrix(0.684971,0,0,0.684971,1461.2311,250.42131)"
-     data-connection-id="in/haplotype_called__vcf/haplotype_called__vcf"
-     class="node output type-File "
-     tabindex="-1">
     <g
-       id="g865"
-       class="core">
-      <circle
-         id="circle851"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle853"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg863"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-11"
-         x="-7"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title855">file_output</title>
-        <polygon
-           id="polygon857"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon859"
-           style="fill:#303030;stroke:#303030"
-           points="385.32,344.68 349.96,309.32 403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 " />
-        <path
-           inkscape:connector-curvature="0"
-           id="path861"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z" />
-      </svg>
-    </g>
-    <text
-       id="text867"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">haplotype_called__vcf</text>
-    <g
-       id="g873"
-       data-port-id="haplotype_called__vcf"
+       tabindex="-1"
+       class="node output type-File "
        data-connection-id="in/haplotype_called__vcf/haplotype_called__vcf"
-       transform="translate(-37)"
-       class="port input-port">
+       transform="translate(2228,360)"
+       data-id="haplotype_called__vcf"
+       id="g985">
       <g
-         id="g871"
-         class="io-port">
+         class="core"
+         id="g975">
         <circle
-           id="circle869"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle961" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle963" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg973">
+          <title
+             id="title965">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon967" />
+          <polygon
+             points="403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon969" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path971"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text977">haplotype_called__vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/haplotype_called__vcf/haplotype_called__vcf"
+         data-port-id="haplotype_called__vcf"
+         id="g983">
+        <g
+           class="io-port"
+           id="g981">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle979" />
+        </g>
       </g>
     </g>
-  </g>
-  <g
-     id="g901"
-     data-id="pass_vcf"
-     transform="matrix(0.684971,0,0,0.684971,1836.0146,296.65685)"
-     data-connection-id="in/pass_vcf/pass_vcf"
-     class="node output type-File "
-     tabindex="-1">
     <g
-       id="g891"
-       class="core">
-      <circle
-         id="circle877"
-         style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
-         class="outer"
-         r="37"
-         cy="0"
-         cx="0" />
-      <circle
-         id="circle879"
-         style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-         class="inner"
-         r="27.75"
-         cy="0"
-         cx="0" />
-      <svg
-         id="svg889"
-         version="1.1"
-         height="20"
-         width="20"
-         y="-11"
-         x="-7"
-         viewBox="0 0 499 462.86"
-         class="node-icon">
-        <title
-           id="title881">file_output</title>
-        <polygon
-           id="polygon883"
-           style="fill:#303030;stroke:#303030"
-           points="387.81,1.75 387.12,1.06 387.81,1.06 " />
-        <polygon
-           id="polygon885"
-           style="fill:#303030;stroke:#303030"
-           points="385.32,344.68 349.96,309.32 403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 " />
-        <path
-           inkscape:connector-curvature="0"
-           id="path887"
-           style="fill:#303030;stroke:#303030;stroke-width:3px"
-           d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z" />
-      </svg>
-    </g>
-    <text
-       id="text893"
-       style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
-       class="title label"
-       transform="matrix(1.22996,0,0,1.22996,0,67)">pass_vcf</text>
-    <g
-       id="g899"
-       data-port-id="pass_vcf"
+       tabindex="-1"
+       class="node output type-File "
        data-connection-id="in/pass_vcf/pass_vcf"
-       transform="translate(-37)"
-       class="port input-port">
+       transform="translate(2775,428)"
+       data-id="pass_vcf"
+       id="g1011">
       <g
-         id="g897"
-         class="io-port">
+         class="core"
+         id="g1001">
         <circle
-           id="circle895"
-           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
-           class="port-handle"
-           r="7"
+           cx="0"
            cy="0"
-           cx="0" />
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle987" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle989" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg999">
+          <title
+             id="title991">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon993" />
+          <polygon
+             points="403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon995" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path997"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.66808,0,0,1.66808,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text1003">pass_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/pass_vcf/pass_vcf"
+         data-port-id="pass_vcf"
+         id="g1009">
+        <g
+           class="io-port"
+           id="g1007">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle1005" />
+        </g>
       </g>
     </g>
   </g>

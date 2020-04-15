@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="cwl-workflow yLlSNA __plugin-port-drag __plugin-validate __plugin-selection __plugin-update"
+   ct-click=""
+   tabindex="-1"
+   ct-drop-enabled=""
+   ct-drop-zones="graph-editor"
+   version="1.1"
+   id="svg747"
+   sodipodi:docname="d3b_vardict_rnaseq_snv_wf.cwl.svg"
+   width="1286.4407"
+   height="525.42371"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata753">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs751" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2581"
+     inkscape:window-height="1579"
+     id="namedview749"
+     showgrid="false"
+     inkscape:zoom="0.834386"
+     inkscape:cx="588.98305"
+     inkscape:cy="473.72879"
+     inkscape:window-x="653"
+     inkscape:window-y="136"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg747" />
+  <rect
+     x="-3.3898306"
+     y="0.26464605"
+     width="100.26351%"
+     height="100.11194%"
+     class="pan-handle"
+     style="fill:#303030;stroke:none;stroke-width:1.00187695px"
+     id="rect2" />
+  <g
+     class="workflow"
+     transform="matrix(0.745919,0,0,0.745919,58.314771,58.667074)"
+     id="g745">
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="call_bed_file"
+       data-destination-port="input_bed_gtf"
+       data-source-node="call_bed_file"
+       data-source-connection="out/call_bed_file/call_bed_file"
+       data-destination-connection="in/bedtools_gtf_to_bed/input_bed_gtf"
+       data-destination-node="bedtools_gtf_to_bed"
+       id="g8">
+      <path
+         class="sub-edge outer"
+         d="M 37,535 C 87.421875,535 87.421875,267.5 137.84375,267.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path4"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,535 C 87.421875,535 87.421875,267.5 137.84375,267.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path6"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="merged_vcf"
+       data-destination-port="input_vcf"
+       data-source-node="sort_merge_vardict_vcf"
+       data-source-connection="out/sort_merge_vardict_vcf/merged_vcf"
+       data-destination-connection="in/gatk_pass_vcf/input_vcf"
+       data-destination-node="gatk_pass_vcf"
+       id="g14">
+      <path
+         class="sub-edge outer"
+         d="m 1066.2219,253.5 c 91.5504,0 91.5504,106.30957 183.1007,106.30957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path10"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1066.2219,253.5 c 91.5504,0 91.5504,106.30957 183.1007,106.30957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path12"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="mode"
+       data-destination-port="mode"
+       data-source-node="mode"
+       data-source-connection="out/mode/mode"
+       data-destination-connection="in/gatk_pass_vcf/mode"
+       data-destination-node="gatk_pass_vcf"
+       id="g20">
+      <path
+         class="sub-edge outer"
+         d="m 37,428 c 599.57395,0 599.57395,-92.96853 1199.1479,-92.96853"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path16"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,428 c 599.57395,0 599.57395,-92.96853 1199.1479,-92.96853"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path18"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/gatk_pass_vcf/output_basename"
+       data-destination-node="gatk_pass_vcf"
+       id="g26">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,535 c 408.2302,0 408.2302,-228.03147 816.4604,-228.03147"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path22"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,535 c 408.2302,0 408.2302,-228.03147 816.4604,-228.03147"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path24"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="tool_name"
+       data-destination-port="tool_name"
+       data-source-node="tool_name"
+       data-source-connection="out/tool_name/tool_name"
+       data-destination-connection="in/gatk_pass_vcf/tool_name"
+       data-destination-node="gatk_pass_vcf"
+       id="g32">
+      <path
+         class="sub-edge outer"
+         d="m 37,321 c 606.16132,0 606.16132,-38.80957 1212.3226,-38.80957"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path28"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,321 c 606.16132,0 606.16132,-38.80957 1212.3226,-38.80957"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path30"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="run_bed"
+       data-destination-port="wgs_bed_file"
+       data-source-node="bedtools_gtf_to_bed"
+       data-source-connection="out/bedtools_gtf_to_bed/run_bed"
+       data-destination-connection="in/python_vardict_interval_split/wgs_bed_file"
+       data-destination-node="python_vardict_interval_split"
+       id="g38">
+      <path
+         class="sub-edge outer"
+         d="m 211.84375,267.5 c 66.92187,0 66.92187,53.5 133.84375,53.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path34"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 211.84375,267.5 c 66.92187,0 66.92187,53.5 133.84375,53.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path36"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="vardict_vcf"
+       data-destination-port="input_vcfs"
+       data-source-node="vardict"
+       data-source-connection="out/vardict/vardict_vcf"
+       data-destination-connection="in/sort_merge_vardict_vcf/input_vcfs"
+       data-destination-node="sort_merge_vardict_vcf"
+       id="g44">
+      <path
+         class="sub-edge outer"
+         d="m 755,158 c 109.22256,0 109.22256,124.7524 218.44511,124.7524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path40"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 755,158 c 109.22256,0 109.22256,124.7524 218.44511,124.7524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path42"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/sort_merge_vardict_vcf/output_basename"
+       data-destination-node="sort_merge_vardict_vcf"
+       id="g50">
+      <path
+         class="sub-edge outer"
+         d="M 419.6875,535 C 691.95468,535 691.95468,253.5 964.22186,253.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path46"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 419.6875,535 C 691.95468,535 691.95468,253.5 964.22186,253.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path48"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_dict"
+       data-destination-port="reference_dict"
+       data-source-node="reference_dict"
+       data-source-connection="out/reference_dict/reference_dict"
+       data-destination-connection="in/sort_merge_vardict_vcf/reference_dict"
+       data-destination-node="sort_merge_vardict_vcf"
+       id="g56">
+      <path
+         class="sub-edge outer"
+         d="m 699,321 c 137.22256,0 137.22256,-96.7524 274.44511,-96.7524"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path52"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 699,321 c 137.22256,0 137.22256,-96.7524 274.44511,-96.7524"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path54"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge __validate-invalid"
+       data-source-port="split_intervals_bed"
+       data-destination-port="bed"
+       data-source-node="python_vardict_interval_split"
+       data-source-connection="out/python_vardict_interval_split/split_intervals_bed"
+       data-destination-connection="in/vardict/bed"
+       data-destination-node="vardict"
+       id="g62">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,321 c 95.15378,0 95.15378,-85.89951 190.30756,-85.89951"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path58"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,321 c 95.15378,0 95.15378,-85.89951 190.30756,-85.89951"
+         style="fill:none;stroke:#f89406;stroke-width:2px"
+         id="path60"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="vardict_cpus"
+       data-destination-port="cpus"
+       data-source-node="vardict_cpus"
+       data-source-connection="out/vardict_cpus/vardict_cpus"
+       data-destination-connection="in/vardict/cpus"
+       data-destination-node="vardict"
+       id="g68">
+      <path
+         class="sub-edge outer"
+         d="m 37,214 c 277.94376,0 277.94376,6.22915 555.88753,6.22915"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path64"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,214 c 277.94376,0 277.94376,6.22915 555.88753,6.22915"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path66"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="STAR_sorted_genomic_bam"
+       data-destination-port="input_bam"
+       data-source-node="STAR_sorted_genomic_bam"
+       data-source-connection="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+       data-destination-connection="in/vardict/input_bam"
+       data-destination-node="vardict"
+       id="g74">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,0 c 80.09919,0 80.09919,201.66085 160.19837,201.66085"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path70"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,0 c 80.09919,0 80.09919,201.66085 160.19837,201.66085"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path72"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="sample_name"
+       data-destination-port="input_name"
+       data-source-node="sample_name"
+       data-source-connection="out/sample_name/sample_name"
+       data-destination-connection="in/vardict/input_name"
+       data-destination-node="vardict"
+       id="g80">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,107 c 76.0375,0 76.0375,73.49874 152.075,73.49874"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path76"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,107 c 76.0375,0 76.0375,73.49874 152.075,73.49874"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path78"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="vardict_min_vaf"
+       data-destination-port="min_vaf"
+       data-source-node="vardict_min_vaf"
+       data-source-connection="out/vardict_min_vaf/vardict_min_vaf"
+       data-destination-connection="in/vardict/min_vaf"
+       data-destination-node="vardict"
+       id="g86">
+      <path
+         class="sub-edge outer"
+         d="m 37,107 c 266,0 266,51 532,51"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path82"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 37,107 c 266,0 266,51 532,51"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path84"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="output_basename"
+       data-destination-port="output_basename"
+       data-source-node="output_basename"
+       data-source-connection="out/output_basename/output_basename"
+       data-destination-connection="in/vardict/output_basename"
+       data-destination-node="vardict"
+       id="g92">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,535 c 76.0375,0 76.0375,-399.49874 152.075,-399.49874"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path88"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,535 c 76.0375,0 76.0375,-399.49874 152.075,-399.49874"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path90"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="padding"
+       data-destination-port="padding"
+       data-source-node="padding"
+       data-source-connection="out/padding/padding"
+       data-destination-connection="in/vardict/padding"
+       data-destination-node="vardict"
+       id="g98">
+      <path
+         class="sub-edge outer"
+         d="m 419.6875,428 c 80.09919,0 80.09919,-313.66085 160.19837,-313.66085"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path94"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 419.6875,428 c 80.09919,0 80.09919,-313.66085 160.19837,-313.66085"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path96"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="vardict_ram"
+       data-destination-port="ram"
+       data-source-node="vardict_ram"
+       data-source-connection="out/vardict_ram/vardict_ram"
+       data-destination-connection="in/vardict/ram"
+       data-destination-node="vardict"
+       id="g104">
+      <path
+         class="sub-edge outer"
+         d="M 37,0 C 314.94376,0 314.94376,95.770855 592.88753,95.770855"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path100"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 37,0 C 314.94376,0 314.94376,95.770855 592.88753,95.770855"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path102"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="reference_fasta"
+       data-destination-port="reference"
+       data-source-node="reference_fasta"
+       data-source-connection="out/reference_fasta/reference_fasta"
+       data-destination-connection="in/vardict/reference"
+       data-destination-node="vardict"
+       id="g110">
+      <path
+         class="sub-edge outer"
+         d="M 419.6875,214 C 514.84128,214 514.84128,80.899506 609.99506,80.899506"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path106"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="M 419.6875,214 C 514.84128,214 514.84128,80.899506 609.99506,80.899506"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path108"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="pass_vcf"
+       data-destination-port="vardict_pass_vcf"
+       data-source-node="gatk_pass_vcf"
+       data-source-connection="out/gatk_pass_vcf/pass_vcf"
+       data-destination-connection="in/vardict_pass_vcf/vardict_pass_vcf"
+       data-destination-node="vardict_pass_vcf"
+       id="g116">
+      <path
+         class="sub-edge outer"
+         d="m 1350.425,321 c 89.7558,0 89.7558,-53.5 179.5115,-53.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path112"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1350.425,321 c 89.7558,0 89.7558,-53.5 179.5115,-53.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path114"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="edge "
+       data-source-port="merged_vcf"
+       data-destination-port="vardict_prepass_vcf"
+       data-source-node="sort_merge_vardict_vcf"
+       data-source-connection="out/sort_merge_vardict_vcf/merged_vcf"
+       data-destination-connection="in/vardict_prepass_vcf/vardict_prepass_vcf"
+       data-destination-node="vardict_prepass_vcf"
+       id="g122">
+      <path
+         class="sub-edge outer"
+         d="m 1066.2219,253.5 c 94.6016,0 94.6016,-60.5 189.2031,-60.5"
+         style="fill:none;stroke:#303030;stroke-width:7px"
+         id="path118"
+         inkscape:connector-curvature="0" />
+      <path
+         class="sub-edge inner"
+         d="m 1066.2219,253.5 c 94.6016,0 94.6016,-60.5 189.2031,-60.5"
+         style="fill:none;stroke:#9a9a9a;stroke-width:2px"
+         id="path120"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="bedtools_gtf_to_bed"
+       transform="translate(174.84375,267.5)"
+       data-id="bedtools_gtf_to_bed"
+       id="g152">
+      <g
+         class="core"
+         id="g136">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle124" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle126" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg134">
+          <title
+             id="title128">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon130" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect132" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text138">bedtools_gtf_to_bed</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/bedtools_gtf_to_bed/input_bed_gtf"
+         data-port-id="input_bed_gtf"
+         id="g144">
+        <g
+           class="io-port"
+           id="g142">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle140" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/bedtools_gtf_to_bed/run_bed"
+         data-port-id="run_bed"
+         id="g150">
+        <g
+           class="io-port"
+           id="g148">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle146" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="gatk_pass_vcf"
+       transform="translate(1292.425,321)"
+       data-id="gatk_pass_vcf"
+       id="g200">
+      <g
+         class="core"
+         id="g166">
+        <circle
+           cx="0"
+           cy="0"
+           r="58"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle154" />
+        <circle
+           cx="0"
+           cy="0"
+           r="43.5"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle156" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg164">
+          <title
+             id="title158">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon160" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect162" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,88)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text168">GATK Select PASS</text>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,-38.809575)"
+         data-connection-id="in/gatk_pass_vcf/tool_name"
+         data-port-id="tool_name"
+         id="g174">
+        <g
+           class="io-port"
+           id="g172">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle170" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,-14.03147)"
+         data-connection-id="in/gatk_pass_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g180">
+        <g
+           class="io-port"
+           id="g178">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle176" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-56.277152,14.03147)"
+         data-connection-id="in/gatk_pass_vcf/mode"
+         data-port-id="mode"
+         id="g186">
+        <g
+           class="io-port"
+           id="g184">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle182" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-43.1024,38.809575)"
+         data-connection-id="in/gatk_pass_vcf/input_vcf"
+         data-port-id="input_vcf"
+         id="g192">
+        <g
+           class="io-port"
+           id="g190">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle188" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(58)"
+         data-connection-id="out/gatk_pass_vcf/pass_vcf"
+         data-port-id="pass_vcf"
+         id="g198">
+        <g
+           class="io-port"
+           id="g196">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle194" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="python_vardict_interval_split"
+       transform="translate(382.6875,321)"
+       data-id="python_vardict_interval_split"
+       id="g230">
+      <g
+         class="core"
+         id="g214">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle202" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle204" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg212">
+          <title
+             id="title206">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon208" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect210" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text216">Create intervals for VarDict</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/python_vardict_interval_split/wgs_bed_file"
+         data-port-id="wgs_bed_file"
+         id="g222">
+        <g
+           class="io-port"
+           id="g220">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle218" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/python_vardict_interval_split/split_intervals_bed"
+         data-port-id="split_intervals_bed"
+         id="g228">
+        <g
+           class="io-port"
+           id="g226">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle224" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="sort_merge_vardict_vcf"
+       transform="translate(1015.2219,253.5)"
+       data-id="sort_merge_vardict_vcf"
+       id="g272">
+      <g
+         class="core"
+         id="g244">
+        <circle
+           cx="0"
+           cy="0"
+           r="51"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle232" />
+        <circle
+           cx="0"
+           cy="0"
+           r="38.25"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle234" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg242">
+          <title
+             id="title236">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon238" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect240" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,81)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text246">GATK Sort &amp; merge vardict</text>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,-29.252398)"
+         data-connection-id="in/sort_merge_vardict_vcf/reference_dict"
+         data-port-id="reference_dict"
+         id="g252">
+        <g
+           class="io-port"
+           id="g250">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle248" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-51)"
+         data-connection-id="in/sort_merge_vardict_vcf/output_basename"
+         data-port-id="output_basename"
+         id="g258">
+        <g
+           class="io-port"
+           id="g256">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle254" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-41.776754,29.252398)"
+         data-connection-id="in/sort_merge_vardict_vcf/input_vcfs"
+         data-port-id="input_vcfs"
+         id="g264">
+        <g
+           class="io-port"
+           id="g262">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle260" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(51)"
+         data-connection-id="out/sort_merge_vardict_vcf/merged_vcf"
+         data-port-id="merged_vcf"
+         id="g270">
+        <g
+           class="io-port"
+           id="g268">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle266" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+       transform="translate(382.6875)"
+       data-id="STAR_sorted_genomic_bam"
+       id="g298">
+      <g
+         class="core"
+         id="g288">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle274" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle276" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg286">
+          <title
+             id="title278">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path280"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon282" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon284" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text290">STAR_sorted_genomic_bam</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/STAR_sorted_genomic_bam/STAR_sorted_genomic_bam"
+         data-port-id="STAR_sorted_genomic_bam"
+         id="g296">
+        <g
+           class="io-port"
+           id="g294">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle292" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-enum "
+       data-connection-id="out/mode/mode"
+       transform="translate(0,428)"
+       data-id="mode"
+       id="g325">
+      <g
+         class="core"
+         id="g315">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle300" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle302" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg313">
+          <title
+             id="title304">type_input</title>
+          <g
+             id="input">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path306"
+               inkscape:connector-curvature="0" />
+            <g
+               id="Layer_22"
+               data-name="Layer 22">
+              <g
+                 id="Layer_9_copy_4"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon308" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text317">mode</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/mode/mode"
+         data-port-id="mode"
+         id="g323">
+        <g
+           class="io-port"
+           id="g321">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle319" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/output_basename/output_basename"
+       transform="translate(382.6875,535)"
+       data-id="output_basename"
+       id="g355">
+      <g
+         class="core"
+         id="g345">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle327" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle329" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg343">
+          <title
+             id="title331">type_input</title>
+          <g
+             id="g341">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path333"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g339"
+               data-name="Layer 22">
+              <g
+                 id="g337"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon335" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text347">output_basename</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/output_basename/output_basename"
+         data-port-id="output_basename"
+         id="g353">
+        <g
+           class="io-port"
+           id="g351">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle349" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/reference_dict/reference_dict"
+       transform="translate(662,321)"
+       data-id="reference_dict"
+       id="g381">
+      <g
+         class="core"
+         id="g371">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle357" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle359" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg369">
+          <title
+             id="title361">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path363"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon365" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon367" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text373">reference_dict</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/reference_dict/reference_dict"
+         data-port-id="reference_dict"
+         id="g379">
+        <g
+           class="io-port"
+           id="g377">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle375" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/reference_fasta/reference_fasta"
+       transform="translate(382.6875,214)"
+       data-id="reference_fasta"
+       id="g407">
+      <g
+         class="core"
+         id="g397">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle383" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle385" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg395">
+          <title
+             id="title387">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path389"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon391" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon393" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text399">reference_fasta</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/reference_fasta/reference_fasta"
+         data-port-id="reference_fasta"
+         id="g405">
+        <g
+           class="io-port"
+           id="g403">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle401" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/sample_name/sample_name"
+       transform="translate(382.6875,107)"
+       data-id="sample_name"
+       id="g437">
+      <g
+         class="core"
+         id="g427">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle409" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle411" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg425">
+          <title
+             id="title413">type_input</title>
+          <g
+             id="g423">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path415"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g421"
+               data-name="Layer 22">
+              <g
+                 id="g419"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon417" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text429">sample_name</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/sample_name/sample_name"
+         data-port-id="sample_name"
+         id="g435">
+        <g
+           class="io-port"
+           id="g433">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle431" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-string "
+       data-connection-id="out/tool_name/tool_name"
+       transform="translate(0,321)"
+       data-id="tool_name"
+       id="g467">
+      <g
+         class="core"
+         id="g457">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle439" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle441" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg455">
+          <title
+             id="title443">type_input</title>
+          <g
+             id="g453">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path445"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g451"
+               data-name="Layer 22">
+              <g
+                 id="g449"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon447" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text459">tool_name</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/tool_name/tool_name"
+         data-port-id="tool_name"
+         id="g465">
+        <g
+           class="io-port"
+           id="g463">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle461" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-int "
+       data-connection-id="out/vardict_cpus/vardict_cpus"
+       transform="translate(0,214)"
+       data-id="vardict_cpus"
+       id="g497">
+      <g
+         class="core"
+         id="g487">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle469" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle471" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg485">
+          <title
+             id="title473">type_input</title>
+          <g
+             id="g483">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path475"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g481"
+               data-name="Layer 22">
+              <g
+                 id="g479"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon477" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text489">vardict_cpus</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/vardict_cpus/vardict_cpus"
+         data-port-id="vardict_cpus"
+         id="g495">
+        <g
+           class="io-port"
+           id="g493">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle491" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-float "
+       data-connection-id="out/vardict_min_vaf/vardict_min_vaf"
+       transform="translate(0,107)"
+       data-id="vardict_min_vaf"
+       id="g527">
+      <g
+         class="core"
+         id="g517">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle499" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle501" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg515">
+          <title
+             id="title503">type_input</title>
+          <g
+             id="g513">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path505"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g511"
+               data-name="Layer 22">
+              <g
+                 id="g509"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon507" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text519">vardict_min_vaf</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/vardict_min_vaf/vardict_min_vaf"
+         data-port-id="vardict_min_vaf"
+         id="g525">
+        <g
+           class="io-port"
+           id="g523">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle521" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-int "
+       data-connection-id="out/vardict_ram/vardict_ram"
+       data-id="vardict_ram"
+       id="g557">
+      <g
+         class="core"
+         id="g547">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle529" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle531" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg545">
+          <title
+             id="title533">type_input</title>
+          <g
+             id="g543">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path535"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g541"
+               data-name="Layer 22">
+              <g
+                 id="g539"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon537" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text549">vardict_ram</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/vardict_ram/vardict_ram"
+         data-port-id="vardict_ram"
+         id="g555">
+        <g
+           class="io-port"
+           id="g553">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle551" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node output type-File "
+       data-connection-id="in/vardict_pass_vcf/vardict_pass_vcf"
+       transform="translate(1566.9365,267.5)"
+       data-id="vardict_pass_vcf"
+       id="g583">
+      <g
+         class="core"
+         id="g573">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle559" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle561" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg571">
+          <title
+             id="title563">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon565" />
+          <polygon
+             points="403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon567" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path569"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text575">vardict_pass_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/vardict_pass_vcf/vardict_pass_vcf"
+         data-port-id="vardict_pass_vcf"
+         id="g581">
+        <g
+           class="io-port"
+           id="g579">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle577" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node output type-File "
+       data-connection-id="in/vardict_prepass_vcf/vardict_prepass_vcf"
+       transform="translate(1292.425,193)"
+       data-id="vardict_prepass_vcf"
+       id="g609">
+      <g
+         class="core"
+         id="g599">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle585" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle587" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           x="-7"
+           y="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg597">
+          <title
+             id="title589">file_output</title>
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon591" />
+          <polygon
+             points="403.28,256 208.64,256 208.64,206 403.28,206 350.96,153.68 386.32,118.32 499,231 385.32,344.68 349.96,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon593" />
+          <path
+             d="m 187.81,163.38 77.69,0.22 H 324 V 112.94 L 211.06,0 H 0 V 462.86 H 324 V 298.5 H 274 V 412.86 H 50 V 50 h 112.81 v 113.38 z m 25,-90.92 41.1,41.1 -41.1,-0.11 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path595"
+             inkscape:connector-curvature="0" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text601">vardict_prepass_vcf</text>
+      <g
+         class="port input-port"
+         transform="translate(-37)"
+         data-connection-id="in/vardict_prepass_vcf/vardict_prepass_vcf"
+         data-port-id="vardict_prepass_vcf"
+         id="g607">
+        <g
+           class="io-port"
+           id="g605">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle603" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-File "
+       data-connection-id="out/call_bed_file/call_bed_file"
+       transform="translate(0,535)"
+       data-id="call_bed_file"
+       id="g635">
+      <g
+         class="core"
+         id="g625">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle611" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle613" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 462.86"
+           y="-10"
+           x="-11"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg623">
+          <title
+             id="title615">file_input</title>
+          <path
+             d="M 386.06,0 H 175 v 58.29 l 50,50 V 50 h 112.81 v 113.38 h 25 L 449,163.62 V 412.86 H 225 v -59.15 l -50,50 v 59.15 H 499 V 112.94 Z m 1.75,113.45 v -41 l 41.1,41.1 z"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="path617"
+             inkscape:connector-curvature="0" />
+          <polygon
+             points="387.81,1.06 387.81,1.75 387.12,1.06 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon619" />
+          <polygon
+             points="194.64,256 0,256 0,206 194.64,206 142.32,153.68 177.68,118.32 290.36,231 176.68,344.68 141.32,309.32 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon621" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text627">call_bed_file</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/call_bed_file/call_bed_file"
+         data-port-id="call_bed_file"
+         id="g633">
+        <g
+           class="io-port"
+           id="g631">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle629" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node input type-int "
+       data-connection-id="out/padding/padding"
+       transform="translate(382.6875,428)"
+       data-id="padding"
+       id="g665">
+      <g
+         class="core"
+         id="g655">
+        <circle
+           cx="0"
+           cy="0"
+           r="37"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle637" />
+        <circle
+           cx="0"
+           cy="0"
+           r="27.75"
+           class="inner"
+           style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+           id="circle639" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 499 365"
+           x="-11"
+           y="-10"
+           width="20"
+           height="20"
+           version="1.1"
+           id="svg653">
+          <title
+             id="title641">type_input</title>
+          <g
+             id="g651">
+            <path
+               d="M 316.5,68 A 181.72,181.72 0 0 0 202.38,108.09 L 238,143.72 a 132.5,132.5 0 1 1 1.16,214.39 L 203.48,393.8 A 182.5,182.5 0 1 0 316.5,68 Z"
+               transform="translate(0,-68)"
+               style="fill:#303030;stroke:#303030;stroke-width:3px"
+               id="path643"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g649"
+               data-name="Layer 22">
+              <g
+                 id="g647"
+                 data-name="Layer 9 copy 4">
+                <polygon
+                   points="194.64,207 0,207 0,157 194.64,157 142.32,104.68 177.68,69.32 290.36,182 176.68,295.68 141.32,260.32 "
+                   style="fill:#303030;stroke:#303030"
+                   id="polygon645" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,67)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text657">padding</text>
+      <g
+         class="port output-port"
+         transform="translate(37)"
+         data-connection-id="out/padding/padding"
+         data-port-id="padding"
+         id="g663">
+        <g
+           class="io-port"
+           id="g661">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle659" />
+        </g>
+      </g>
+    </g>
+    <g
+       tabindex="-1"
+       class="node step  "
+       data-connection-id="vardict"
+       transform="translate(662,158)"
+       data-id="vardict"
+       id="g743">
+      <g
+         class="core"
+         id="g679">
+        <circle
+           cx="0"
+           cy="0"
+           r="93"
+           class="outer"
+           style="fill:#303030;stroke:#9a9a9a;stroke-width:2px"
+           id="circle667" />
+        <circle
+           cx="0"
+           cy="0"
+           r="69.75"
+           class="inner"
+           style="fill:#11a7a7;stroke:none;stroke-width:1px"
+           id="circle669" />
+        <svg
+           class="node-icon"
+           viewBox="0 0 398.39 397.78"
+           x="-10"
+           y="-8"
+           width="20"
+           height="15"
+           version="1.1"
+           id="svg677">
+          <title
+             id="title671">tool2</title>
+          <polygon
+             points="0,31.57 38.77,0 200.63,198.78 38.77,397.57 0,366 136.15,198.78 "
+             style="fill:#303030;stroke:#303030"
+             id="polygon673" />
+          <rect
+             x="198.39"
+             y="347.78"
+             width="200"
+             height="50"
+             style="fill:#303030;stroke:#303030;stroke-width:3px"
+             id="rect675" />
+        </svg>
+      </g>
+      <text
+         transform="matrix(1.17031,0,0,1.17031,0,123)"
+         class="title label"
+         style="font-size:13px;font-family:sans-serif;text-anchor:middle;fill:#ffffff"
+         id="text681">VarDict Java</text>
+      <g
+         class="port input-port"
+         transform="translate(-52.00494,-77.100494)"
+         data-connection-id="in/vardict/reference"
+         data-port-id="reference"
+         id="g687">
+        <g
+           class="io-port"
+           id="g685">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle683" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-69.112469,-62.229146)"
+         data-connection-id="in/vardict/ram"
+         data-port-id="ram"
+         id="g693">
+        <g
+           class="io-port"
+           id="g691">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle689" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-82.114126,-43.660855)"
+         data-connection-id="in/vardict/padding"
+         data-port-id="padding"
+         id="g699">
+        <g
+           class="io-port"
+           id="g697">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle695" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-90.237503,-22.498736)"
+         data-connection-id="in/vardict/output_basename"
+         data-port-id="output_basename"
+         id="g705">
+        <g
+           class="io-port"
+           id="g703">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle701" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-93)"
+         data-connection-id="in/vardict/min_vaf"
+         data-port-id="min_vaf"
+         id="g711">
+        <g
+           class="io-port"
+           id="g709">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle707" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-90.237503,22.498736)"
+         data-connection-id="in/vardict/input_name"
+         data-port-id="input_name"
+         id="g717">
+        <g
+           class="io-port"
+           id="g715">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle713" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-82.114126,43.660855)"
+         data-connection-id="in/vardict/input_bam"
+         data-port-id="input_bam"
+         id="g723">
+        <g
+           class="io-port"
+           id="g721">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle719" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-69.112469,62.229146)"
+         data-connection-id="in/vardict/cpus"
+         data-port-id="cpus"
+         id="g729">
+        <g
+           class="io-port"
+           id="g727">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle725" />
+        </g>
+      </g>
+      <g
+         class="port input-port"
+         transform="translate(-52.00494,77.100494)"
+         data-connection-id="in/vardict/bed"
+         data-port-id="bed"
+         id="g735">
+        <g
+           class="io-port"
+           id="g733">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle731" />
+        </g>
+      </g>
+      <g
+         class="port output-port"
+         transform="translate(93)"
+         data-connection-id="out/vardict/vardict_vcf"
+         data-port-id="vardict_vcf"
+         id="g741">
+        <g
+           class="io-port"
+           id="g739">
+          <circle
+             cx="0"
+             cy="0"
+             r="7"
+             class="port-handle"
+             style="fill:#c3c3c3;stroke:none;stroke-width:1px"
+             id="circle737" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

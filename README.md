@@ -16,13 +16,16 @@ For the most part, tool parameters follow defaults from the GATK Best Practices 
 ```yaml
 inputs:
   output_basename: string
-  pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
-  reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
+  sample_name: string
+  reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
   reference_dict: File
-  knownsites: {type: 'File[]', doc: "Population vcfs, based on Broad best practices"}
-  dbsnp_vcf: {type: File, secondaryFiles: ['.idx']}
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_cpus: {type: ['null', int], default: 4}
+  vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
 ```
 
@@ -85,9 +88,9 @@ inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
   reference_dict: File
   vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
-  vardict_cpus: {type: ['null', int], default: 9}
-  vardict_ram: {type: ['null', int], default: 18, doc: "In GB"}
-  calling bed: {type: File, doc: "Interval calling bed file.  Recommend canocical chromosomes with N regions removed"}
+  vardict_cpus: {type: ['null', int], default: 4}
+  vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
   padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
@@ -104,3 +107,7 @@ outputs:
 - `kfdrc/vardict:1.7.0`
 - `kfdrc/gatk:4.1.1.0`
 - `kfdrc/python:2.7.13`
+
+### Workflow Diagram
+
+![WF diagram](misc/d3b_vardict_rnaseq_snv_wf.cwl.svg)

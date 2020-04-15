@@ -15,9 +15,9 @@ inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
   reference_dict: File
   vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
-  vardict_cpus: {type: ['null', int], default: 9}
-  vardict_ram: {type: ['null', int], default: 18, doc: "In GB"}
-  calling bed: {type: File, doc: "Interval calling bed file.  Recommend canocical chromosomes with N regions removed"}
+  vardict_cpus: {type: ['null', int], default: 4}
+  vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
   padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
@@ -27,17 +27,22 @@ outputs:
   vardict_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "VarDict calls filtered on PASS"}
 
 steps:
+  bedtools_gtf_to_bed:
+    run: ../tools/bedtools_gtf_to_bed.cwl
+    in:
+      input_bed_gtf: call_bed_file
+    out: [run_bed]
   python_vardict_interval_split:
     run: ../tools/python_vardict_interval_split.cwl
-    doc: "Custom interval list generation for vardict input. Briefly, ~60M bp per interval list, 20K bp intervals, lists break on chr and N reginos only"
+    doc: "Custom interval list generation for vardict input. Briefly, ~60M bp per interval list, 20K bp intervals, lists break on chr and N regions only"
     in:
-      wgs_bed_file: calling bed
+      wgs_bed_file: bedtools_gtf_to_bed/run_bed
     out: [split_intervals_bed]
   vardict:
     run: ../tools/vardict_rnaseq.cwl
     hints:
       - class: 'sbg:AWSInstanceType'
-        value: c5.9xlarge
+        value: c5.4xlarge
     label: "VarDict Java"
     in:
       input_bam: STAR_sorted_genomic_bam
