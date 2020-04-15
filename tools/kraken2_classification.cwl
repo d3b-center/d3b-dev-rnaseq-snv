@@ -1,6 +1,8 @@
 cwlVersion: v1.0
 class: CommandLineTool
 id: kraken2_classification 
+doc: |-
+  Kraken2 Classification. Maintained on [github](https://github.com/d3b-center/d3b-dev-rnaseq-snv).
 requirements:
   - class: ShellCommandRequirement
   - class: DockerRequirement
@@ -36,7 +38,7 @@ inputs:
   input_mates: { type: 'File?', doc: "Paired mates for input_reads" }
   db_path: { type: string, default: "./covid", doc: "Relative path to the folder containing the db files from input_db" } 
   threads: { type: int, default: 32, doc: "Number of threads to use in parallel" }
-  ram: { type: int, default: 50000, doc: "Recommended KB of RAM needed to run the job" }
+  ram: { type: int, default: 50000, doc: "Recommended MB of RAM needed to run the job" }
   output_basename: { type: string, doc: "String to be used as the base filename of the output" }
 outputs:
   output: { type: File, outputBinding: { glob: "*.output" } }
