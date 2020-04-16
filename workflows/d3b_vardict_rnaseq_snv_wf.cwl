@@ -17,6 +17,7 @@ inputs:
   vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
   vardict_cpus: {type: ['null', int], default: 4}
   vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  vardict_bp_target: {type: ['null', int], doc: "Intended max number of base pairs per file.  Existing intervals large than this will NOT be split into another file. Make this value smaller to break up the work into smaller chunks", default: 60000000}
   call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
   padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
@@ -37,6 +38,7 @@ steps:
     doc: "Custom interval list generation for vardict input. Briefly, ~60M bp per interval list, 20K bp intervals, lists break on chr and N regions only"
     in:
       wgs_bed_file: bedtools_gtf_to_bed/run_bed
+      bp_target: vardict_bp_target
     out: [split_intervals_bed]
   vardict:
     run: ../tools/vardict_rnaseq.cwl

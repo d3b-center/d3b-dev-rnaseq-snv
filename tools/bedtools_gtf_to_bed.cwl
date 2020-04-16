@@ -19,6 +19,10 @@ arguments:
       ${
           if(inputs.input_bed_gtf.nameext == '.bed'){
               var cmd = "cp " + inputs.input_bed_gtf.path + " .; exit 0;"
+              return cmd;
+          }
+          else{
+            return "";
           }
       }
 
