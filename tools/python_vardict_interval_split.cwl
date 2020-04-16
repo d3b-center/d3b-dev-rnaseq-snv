@@ -15,6 +15,7 @@ requirements:
 baseCommand: [python, -c]
 arguments:
   - position: 0
+    shellQuote: true
     valueFrom: >-
         def main():
             import sys
