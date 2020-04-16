@@ -16,13 +16,16 @@ For the most part, tool parameters follow defaults from the GATK Best Practices 
 ```yaml
 inputs:
   output_basename: string
-  pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
-  reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
+  sample_name: string
+  reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
   reference_dict: File
-  knownsites: {type: 'File[]', doc: "Population vcfs, based on Broad best practices"}
-  dbsnp_vcf: {type: File, secondaryFiles: ['.idx']}
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_cpus: {type: ['null', int], default: 4}
+  vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
 ```
 
@@ -34,9 +37,44 @@ outputs:
   pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Filtered vcf selected for PASS variants"}
 ```
 
+### Docker Pulls
+ - `kfdrc/sambamba:0.7.1`
+ - `kfdrc/gatk:4.1.1.0`
+ - `kfdrc/python:2.7.13`
+
 ### Workflow Diagram
 
 ![WF diagram](misc/d3b_gatk_rnaseq_snv_wf.cwl.svg)
+
+### GATK4 simulated bash calls
+
+ | Step                                               | Type         | Num scatter            | Command                                                                                                                                                                                                         |
+ | -------------------------------------------------- | ------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | sambamba_sort_gatk_md_subwf_sambamba_nsort_bam                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_sambamba_nsort_bam                                               | run step         | NA            | mkdir TMP                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_sambamba_nsort_bam                                               | run step         | NA            | sambamba sort -t 16 -m 30GiB -N --show-progress --tmpdir TMP /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.bam -o da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.bam                                                                                                                                                                                                         |
+ | bedtools_gtf_to_bed                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | bedtools_gtf_to_bed                                               | run step         | NA            | cat /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/gencode.v33.primary_assembly.annotation.gtf | grep -vE "^#" | cut -f 1,4,5 | awk '{OFS = "\t";a=$2-1;print $1,a,$3; }' | bedtools sort | bedtools merge > gencode.v33.primary_assembly.annotation.gtf.bed                                                                                                                                                                                                         |
+ | gatk_intervallisttools                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | gatk_intervallisttools                                               | run step         | NA            | /gatk BedToIntervalList -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/bedtools_gtf_to_bed/gencode.v33.primary_assembly.annotation.gtf.bed -O gencode.v33.primary_assembly.annotation.gtf.interval_list -SD /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.dict; LIST=gencode.v33.primary_assembly.annotation.gtf.interval_list;BANDS=0;                                                                                                                                                                                                         |
+ | gatk_intervallisttools                                               | run step         | NA            | /gatk IntervalListTools --java-options "-Xmx2000m" --SCATTER_COUNT=50 --SUBDIVISION_MODE=BALANCING_WITHOUT_INTERVAL_SUBDIVISION_WITH_OVERFLOW --UNIQUE=true --SORT=true --BREAK_BANDS_AT_MULTIPLES_OF=$BANDS --INPUT=$LIST --OUTPUT=.;CT=`find . -name 'temp_0*' | wc -l`;seq -f "%04g" $CT | xargs -I N -P 4 /gatk IntervalListToBed --java-options -Xmx100m -I temp_N_of_$CT/scattered.interval_list -O temp_N_of_$CT/scattered.interval_list.N.bed;mv temp_0*/*.bed .;                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_gatk_md_sorted                                               | run step         | NA            | mkdir TMP                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_gatk_md_sorted                                               | run step         | NA            | /gatk MarkDuplicatesSpark --java-options "-Xmx30000m -XX:+PrintFlagsFinal -Xloggc:gc_log.log -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" --tmp-dir TMP -I=/sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/sambamba_sort_gatk_md_subwf_sambamba_nsort_bam/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.bam -O=da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.bam                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_sambamba_csort_bam                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_sambamba_csort_bam                                               | run step         | NA            | mkdir TMP                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_sambamba_csort_bam                                               | run step         | NA            | sambamba sort -t 16 -m 30GiB  --show-progress --tmpdir TMP /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/sambamba_sort_gatk_md_subwf_gatk_md_sorted/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.bam -o da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.sorted.bam                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_samtools_index                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_samtools_index                                               | run step         | NA            | cp /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/sambamba_sort_gatk_md_subwf_sambamba_csort_bam/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.sorted.bam .                                                                                                                                                                                                         |
+ | sambamba_sort_gatk_md_subwf_samtools_index                                               | run step         | NA            | samtools index -@ 16 /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/sambamba_sort_gatk_md_subwf_sambamba_csort_bam/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.sorted.bam da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.sorted.bai                                                                                                                                                                                                         |
+ | gatk_splitntrim                                               | scatter         | 50            | /gatk SplitNCigarReads --java-options "-Xmx7500m -XX:+PrintFlagsFinal -Xloggc:gc_log.log -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" --max-reads-in-memory 300000 -R /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/sambamba_sort_gatk_md_subwf_samtools_index/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.sorted.dup_marked.sorted.bam -L /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_intervallisttools/scattered.interval_list.0001.bed -OBI -O GATK4_NEW_SPLIT.sorted.dup_marked.splitn.bam                                                                                                                                                                                                         |
+ | gatk_baserecalibrator                                               | scatter         | 50            | /gatk BaseRecalibrator --java-options "-Xmx7500m -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10 -XX:+PrintFlagsFinal -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintGCDetails -Xloggc:gc_log.log" -R /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_splitntrim_10_s/GATK4_NEW_SPLIT.sorted.dup_marked.splitn.bam --use-original-qualities -O GATK4_NEW_SPLIT.sorted.dup_marked.splitn.recal_data.csv  --known-sites /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/1000G_omni2.5.hg38.vcf.gz --known-sites /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/1000G_phase1.snps.high_confidence.hg38.vcf.gz --known-sites /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/Homo_sapiens_assembly38.known_indels.vcf.gz --known-sites /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz                                                                                                                                                                                                         |
+ | gatk_applybqsr                                               | scatter         | 50            | /gatk ApplyBQSR --java-options "-Xms3000m -XX:+PrintFlagsFinal -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintGCDetails -Xloggc:gc_log.log -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" --create-output-bam-md5 --add-output-sam-program-record -R /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_splitntrim_20_s/GATK4_NEW_SPLIT.sorted.dup_marked.splitn.bam --use-original-qualities -O GATK4_NEW_SPLIT.sorted.dup_marked.splitn.aligned.duplicates_marked.recalibrated.bam -bqsr /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_baserecalibrator_20_s/GATK4_NEW_SPLIT.sorted.dup_marked.splitn.recal_data.csv                                                                                                                                                                                                         |
+ | gatk_haplotype_rnaseq                                               | scatter         | 50            | /gatk HaplotypeCaller -R /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_applybqsr_19_s/GATK4_NEW_SPLIT.sorted.dup_marked.splitn.aligned.duplicates_marked.recalibrated.bam --standard-min-confidence-threshold-for-calling 20  -O GATK4_NEW_SPLIT.gatk.hc.called.vcf.gz --dbsnp /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/Homo_sapiens_assembly38.dbsnp138.vcf                                                                                                                                                                                                         |
+ | merge_hc_vcf                                               | run step         | NA            | /gatk MergeVcfs --java-options "-Xmx2000m" --TMP_DIR=./TMP --CREATE_INDEX=true --SEQUENCE_DICTIONARY=/sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.dict --OUTPUT=GATK4_NEW_SPLIT.gatk.hc.merged.vcf.gz  -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_haplotype_rnaseq_1_s/GATK4_NEW_SPLIT.gatk.hc.called.vcf.gz -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_haplotype_rnaseq_2_s/GATK4_NEW_SPLIT.gatk.hc.called.vcf.gz -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_haplotype_rnaseq_3_s/GATK4_NEW_SPLIT.gatk.hc.called.vcf.gz -I /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_haplotype_rnaseq_4_s/GATK4_NEW_SPLIT.gatk.hc.called.vcf.gz                                                                                                                                                                                                          |
+ | gatk_filter_vcf                                               | run step         | NA            | /gatk VariantFiltration -R /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa -V /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/merge_hc_vcf/GATK4_NEW_SPLIT.gatk.hc.merged.vcf.gz --window 35 --cluster 3 --filter-name "FS" --filter "FS > 30.0" --filter-name "QD" --filter "QD < 2.0"  -O GATK4_NEW_SPLIT.gatk.hc.filtered.vcf.gz                                                                                                                                                                                                         |
+ | gatk_pass_vcf                                               | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | gatk_pass_vcf                                               | run step         | NA            | /gatk SelectVariants --java-options "-Xmx7500m" -V /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/3c20cc8e-18d7-43f2-bc2c-4a76d38a88f8/gatk_filter_vcf/GATK4_NEW_SPLIT.gatk.hc.filtered.vcf.gz -O GATK4_NEW_SPLIT.gatk.hc.PASS.vcf.gz --exclude-filtered TRUE                                                                                                                                                                                                         |
+
 
 ## Strelka2 v2.9.10
 This [workflow](https://github.com/Illumina/strelka/blob/v2.9.x/docs/userGuide/README.md#rna-seq) is pretty straight forward, with a `PASS` filter step added to get `PASS` calls.
@@ -59,9 +97,60 @@ inputs:
   strelka2_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Strelka2 calls filtered on PASS"}
 ```
 
+### Docker Pulls
+ - `kfdrc/strelka2:2.9.10`
+ - `kfdrc/gatk:4.1.1.0`
+
 ### Workflow Diagram
 
 ![WF diagram](misc/d3b_strelka2_rnaseq_snv_wf.cwl.svg)
+
+### Strelka2 simulated bash calls
+
+ | Step                | Type         | Num scatter            | Command                                                                                                                                                                                                         |
+ | ------------------- | ------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | strelka2_rnaseq                | run step         | NA            | /strelka-2.9.10.centos6_x86_64/bin/configureStrelkaGermlineWorkflow.py --bam /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/da63df67-62a4-487b-aa68-d7f139809160.Aligned.out.sorted.bam --reference /sbgenomics/Projects/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/GRCh38.primary_assembly.genome.fa  --rna --runDir ./ && ./runWorkflow.py -m local -j 16 -g 30                                                                                                                                                                                                         |
+ | strelka2_rnaseq                | run step         | NA            | mv results/variants/variants.vcf.gz STRELKA2_TEST.strelka2.rnaseq.vcf.gz                                                                                                                                                                                                         |
+ | strelka2_rnaseq                | run step         | NA            | mv results/variants/variants.vcf.gz.tbi STRELKA2_TEST.strelka2.rnaseq.vcf.gz.tbi                                                                                                                                                                                                         |
+ | gatk_pass_vcf                | run step         | NA            | /bin/bash -c set -eo pipefail                                                                                                                                                                                                         |
+ | gatk_pass_vcf                | run step         | NA            | /gatk SelectVariants --java-options "-Xmx7500m" -V /sbgenomics/workspaces/598f0ba4-d8a8-45e7-8bf2-1fe004e4979a/tasks/5f77306d-9650-4b82-83e1-1623eb07e211/strelka2_rnaseq/STRELKA2_TEST.strelka2.rnaseq.vcf.gz -O STRELKA2_TEST.strelka2.PASS.vcf.gz --exclude-filtered TRUE                                                                                                                                                                                                         |
+
+## VardictJava v1.7.0
+This [workflow](https://github.com/bcbio/bcbio-nextgen/blob/master/bcbio/rnaseq/variation.py) is based on the Vardict run style of BC Bio.
+`workflows/d3b_vardict_rnaseq_snv_wf.cwl` is the wrapper cwl that runs this workflow.
+
+### Inputs
+```yaml
+inputs:
+  output_basename: string
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+  sample_name: string
+  reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
+  reference_dict: File
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_cpus: {type: ['null', int], default: 4}
+  vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
+  call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
+  tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
+  mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
+```
+
+### Outputs
+```yaml
+outputs:
+  vardict_prepass_vcf: {type: File, outputSource: sort_merge_vardict_vcf/merged_vcf, doc: "VarDict SNV calls"}
+  vardict_pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "VarDict calls filtered on PASS"}
+```
+
+### Docker Pulls
+- `kfdrc/vardict:1.7.0`
+- `kfdrc/gatk:4.1.1.0`
+- `kfdrc/python:2.7.13`
+
+### Workflow Diagram
+
+![WF diagram](misc/d3b_vardict_rnaseq_snv_wf.cwl.svg)
 
 ## Kraken2
 [Kraken2](http://ccb.jhu.edu/software/kraken2/index.shtml) is available to run at `tools/kraken2_classification.cwl`.
