@@ -1,4 +1,4 @@
-# RNAseq SNV Calling Workflow
+# RNAseq SNV Calling Workflow (beta)
 This repo contains snv calling methods using Broad GATK best practices, Strelka2, and VarDict
 
 <p align="center">
