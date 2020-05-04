@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 workflows/.DS_Store
 notebooks/.ipynb_checkpoints/RNAseq_SNV_WF_DEV-checkpoint.ipynb
+.DS_Store
