@@ -21,7 +21,7 @@ doc: |-
       vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
       call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
       tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
-      padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
+      padding: {type: ['null', int], doc: "Padding to add to input intervals, recommend 0 if intervals already padded, 150 if not", default: 150}
       mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
     ```
 
@@ -114,7 +114,6 @@ steps:
       input_bam: gatk_splitntrim/cigar_n_split_bam
       knownsites: knownsites
       reference: reference_fasta
-      # sequence_interval: python_createsequencegroups/sequence_intervals
     scatter: [input_bam]
     out: [output]
   gatk_applybqsr:
@@ -127,7 +126,6 @@ steps:
       reference: reference_fasta
       input_bam: gatk_splitntrim/cigar_n_split_bam
       bqsr_report: gatk_baserecalibrator/output
-      # sequence_interval: python_createsequencegroups/sequence_intervals_with_unmapped
     scatter: [input_bam, bqsr_report]
     scatterMethod: dotproduct
     out: [recalibrated_bam]
@@ -141,7 +139,6 @@ steps:
       reference_fasta: reference_fasta
       bqsr_bam: gatk_applybqsr/recalibrated_bam
       dbsnp: dbsnp_vcf
-      # genes_bed: gatk_intervallisttools/output
       output_basename: output_basename
     scatter: bqsr_bam
     out: [hc_called_vcf]
@@ -160,7 +157,6 @@ steps:
     in:
       reference_fasta: reference_fasta
       hc_vcf: merge_hc_vcf/merged_vcf
-      # genes_bed: intervals_bed
       output_basename: output_basename
     out: [filtered_vcf]
   gatk_pass_vcf:

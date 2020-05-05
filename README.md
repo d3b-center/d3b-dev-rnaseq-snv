@@ -5,11 +5,11 @@ This repo contains snv calling methods using Broad GATK best practices, Strelka2
   <img alt="Logo for The Center for Data Driven Discovery" src="https://raw.githubusercontent.com/d3b-center/handbook/master/website/static/img/chop_logo.svg?sanitize=true" width="400px" />
 </p>
 
-For all workflows,input bams should be indexed beforehand.  This tool is provided in `tools/samtools_index.cwl`
+For all workflows, input bams should be indexed beforehand.  This tool is provided in `tools/samtools_index.cwl`
 
 ## GATK4 v4.1.1.0
 The overall [workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531192-RNAseq-short-variant-discovery-SNPs-Indels-) picks up from post-STAR alignment, starting at Picard mark duplicates.
-For the most part, tool parameters follow defaults from the GATK Best Practices [WDL](https://github.com/gatk-workflows/gatk4-rnaseq-germline-snps-indels/blob/master/gatk4-rna-best-practices.wdl), written in cwl with added optimatization for use on the Cavatica platform.
+For the most part, tool parameters follow defaults from the GATK Best Practices [WDL](https://github.com/gatk-workflows/gatk4-rnaseq-germline-snps-indels/blob/master/gatk4-rna-best-practices.wdl), written in cwl with added optimization for use on the Cavatica platform.
 `workflows/d3b_gatk_rnaseq_snv_wf.cwl` is the wrapper cwl used to run all tools for GAT4.
 
 ### Inputs
@@ -20,12 +20,12 @@ inputs:
   sample_name: string
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict'], doc: "Reference genome used"}
   reference_dict: File
-  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for vardict to consider.  Recommend 0.2", default: 0.2}
+  vardict_min_vaf: {type: ['null', float], doc: "Min variant allele frequency for VarDict to consider.  Recommend 0.2", default: 0.2}
   vardict_cpus: {type: ['null', int], default: 4}
   vardict_ram: {type: ['null', int], default: 8, doc: "In GB"}
   call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
-  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommened 0 if intervals already padded, 150 if not", default: 150}
+  padding: {type: ['null', int], doc: "Padding to add to input intervals, recommend 0 if intervals already padded, 150 if not", default: 150}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
 ```
 
