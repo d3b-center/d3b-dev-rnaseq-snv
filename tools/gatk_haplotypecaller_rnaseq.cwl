@@ -17,6 +17,7 @@ arguments:
       -R $(inputs.reference_fasta.path)
       -I $(inputs.bqsr_bam.path)
       --standard-min-confidence-threshold-for-calling 20
+      -dont-use-soft-clipped-bases
       ${
         if (inputs.genes_bed != null){
           return "-L " + inputs.genes_bed.path;
