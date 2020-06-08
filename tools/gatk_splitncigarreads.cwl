@@ -42,7 +42,7 @@ arguments:
       
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
-  dup_marked_bam: {type: File, secondaryFiles: ['.bai', '^.bai']}
+  dup_marked_bam: {type: File, secondaryFiles: ['^.bai']}
   interval_bed: {type: File?}
   output_basename: {type: string?, doc: "Can leave blank if using an inerval file"}
 outputs:
