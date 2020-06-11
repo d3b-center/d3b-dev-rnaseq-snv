@@ -13,7 +13,7 @@ inputs:
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
 
 outputs:
-  sorted_md_bam: {type: File, outputSource: samtools_index/bam_file, doc: "Dup marked and sorted bam"}
+  sorted_md_bam: {type: File, outputSource: samtools_index/bam_file, secondaryFiles: ['^.bai'], doc: "Dup marked and sorted bam"}
 
 steps:
   sambamba_nsort_bam:

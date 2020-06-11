@@ -30,7 +30,7 @@ arguments:
       --dbsnp $(inputs.dbsnp.path)
 inputs:
   reference_fasta: {type: File, secondaryFiles: ['.fai', '^.dict']}
-  bqsr_bam: {type: File, secondaryFiles: ['.bai']}
+  bqsr_bam: {type: File, secondaryFiles: ['^.bai']}
   genes_bed: {type: File?}
   dbsnp: {type: File, secondaryFiles: ['.idx'], doc: "dbSNP reference"}
   output_basename: string
