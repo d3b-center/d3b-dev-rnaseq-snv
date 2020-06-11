@@ -92,42 +92,30 @@ steps:
     out:
       [sorted_md_bam]
   gatk_splitntrim:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.4xlarge
     run: ../tools/gatk_splitncigarreads.cwl
     label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
       dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
-      interval_bed: gatk_intervallisttools/output
+      interval_bed: bedtools_gtf_to_bed/run_bed
       output_basename: output_basename
-    scatter: interval_bed
     out: [cigar_n_split_bam]
   gatk_baserecalibrator:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.4xlarge
     run: ../tools/gatk_baserecalibrator.cwl
     label: "GATK BQSR"
     in:
       input_bam: gatk_splitntrim/cigar_n_split_bam
       knownsites: knownsites
       reference: reference_fasta
-    scatter: [input_bam]
+      sequence_interval: bedtools_gtf_to_bed/run_bed
     out: [output]
   gatk_applybqsr:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.4xlarge
     run: ../tools/gatk_applybqsr.cwl
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
       input_bam: gatk_splitntrim/cigar_n_split_bam
       bqsr_report: gatk_baserecalibrator/output
-    scatter: [input_bam, bqsr_report]
-    scatterMethod: dotproduct
     out: [recalibrated_bam]
   gatk_haplotype_rnaseq:
     hints:
@@ -140,7 +128,8 @@ steps:
       bqsr_bam: gatk_applybqsr/recalibrated_bam
       dbsnp: dbsnp_vcf
       output_basename: output_basename
-    scatter: bqsr_bam
+      genes_bed: gatk_intervallisttools/output
+    scatter: genes_bed
     out: [hc_called_vcf]
   merge_hc_vcf:
     run: ../tools/gatk_mergevcfs.cwl
