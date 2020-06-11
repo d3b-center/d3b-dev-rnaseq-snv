@@ -98,7 +98,6 @@ steps:
       reference_fasta: reference_fasta
       dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
       interval_bed: bedtools_gtf_to_bed/run_bed
-      output_basename: output_basename
     out: [cigar_n_split_bam]
   gatk_baserecalibrator:
     run: ../tools/gatk_baserecalibrator.cwl
@@ -107,7 +106,6 @@ steps:
       input_bam: gatk_splitntrim/cigar_n_split_bam
       knownsites: knownsites
       reference: reference_fasta
-      sequence_interval: bedtools_gtf_to_bed/run_bed
     out: [output]
   gatk_applybqsr:
     run: ../tools/gatk_applybqsr.cwl
