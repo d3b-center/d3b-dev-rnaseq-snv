@@ -51,6 +51,7 @@ requirements:
 inputs:
   output_basename: string
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
+  num_split: {type: int?, doc: "Nunber of files to split the bam into for split N cigar trim", default: 50}
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
@@ -91,19 +92,31 @@ steps:
       pass_thru: pass_thru
     out:
       [sorted_md_bam]
+  gatk_splitbybamreads:
+    run: ../tools/gatk_splitbambyreads.cwl
+    in:
+      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
+      num_split: num_split
+    out: [split_bams]
   gatk_splitntrim:
     run: ../tools/gatk_splitncigarreads.cwl
-    label: "GATK Split N Cigar"
+    label: "GATK Split bam by Reads"
     in:
       reference_fasta: reference_fasta
-      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
-      interval_bed: bedtools_gtf_to_bed/run_bed
+      dup_marked_bam: gatk_splitbybamreads/split_bams
+    scatter: dup_marked_bam
     out: [cigar_n_split_bam]
+  sambamba_merge:
+    run: ../tools/sambamba_merge.cwl
+    in:
+      input_bams: gatk_splitntrim/cigar_n_split_bam
+      output_basename: {default: "splitntrim_merged"}
+    out: [merged_bam]
   gatk_baserecalibrator:
     run: ../tools/gatk_baserecalibrator.cwl
     label: "GATK BQSR"
     in:
-      input_bam: gatk_splitntrim/cigar_n_split_bam
+      input_bam: sambamba_merge/merged_bam
       knownsites: knownsites
       reference: reference_fasta
     out: [output]
