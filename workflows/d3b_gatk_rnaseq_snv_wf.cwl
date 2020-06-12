@@ -93,14 +93,21 @@ steps:
     out:
       [sorted_md_bam]
   gatk_splitbybamreads:
+    hints:
+      - class: 'sbg:AWSInstanceType'
+        value: c5.xlarge
     run: ../tools/gatk_splitbambyreads.cwl
+    label: "GATK Split Bam by Reads"
     in:
       dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
       num_split: num_split
     out: [split_bams]
   gatk_splitntrim:
+    hints:
+      - class: 'sbg:AWSInstanceType'
+        value: c5.4xlarge
     run: ../tools/gatk_splitncigarreads.cwl
-    label: "GATK Split bam by Reads"
+    label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
       dup_marked_bam: gatk_splitbybamreads/split_bams
@@ -108,11 +115,15 @@ steps:
     out: [cigar_n_split_bam]
   sambamba_merge:
     run: ../tools/sambamba_merge.cwl
+    label: "SAMBAMBA Merge Bams"
     in:
       input_bams: gatk_splitntrim/cigar_n_split_bam
       output_basename: {default: "splitntrim_merged"}
     out: [merged_bam]
   gatk_baserecalibrator:
+    hints:
+      - class: 'sbg:AWSInstanceType'
+        value: c5.xlarge
     run: ../tools/gatk_baserecalibrator.cwl
     label: "GATK BQSR"
     in:
