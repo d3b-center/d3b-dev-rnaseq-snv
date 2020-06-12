@@ -12,24 +12,19 @@ requirements:
     coresMin: 16
 baseCommand: ["/bin/bash", "-c"]
 arguments:
-  - position: 1
+  - position: 0
     shellQuote: false
     valueFrom: >-
       set -eo pipefail
       
-      mkdir TMP
-
-      sambamba sort
+      sambamba merge
       $(inputs.output_basename).bam
       -t 16
-      -m 30GiB
-      --show-progress
-      --tmpdir TMP
 
   - position: 3
     shellQuote: false
     valueFrom: >-
-      mv $(inputs.output_basename).bam.bai $(inputs.output_basename).bai
+      && mv $(inputs.output_basename).bam.bai $(inputs.output_basename).bai
 
 inputs:
   input_bams:
@@ -38,7 +33,7 @@ inputs:
       items: File
       inputBinding:
         separate: false
-        position: 1
+        position: 2
   output_basename: string
 outputs: 
   merged_bam:

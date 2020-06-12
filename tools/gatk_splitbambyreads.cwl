@@ -19,7 +19,7 @@ arguments:
       -Xloggc:gc_log.log
       -XX:GCTimeLimit=50
       -XX:GCHeapFreeLimit=10"
-      -I $(inputs.dup_marked_bam)
+      -I $(inputs.dup_marked_bam.path)
       -O ./
       --SPLIT_TO_N_FILES $(inputs.num_split)
       --CREATE_INDEX true
