@@ -40,7 +40,7 @@ arguments:
       
 inputs:
   reference: {type: File, secondaryFiles: [^.dict, .fai]}
-  input_bam: {type: File, secondaryFiles: [.bai]}
+  input_bam: {type: File, secondaryFiles: [^.bai]}
   bqsr_report: File
   sequence_interval: File?
 outputs:
