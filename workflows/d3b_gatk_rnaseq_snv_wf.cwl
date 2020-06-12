@@ -125,7 +125,7 @@ steps:
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
-      input_bam: gatk_splitntrim/cigar_n_split_bam
+      input_bam: sambamba_merge/merged_bam
       bqsr_report: gatk_baserecalibrator/output
     out: [recalibrated_bam]
   gatk_haplotype_rnaseq:
