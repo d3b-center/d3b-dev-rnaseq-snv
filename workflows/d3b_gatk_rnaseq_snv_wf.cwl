@@ -92,12 +92,12 @@ steps:
       pass_thru: pass_thru
     out:
       [sorted_md_bam]
-  gatk_splitbybamreads:
+  gatk_split_md_bam_reads:
     hints:
       - class: 'sbg:AWSInstanceType'
         value: c5.xlarge
     run: ../tools/gatk_splitbambyreads.cwl
-    label: "GATK Split Bam by Reads"
+    label: "GATK Split Mark Dup Bam by Reads"
     in:
       dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
       num_split: num_split
@@ -110,12 +110,12 @@ steps:
     label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
-      dup_marked_bam: gatk_splitbybamreads/split_bams
+      dup_marked_bam: gatk_split_md_bam_reads/split_bams
     scatter: dup_marked_bam
     out: [cigar_n_split_bam]
-  sambamba_merge:
+  sambamba_merge_splitn:
     run: ../tools/sambamba_merge.cwl
-    label: "SAMBAMBA Merge Bams"
+    label: "SAMBAMBA Merge Split N Bams"
     in:
       input_bams: gatk_splitntrim/cigar_n_split_bam
       output_basename: {default: "splitntrim_merged"}
@@ -127,18 +127,37 @@ steps:
     run: ../tools/gatk_baserecalibrator.cwl
     label: "GATK BQSR"
     in:
-      input_bam: sambamba_merge/merged_bam
+      input_bam: sambamba_merge_splitn/merged_bam
       knownsites: knownsites
       reference: reference_fasta
     out: [output]
+  gatk_split_splitn_bam_reads:
+      hints:
+        - class: 'sbg:AWSInstanceType'
+          value: c5.xlarge
+      run: ../tools/gatk_splitbambyreads.cwl
+      label: "GATK Split CIGAR N Split Bam by Reads"
+      in:
+        dup_marked_bam: sambamba_merge_splitn/merged_bam
+        num_split: num_split
+      out: [split_bams]
   gatk_applybqsr:
     run: ../tools/gatk_applybqsr.cwl
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
-      input_bam: sambamba_merge/merged_bam
+      input_bam: gatk_split_splitn_bam_reads/split_bams
       bqsr_report: gatk_baserecalibrator/output
+    scatter: input_bam
     out: [recalibrated_bam]
+  sambamba_merge_bqsr:
+    run: ../tools/sambamba_merge.cwl
+    label: "SAMBAMBA Merge BQSR Bams"
+    in:
+      input_bams: gatk_applybqsr/recalibrated_bam
+      output_basename: {default: "splitntrim_merged"}
+    out: [merged_bam]
+
   gatk_haplotype_rnaseq:
     hints:
       - class: 'sbg:AWSInstanceType'
@@ -147,7 +166,7 @@ steps:
     label: "GATK Haplotype Caller"
     in:
       reference_fasta: reference_fasta
-      bqsr_bam: gatk_applybqsr/recalibrated_bam
+      bqsr_bam: sambamba_merge_bqsr/merged_bam
       dbsnp: dbsnp_vcf
       output_basename: output_basename
       genes_bed: gatk_intervallisttools/output
