@@ -51,7 +51,8 @@ requirements:
 inputs:
   output_basename: string
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
-  num_split: {type: int?, doc: "Nunber of files to split the bam into for split N cigar trim", default: 50}
+  # num_split: {type: int?, doc: "Number of files to split the bam into for split N cigar trim", default: 50}
+  scatter_ct: {type: int?, doc: "Number of interval lists to split into", default: 50}
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
@@ -79,8 +80,7 @@ steps:
       interval_list: bedtools_gtf_to_bed/run_bed
       reference_dict: reference_dict
       exome_flag: exome_flag
-      scatter_ct:
-        valueFrom: ${return 50}
+      scatter_ct: scatter_ct
       bands:
         valueFrom: ${return 80000000}
     out: [output]
@@ -92,26 +92,17 @@ steps:
       pass_thru: pass_thru
     out:
       [sorted_md_bam]
-  gatk_split_md_bam_reads:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.xlarge
-    run: ../tools/gatk_splitbambyreads.cwl
-    label: "GATK Split Mark Dup Bam by Reads"
-    in:
-      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
-      num_split: num_split
-    out: [split_bams]
   gatk_splitntrim:
     hints:
       - class: 'sbg:AWSInstanceType'
-        value: c5.4xlarge
+        value: c5.2xlarge
     run: ../tools/gatk_splitncigarreads.cwl
     label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
-      dup_marked_bam: gatk_split_md_bam_reads/split_bams
-    scatter: dup_marked_bam
+      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
+      interval_bed: gatk_intervallisttools/output
+    scatter: interval_bed
     out: [cigar_n_split_bam]
   sambamba_merge_splitn:
     run: ../tools/sambamba_merge.cwl
@@ -131,33 +122,19 @@ steps:
       knownsites: knownsites
       reference: reference_fasta
     out: [output]
-  gatk_split_splitn_bam_reads:
-      hints:
-        - class: 'sbg:AWSInstanceType'
-          value: c5.xlarge
-      run: ../tools/gatk_splitbambyreads.cwl
-      label: "GATK Split CIGAR N Split Bam by Reads"
-      in:
-        dup_marked_bam: sambamba_merge_splitn/merged_bam
-        num_split: num_split
-      out: [split_bams]
   gatk_applybqsr:
+    hints:
+      - class: 'sbg:AWSInstanceType'
+        value: c5.2xlarge
     run: ../tools/gatk_applybqsr.cwl
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
-      input_bam: gatk_split_splitn_bam_reads/split_bams
+      input_bam: sambamba_merge_splitn/merged_bam
       bqsr_report: gatk_baserecalibrator/output
-    scatter: input_bam
+      sequence_interval: gatk_intervallisttools/output
+    scatter: sequence_interval
     out: [recalibrated_bam]
-  sambamba_merge_bqsr:
-    run: ../tools/sambamba_merge.cwl
-    label: "SAMBAMBA Merge BQSR Bams"
-    in:
-      input_bams: gatk_applybqsr/recalibrated_bam
-      output_basename: {default: "splitntrim_merged"}
-    out: [merged_bam]
-
   gatk_haplotype_rnaseq:
     hints:
       - class: 'sbg:AWSInstanceType'
@@ -166,11 +143,10 @@ steps:
     label: "GATK Haplotype Caller"
     in:
       reference_fasta: reference_fasta
-      bqsr_bam: sambamba_merge_bqsr/merged_bam
+      bqsr_bam: gatk_applybqsr/recalibrated_bam
       dbsnp: dbsnp_vcf
       output_basename: output_basename
-      genes_bed: gatk_intervallisttools/output
-    scatter: genes_bed
+    scatter: bqsr_bam
     out: [hc_called_vcf]
   merge_hc_vcf:
     run: ../tools/gatk_mergevcfs.cwl
@@ -203,4 +179,4 @@ $namespaces:
   sbg: https://sevenbridges.com
 hints:
   - class: 'sbg:maxNumberOfParallelInstances'
-    value: 2
+    value: 3

@@ -36,7 +36,7 @@ arguments:
               return "-O " + inputs.output_basename + ".sorted.dup_marked.splitn.bam";
           }
           else{
-              return "-O " + inputs.dup_marked_bam.nameroot + ".sorted.dup_marked.splitn.bam";
+              return "-O " + inputs.dup_marked_bam.nameroot + ".splitn.bam";
           }
       }
       
