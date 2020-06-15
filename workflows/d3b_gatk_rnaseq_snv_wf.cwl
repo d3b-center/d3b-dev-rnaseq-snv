@@ -91,6 +91,7 @@ steps:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
       pass_thru: pass_thru
       interval_bed: gatk_intervallisttools/output
+      reference_fasta: reference_fasta
     out:
       [sorted_md_splitn_bam]
   gatk_baserecalibrator:
