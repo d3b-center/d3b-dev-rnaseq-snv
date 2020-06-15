@@ -19,7 +19,8 @@ arguments:
       -Xloggc:gc_log.log
       -XX:GCTimeLimit=50
       -XX:GCHeapFreeLimit=10"
-      --max-reads-in-memory 300000
+      --max-reads-in-memory 600000
+      --seconds-between-progress-updates 60
       -R $(inputs.reference_fasta.path)
       -I $(inputs.dup_marked_bam.path)
       ${
