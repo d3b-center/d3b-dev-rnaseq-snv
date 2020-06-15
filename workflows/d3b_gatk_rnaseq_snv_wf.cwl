@@ -84,33 +84,15 @@ steps:
       bands:
         valueFrom: ${return 80000000}
     out: [output]
-  sambamba_sort_gatk_md_subwf:
-    run: ../subworkflows/sambamba_sort_gatk_md_sub_wf.cwl
-    label: "SAMBAMBA Sort GATK Mark Duplicates"
+  preprocess_rnaseq_bam:
+    run: ../subworkflows/preprocess_rnaseq_bam.cwl
+    label: "Preprocess RNAseq BAM"
     in:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
       pass_thru: pass_thru
-    out:
-      [sorted_md_bam]
-  gatk_splitntrim:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.2xlarge
-    run: ../tools/gatk_splitncigarreads.cwl
-    label: "GATK Split N Cigar"
-    in:
-      reference_fasta: reference_fasta
-      dup_marked_bam: sambamba_sort_gatk_md_subwf/sorted_md_bam
       interval_bed: gatk_intervallisttools/output
-    scatter: interval_bed
-    out: [cigar_n_split_bam]
-  sambamba_merge_splitn:
-    run: ../tools/sambamba_merge.cwl
-    label: "SAMBAMBA Merge Split N Bams"
-    in:
-      input_bams: gatk_splitntrim/cigar_n_split_bam
-      output_basename: {default: "splitntrim_merged"}
-    out: [merged_bam]
+    out:
+      [sorted_md_splitn_bam]
   gatk_baserecalibrator:
     hints:
       - class: 'sbg:AWSInstanceType'
@@ -118,7 +100,7 @@ steps:
     run: ../tools/gatk_baserecalibrator.cwl
     label: "GATK BQSR"
     in:
-      input_bam: sambamba_merge_splitn/merged_bam
+      input_bam: preprocess_rnaseq_bam/sorted_md_splitn_bam
       knownsites: knownsites
       reference: reference_fasta
     out: [output]
@@ -130,7 +112,7 @@ steps:
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
-      input_bam: sambamba_merge_splitn/merged_bam
+      input_bam: preprocess_rnaseq_bam/sorted_md_splitn_bam
       bqsr_report: gatk_baserecalibrator/output
       sequence_interval: gatk_intervallisttools/output
     scatter: sequence_interval
