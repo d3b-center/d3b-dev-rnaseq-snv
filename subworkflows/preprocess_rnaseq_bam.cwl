@@ -11,6 +11,7 @@ requirements:
 
 inputs:
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+  reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   interval_bed: {type: 'File[]', doc: "Bed file array to scatter gatk split n trim"}
 outputs:
