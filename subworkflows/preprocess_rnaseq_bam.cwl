@@ -15,7 +15,7 @@ inputs:
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   interval_bed: {type: 'File[]', doc: "Bed file array to scatter gatk split n trim"}
 outputs:
-  sorted_md_splitn_bam: {type: File, outputSource: sambamba_merge_splitn/merged_bam, doc: "Dup marked, sorted, Split N trim cigar bam"}
+  sorted_md_splitn_bam: {type: File, outputSource: sambamba_merge_splitn/merged_bam, secondaryFiles: ['^.bai'], doc: "Dup marked, sorted, Split N trim cigar bam"}
 
 steps:
   sambamba_nsort_bam:
