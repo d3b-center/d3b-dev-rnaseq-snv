@@ -13,7 +13,6 @@ inputs:
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
-  interval_bed: {type: File, doc: "Bed file array to scatter gatk split n trim"}
 outputs:
   sorted_md_splitn_bam: {type: File, outputSource: gatk_splitntrim/cigar_n_split_bam, secondaryFiles: ['^.bai'], doc: "Dup marked, sorted, Split N trim cigar bam"}
 
@@ -53,5 +52,4 @@ steps:
     in:
       reference_fasta: reference_fasta
       dup_marked_bam: samtools_index/bam_file
-      interval_bed: interval_bed
     out: [cigar_n_split_bam]
