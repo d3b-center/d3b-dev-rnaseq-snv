@@ -90,7 +90,6 @@ steps:
     in:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
       pass_thru: pass_thru
-      interval_bed: bedtools_gtf_to_bed/run_bed
       reference_fasta: reference_fasta
     out:
       [sorted_md_splitn_bam]
@@ -158,4 +157,4 @@ $namespaces:
   sbg: https://sevenbridges.com
 hints:
   - class: 'sbg:maxNumberOfParallelInstances'
-    value: 3
+    value: 2
