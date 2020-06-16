@@ -90,7 +90,7 @@ steps:
     in:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
       pass_thru: pass_thru
-      interval_bed: gatk_intervallisttools/output
+      interval_bed: bedtools_gtf_to_bed/run_bed
       reference_fasta: reference_fasta
     out:
       [sorted_md_splitn_bam]
@@ -106,17 +106,12 @@ steps:
       reference: reference_fasta
     out: [output]
   gatk_applybqsr:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.2xlarge
     run: ../tools/gatk_applybqsr.cwl
     label: "GATK Apply BQSR"
     in:
       reference: reference_fasta
       input_bam: preprocess_rnaseq_bam/sorted_md_splitn_bam
       bqsr_report: gatk_baserecalibrator/output
-      sequence_interval: gatk_intervallisttools/output
-    scatter: sequence_interval
     out: [recalibrated_bam]
   gatk_haplotype_rnaseq:
     hints:
@@ -129,7 +124,8 @@ steps:
       bqsr_bam: gatk_applybqsr/recalibrated_bam
       dbsnp: dbsnp_vcf
       output_basename: output_basename
-    scatter: bqsr_bam
+      genes_bed: gatk_intervallisttools/output
+    scatter: genes_bed
     out: [hc_called_vcf]
   merge_hc_vcf:
     run: ../tools/gatk_mergevcfs.cwl

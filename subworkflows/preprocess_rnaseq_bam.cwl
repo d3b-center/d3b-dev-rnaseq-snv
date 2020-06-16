@@ -13,9 +13,9 @@ inputs:
   STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
-  interval_bed: {type: 'File[]', doc: "Bed file array to scatter gatk split n trim"}
+  interval_bed: {type: File, doc: "Bed file array to scatter gatk split n trim"}
 outputs:
-  sorted_md_splitn_bam: {type: File, outputSource: sambamba_merge_splitn/merged_bam, secondaryFiles: ['^.bai'], doc: "Dup marked, sorted, Split N trim cigar bam"}
+  sorted_md_splitn_bam: {type: File, outputSource: gatk_splitntrim/cigar_n_split_bam, secondaryFiles: ['^.bai'], doc: "Dup marked, sorted, Split N trim cigar bam"}
 
 steps:
   sambamba_nsort_bam:
@@ -48,24 +48,10 @@ steps:
       input_reads: sambamba_csort_bam/sorted_bam
     out: [bam_file]
   gatk_splitntrim:
-    hints:
-      - class: 'sbg:AWSInstanceType'
-        value: c5.2xlarge
     run: ../tools/gatk_splitncigarreads.cwl
     label: "GATK Split N Cigar"
     in:
       reference_fasta: reference_fasta
       dup_marked_bam: samtools_index/bam_file
       interval_bed: interval_bed
-    scatter: interval_bed
     out: [cigar_n_split_bam]
-  sambamba_merge_splitn:
-    run: ../tools/sambamba_merge.cwl
-    label: "SAMBAMBA Merge Split N Bams"
-    in:
-      input_bams: gatk_splitntrim/cigar_n_split_bam
-      output_basename: {default: "splitntrim_merged"}
-    out: [merged_bam]
-
-$namespaces:
-  sbg: https://sevenbridges.com
