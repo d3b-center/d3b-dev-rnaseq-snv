@@ -5,8 +5,8 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 8000
-    coresMin: 4
+    ramMin: 16000
+    coresMin: 8
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:4.1.7.0R'
 baseCommand: [/gatk, SplitNCigarReads]
@@ -14,13 +14,12 @@ arguments:
   - position: 1
     shellQuote: false
     valueFrom: >-
-      --java-options "-Xmx7500m
+      --java-options "-Xmx16G
       -XX:+PrintFlagsFinal
       -Xloggc:gc_log.log
       -XX:GCTimeLimit=50
       -XX:GCHeapFreeLimit=10"
-      --max-reads-in-memory 600000
-      --seconds-between-progress-updates 60
+      --seconds-between-progress-updates 30
       -R $(inputs.reference_fasta.path)
       -I $(inputs.dup_marked_bam.path)
       ${
@@ -51,4 +50,4 @@ outputs:
     type: File
     outputBinding:
       glob: '*.bam'
-    secondaryFiles: ['.bai']
+    secondaryFiles: ['^.bai']
