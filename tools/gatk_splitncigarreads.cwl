@@ -5,7 +5,7 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 16000
+    ramMin: 32000
     coresMin: 8
   - class: DockerRequirement
     dockerPull: 'kfdrc/gatk:4.1.7.0R'
@@ -14,7 +14,7 @@ arguments:
   - position: 1
     shellQuote: false
     valueFrom: >-
-      --java-options "-Xmx16G
+      --java-options "-Xmx30G
       -XX:+PrintFlagsFinal
       -Xloggc:gc_log.log
       -XX:GCTimeLimit=50
