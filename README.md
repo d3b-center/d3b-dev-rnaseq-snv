@@ -11,7 +11,7 @@ For all workflows, input bams should be indexed beforehand.  This tool is provid
 The overall [workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531192-RNAseq-short-variant-discovery-SNPs-Indels-) picks up from post-STAR alignment, starting at Picard mark duplicates.
 For the most part, tool parameters follow defaults from the GATK Best Practices [WDL](https://github.com/gatk-workflows/gatk4-rnaseq-germline-snps-indels/blob/master/gatk4-rna-best-practices.wdl), written in cwl with added optimization for use on the Cavatica platform.
 `workflows/d3b_gatk_rnaseq_snv_wf.cwl` is the wrapper cwl used to run all tools for GATK4.
-Run time (n=1) ~5 hours, cost on cavatica ~$5
+Run time (n=1) ~12 hours, cost on cavatica ~$5
 
 ### Inputs
 ```yaml
@@ -42,7 +42,6 @@ outputs:
 ### Docker Pulls
  - `kfdrc/sambamba:0.7.1`
  - `kfdrc/gatk:4.1.7.0R`
- - `kfdrc/python:2.7.13`
 
 ### Workflow Diagram
 
