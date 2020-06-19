@@ -8,8 +8,8 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 8000
-    coresMin: 4
+    ramMin: 16000
+    coresMin: 8
 baseCommand: ["/bin/bash", "-c"]
 arguments:
   - position: 1
@@ -20,12 +20,13 @@ arguments:
       mkdir TMP
 
       sambamba markdup
-      -t 4
-      --sort-buffer-size 7500
-      --show-progress
+      -t 8
+      --sort-buffer-size 15000
       --tmpdir TMP
       $(inputs.input_bam.path)
       $(inputs.input_bam.nameroot).md.bam
+
+      mv $(inputs.input_bam.nameroot).md.bam.bai $(inputs.input_bam.nameroot).md.bai
 
 inputs:
   input_bam: File
