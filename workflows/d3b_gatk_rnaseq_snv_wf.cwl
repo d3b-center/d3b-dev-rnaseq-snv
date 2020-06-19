@@ -14,7 +14,7 @@ doc: |-
       output_basename: string
       pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
       scatter_ct: {type: int?, doc: "Number of interval lists to split into", default: 50}
-      STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+      STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam"}
       reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
       reference_dict: File
       call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
@@ -50,9 +50,8 @@ requirements:
 
 inputs:
   output_basename: string
-  pass_thru: {type: boolean, doc: "Param for whether to skip name sort step before markd dup if source is already name sorted", default: false}
   scatter_ct: {type: int?, doc: "Number of interval lists to split into", default: 50}
-  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam", secondaryFiles: ['^.bai']}
+  STAR_sorted_genomic_bam: {type: File, doc: "STAR sorted alignment bam"}
   reference_fasta: {type: File, secondaryFiles: ['^.dict', '.fai'], doc: "Reference genome used"}
   reference_dict: File
   call_bed_file: {type: File, doc: "BED or GTF intervals to make calls"}
@@ -89,7 +88,6 @@ steps:
     label: "Preprocess RNAseq BAM"
     in:
       STAR_sorted_genomic_bam: STAR_sorted_genomic_bam
-      pass_thru: pass_thru
       reference_fasta: reference_fasta
     out:
       [sorted_md_splitn_bam]
