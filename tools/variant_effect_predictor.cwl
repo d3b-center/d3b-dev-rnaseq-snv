@@ -24,9 +24,21 @@ arguments:
       --cache_version 100
       --vcf
       --symbol
+      ${
+        if (inputs.merged_cache){
+          return " --merged ";
+        }
+        else{
+          return " ";
+        }
+      }
       --canonical
       --variant_class
       --offline
+      --ccds
+      --uniprot
+      --protein
+      --numbers
       --hgvs
       --hgvsg
       --fork 14
@@ -37,6 +49,9 @@ arguments:
       --stats_file $(inputs.output_basename)_stats.txt
       --stats_text
       --warning_file $(inputs.output_basename)_warnings.txt
+      --allele_number
+      --dont_skip
+      --allow_non_variant
       --fasta $(inputs.reference.path) |
       /ensembl-vep/htslib/bgzip -@ 14 -c > $(inputs.output_basename).$(inputs.tool_name).vep.vcf.gz
       && /ensembl-vep/htslib/tabix $(inputs.output_basename).$(inputs.tool_name).vep.vcf.gz
@@ -47,6 +62,7 @@ inputs:
     type: File
     secondaryFiles: [.tbi]
   output_basename: string
+  merged_cache: {type: boolean, doc: "If merged cache being used", default: true}
   tool_name: {type: string, doc: "Name of tool used to generate calls"}
   cache: {type: File, label: tar gzipped cache from ensembl/local converted cache}
 
