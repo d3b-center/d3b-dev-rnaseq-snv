@@ -9,8 +9,10 @@ It also contains a very basic VEP annotation tool
 For all workflows, input bams should be indexed beforehand.  This tool is provided in `tools/samtools_index.cwl`
 
 ## GATK4 v4.1.7.0
-The overall [workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531192-RNAseq-short-variant-discovery-SNPs-Indels-) picks up from post-STAR alignment, starting at Picard mark duplicates.
+The overall [workflow](https://gatk.broadinstitute.org/hc/en-us/articles/360035531192-RNAseq-short-variant-discovery-SNPs-Indels-) picks up from post-STAR alignment, starting at mark duplicates.
 For the most part, tool parameters follow defaults from the GATK Best Practices [WDL](https://github.com/gatk-workflows/gatk4-rnaseq-germline-snps-indels/blob/master/gatk4-rna-best-practices.wdl), written in cwl with added optimization for use on the Cavatica platform.
+A mild warning, sambamba is used in this workflow to mark dulicates for speed and efficiency instead of picard.
+Behavior should be the same except for markig optical duplicates.
 `workflows/d3b_gatk_rnaseq_snv_wf.cwl` is the wrapper cwl used to run all tools for GATK4.
 Run time (n=782) COV-IRT dataset,  ~3 hours, cost on cavatica ~$1.05 per sample
 
