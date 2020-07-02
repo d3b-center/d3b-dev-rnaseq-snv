@@ -15,6 +15,7 @@ venv/bin/gdc-fastq-splitter -h # if successful, you should get help menu
 ```
 
 # Fun time run time
+Note that processing paired end files will use two cores instead on one (likely a good thing).
 
 ```text
 inputs: 
@@ -101,5 +102,5 @@ STAR --twopassMode Basic \
     --quantMode TranscriptomeSAM GeneCounts \
     --outSAMheaderHD @HD VN:1.4 SO:coordinate \
     --outFileNamePrefix /path/to/output/directory/${sample} \
-    --readFilesIn COVHA-P1-D06-N.filtered.human_H5NKGDSXY_1_R1.fq.gz,COVHA-P1-D06-N.filtered.human_H5NKGDSXY_2_R1.fq.gz,COVHA-P1-D06-N.filtered.human_H5NKGDSXY_1_R2.fq.gz,COVHA-P1-D06-N.filtered.human_H5NKGDSXY_2_R2.fq.gz
+    --readFilesIn COVHA-P1-D06-N.filtered.human_H5NKGDSXY_1_R1.fq.gz,COVHA-P1-D06-N.filtered.human_H5NKGDSXY_2_R1.fq.gz COVHA-P1-D06-N.filtered.human_H5NKGDSXY_1_R2.fq.gz,COVHA-P1-D06-N.filtered.human_H5NKGDSXY_2_R2.fq.gz
 ```
