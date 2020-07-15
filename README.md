@@ -221,6 +221,7 @@ outputs:
 [Variant Effect Predictor](https://useast.ensembl.org/info/docs/tools/vep/index.html) is an ENSEMBL tool for annotating variants.
 The tool built for this repo has very basic and rigid functionality, but can be run on any of the vcf outputs from the worfklows.
 `tools/variant_effect_predictor.cwl`.
+It can be run using a cache or a gtf - in this case a gtf was used to be able to generate gene models for both human and SARS CoV-2
 Run time (n=782) COV-IRT dataset,  ~6 minutes, cost on cavatica ~$0.22 per sample
 
 
@@ -235,13 +236,12 @@ Run time (n=782) COV-IRT dataset,  ~6 minutes, cost on cavatica ~$0.22 per sampl
 ```yaml
 inputs:
   reference: {type: File,  secondaryFiles: [.fai], label: Fasta genome assembly with index}
-  input_vcf:
-    type: File
-    secondaryFiles: [.tbi]
+  input_vcf: {type: File, secondaryFiles: [.tbi]}
   output_basename: string
-  merged_cache: {type: boolean, doc: "If merged cache being used", default: true}
+  merged_cache: {type: boolean?, doc: "If merged cache being used", default: true}
   tool_name: {type: string, doc: "Name of tool used to generate calls"}
-  cache: {type: File, label: tar gzipped cache from ensembl/local converted cache}
+  cache: {type: File?, label: tar gzipped cache from ensembl/local converted cache, doc: "Use this if not using a gtf for gene models"}
+  bgzipped_gtf: {type: File?, doc: "If merged cache being used", secondaryFiles: ['.tbi'], doc: "Use this if not using a cahce, but using gtf instead for gene models"}
   ```
 
 ```yaml

@@ -69,9 +69,7 @@ arguments:
 
 inputs:
   reference: {type: File,  secondaryFiles: [.fai], label: Fasta genome assembly with index}
-  input_vcf:
-    type: File
-    secondaryFiles: [.tbi]
+  input_vcf: {type: File, secondaryFiles: [.tbi]}
   output_basename: string
   merged_cache: {type: boolean?, doc: "If merged cache being used", default: true}
   tool_name: {type: string, doc: "Name of tool used to generate calls"}
