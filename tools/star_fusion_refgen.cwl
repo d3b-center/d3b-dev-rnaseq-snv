@@ -1,7 +1,7 @@
 cwlVersion: v1.0
 class: CommandLineTool
 id: star_fusion_ref_gen
-doc: "Generatte STAR Fusion reference file from custom annotation using STAR Fusion v1.9.0"
+doc: "Generate STAR Fusion reference file from custom annotation using STAR Fusion v1.9.0"
 requirements:
   - class: ShellCommandRequirement
   - class: DockerRequirement
@@ -11,7 +11,7 @@ requirements:
     coresMin: 8
     ramMin: 64000
 
-baseCommand: [/usr/local/src/Fusion/ctat-genome-lib-builder/prep_genome_lib.pl]
+baseCommand: [/usr/local/src/STAR-Fusion/ctat-genome-lib-builder/prep_genome_lib.pl]
 arguments:
   - position: 1
     shellQuote: false

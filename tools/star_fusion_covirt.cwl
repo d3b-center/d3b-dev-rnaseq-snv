@@ -1,6 +1,6 @@
 cwlVersion: v1.0
 class: CommandLineTool
-id: star_fusion
+id: star_fusion_covirt
 requirements:
   - class: ShellCommandRequirement
   - class: DockerRequirement
