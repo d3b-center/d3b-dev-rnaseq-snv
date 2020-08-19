@@ -40,7 +40,7 @@ doc: |-
     ### Simulated bash calls
     An example of bash calls from each step can be found in the [git repo](https://github.com/d3b-center/d3b-dev-rnaseq-snv#gatk4-simulated-bash-calls)
 
-id: d3b-gatk-rnaseq-snv-wf
+id: d3b-gatk-rnaseq-snv-vep-wf
 label: "GATK RNAseq SNV Calling Workflow"
 requirements:
   - class: ScatterFeatureRequirement
@@ -59,10 +59,15 @@ inputs:
   dbsnp_vcf: {type: File, secondaryFiles: ['.tbi']}
   tool_name: {type: string, doc: "description of tool that generated data, i.e. gatk_haplotypecaller"}
   mode: {type: ['null', {type: enum, name: select_vars_mode, symbols: ["gatk", "grep"]}], doc: "Choose 'gatk' for SelectVariants tool, or 'grep' for grep expression", default: "gatk"}
+  input_tumor_name: string
+  vep_cache: {type: File, doc: "Tar gzipped cache from VEP"}
+  vep_ref_build: {type: ['null', string], doc: "Genome ref build used, should line up with cache.", default: "GRCh38" }
+
 
 outputs:
   filtered_hc_vcf: {type: File, outputSource: gatk_filter_vcf/filtered_vcf, doc: "Haplotype called vcf with Broad-recommended FILTER values added"}
-  pass_vcf: {type: File, outputSource: gatk_pass_vcf/pass_vcf, doc: "Filtered vcf selected for PASS variants"}
+  vep_pass_vcf: {type: File, outputSource: vep_annot_gatk/output_vcf, secondaryFiles: ['.tbi'], doc: "Filtered vcf selected for PASS variants"}
+  vep_maf: {type: File, outputSource: vep_annot_gatk/output_maf, doc: "Filtered vcf selected for PASS variants"}
   anaylsis_ready_bam: {type: File, outputSource: gatk_applybqsr/recalibrated_bam, doc: "Duplicate marked, Split N trimmed CIGAR BAM, BQSR recalibratede, ready for RNAseq calling"}
   bqsr_table: {type: File, outputSource: gatk_baserecalibrator/output, doc: "BQSR table"}
 
@@ -149,6 +154,19 @@ steps:
       tool_name: tool_name
       mode: mode
     out: [pass_vcf]
+  vep_annot_gatk:
+    run: ../tools/vep_vcf2maf.cwl
+    label: "MSKCC VEP VCF2MAF"
+    in:
+      input_vcf: gatk_pass_vcf/pass_vcf
+      output_basename: output_basename
+      tumor_id: input_tumor_name
+      tool_name: tool_name
+      reference: reference_fasta
+      cache: vep_cache
+      ref_build: vep_ref_build
+    out: [output_vcf, output_tbi, output_maf, warn_txt]
+
 
 $namespaces:
   sbg: https://sevenbridges.com
