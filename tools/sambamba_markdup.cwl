@@ -1,34 +1,34 @@
-cwlVersion: v1.0
+cwlVersion: v1.2
 class: CommandLineTool
-id: sambamba_sort_mark_dup
+id: sambamba-markdup
 
 requirements:
   - class: DockerRequirement
-    dockerPull: 'kfdrc/sambamba:0.7.1'
+    dockerPull: 'pgc-images.sbgenomics.com/brownm28/sambamba:1.0.1'
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 8000
-    coresMin: 4
-baseCommand: ["/bin/bash", "-c"]
+    ramMin: 16000
+    coresMin: 8
 arguments:
-  - position: 1
+  - position: 0
     shellQuote: false
     valueFrom: >-
-      set -eo pipefail
-
       mkdir TMP
-
-      sambamba markdup
+      && sambamba markdup
       --tmpdir TMP
-      -t 4
-      $(inputs.input_bam.path)
-      $(inputs.input_bam.nameroot).md.bam
-
-      mv $(inputs.input_bam.nameroot).md.bam.bai $(inputs.input_bam.nameroot).md.bai
+  - position: 2
+    shellQuote: false
+    valueFrom: >-
+      $(inputs.sorted_align.nameroot).md.bam
 
 inputs:
-  input_bam: File
+  sorted_align: { type: File, secondaryFiles: [{pattern: ".bai", required: false}, {pattern: "^.bai", required: false}],
+    inputBinding: { position: 1} }
+  ram: { type: 'int?', doc: "RAM in GB to make available to this task", default: 16 }
+  threads: { type: 'int?', doc: "number of computing threads that will be used by the software to run parallel processes",
+    default: 8, inputBinding: { position: 0, prefix: "-t"} }
+
 outputs: 
   markduplicates_bam:
     type: File
