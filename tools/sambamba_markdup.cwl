@@ -8,8 +8,8 @@ requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
   - class: ResourceRequirement
-    ramMin: 16000
-    coresMin: 8
+    ramMin:  $(inputs.ram * 1000)
+    coresMin: $(inputs.threads)
 arguments:
   - position: 0
     shellQuote: false
@@ -23,7 +23,7 @@ arguments:
       $(inputs.sorted_align.nameroot).md.bam
 
 inputs:
-  sorted_align: { type: File, secondaryFiles: [{pattern: ".bai", required: false}, {pattern: "^.bai", required: false}],
+  sorted_align: { type: File, secondaryFiles: ['.bai'],
     inputBinding: { position: 1} }
   ram: { type: 'int?', doc: "RAM in GB to make available to this task", default: 16 }
   threads: { type: 'int?', doc: "number of computing threads that will be used by the software to run parallel processes",
@@ -34,3 +34,4 @@ outputs:
     type: File
     outputBinding:
       glob: '*.bam'
+    secondaryFiles: ['.bai']

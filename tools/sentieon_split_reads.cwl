@@ -33,13 +33,12 @@ arguments:
 
 inputs:
   sentieon_license: { type: string, doc: "Sentieon license server and port, in format 0.0.0.0:0000" }
-  ram: { type: 'int?', doc: "RAM in GB to make available to this task", default: 16 }
+  ram: { type: 'int?', doc: "RAM in GB to make available to this task", default: 64 }
   threads: { type: 'int?', doc: "number of computing threads that will be used by the software to run parallel processes",
     default: 8, inputBinding: { position: 0, prefix: "-t" } }
   reference: { type: File, secondaryFiles: ['.fai'],  doc: "location of the reference FASTA file. Use if input is cram",
     inputBinding: { position: 0, prefix: "--reference"} }
-  rmdup_align: { type: File, secondaryFiles: [{pattern: ".bai", required: false}, {pattern: "^.bai", required: false}, {pattern: ".crai", required: false},
-      {pattern: "^.crai", required: false}], inputBinding: { position: 0, prefix: "-i"} }
+  rmdup_align: { type: File, secondaryFiles: ['.bai'], inputBinding: { position: 0, prefix: "-i"} }
 outputs:
-  split_bam: { type: File, outputBinding: { glob: "$(inputs.rmdup_align.nameroot).rdsplit.bam"}, secondaryFiles: [{pattern: ".bai", required: false}, {pattern: "^.bai", required: false}] }
+  split_bam: { type: File, outputBinding: { glob: "$(inputs.rmdup_align.nameroot).rdsplit.bam"}, secondaryFiles: ['.bai'] }
 

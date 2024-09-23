@@ -13,6 +13,8 @@ inputs:
   reference: { type: File, secondaryFiles: ['.fai'],  doc: "location of the reference FASTA file. Use if input is cram" }
   sentieon_license: {type: 'string?', doc: "License server host and port", default: "10.5.64.221:8990"}
   output_basename: { type: 'string?' }
+  split_reads_cpu: { type: 'int?', default: 16 }
+  split_reads_ram: { type: 'int?', default: 64 }
 
 outputs:
   dnascope_rnaseq_vcf: {type: File, outputSource: sentieon_dnascope/rna_snv_vcf }
@@ -38,9 +40,11 @@ steps:
       sentieon_license: sentieon_license
       reference: reference
       rmdup_align: sambamba_markdup/markduplicates_bam
+      ram: split_reads_ram
+      threads: split_reads_cpu
     out: [split_bam]
   sentieon_dnascope:
-    run: ../tools/sentieon_dnascope.cwl
+    run: ../tools/sentieon_dnaseq.cwl
     in:
       sentieon_license: sentieon_license
       reference: reference
